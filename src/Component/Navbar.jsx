@@ -96,7 +96,7 @@ const Sidebar = styled(motion.div)`
   background: linear-gradient(
     -135deg,
     #f0e8d7 0%,
-    #f0e8d7 10%,
+    #f0e8d2 10%,
     #faf2df 20%,
     #f0e8d7 30%,
     #e1d7c0 60%,
