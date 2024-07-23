@@ -30,16 +30,16 @@ const HeroSection = styled.section`
 
   text-align: center;
   background: linear-gradient(
-    -135deg,
-    #f0e8d7 0%,
-    #f0e8d7 10%,
-    #faf2df 20%,
-    #f0e8d7 30%,
-    #e1d7c0 60%,
-    #d6d0c1 70%,
-    #f0e8d7 80%,
-    #d6d0c1 90%,
-    #f0e8d7 100%
+    185deg,
+    #d8d5ce 0%,
+    #f5f2ea 10%,
+    #d8d5ce 20%,
+    #f5f2ea 30%,
+    #f5f2ea 60%,
+    #d8d5ce 70%,
+    #f5f2ea 80%,
+    #f5f2ea 90%,
+    #d8d5ce 100%
   );
 
   color: #333;
@@ -132,6 +132,18 @@ const Image = styled.div`
     max-width: 100%;
     border-radius: 50px 50px 0 0;
     background: linear-gradient(
+      185deg,
+      #d8d5ce 0%,
+      #f5f2ea 10%,
+      #d8d5ce 20%,
+      #f5f2ea 30%,
+      #f5f2ea 60%,
+      #d8d5ce 70%,
+      #f5f2ea 80%,
+      #f5f2ea 90%,
+      #d8d5ce 100%
+    );
+    /* background: linear-gradient(
       -135deg,
       #f0e8d7 0%,
       #f0e8d7 10%,
@@ -142,7 +154,7 @@ const Image = styled.div`
       #f0e8d7 80%,
       #d6d0c1 90%,
       #f0e8d7 100%
-    );
+    ); */
     box-shadow:
       0 0 2px #f3d57f,
       0 0 2px #f3d57f,

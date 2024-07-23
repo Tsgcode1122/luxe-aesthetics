@@ -94,16 +94,16 @@ const Logo = styled.img`
 const Sidebar = styled(motion.div)`
   top: 3rem;
   background: linear-gradient(
-    -135deg,
-    #f0e8d7 0%,
-    #f0e8d2 10%,
-    #faf2df 20%,
-    #f0e8d7 30%,
-    #e1d7c0 60%,
-    #d6d0c1 70%,
-    #f0e8d7 80%,
-    #d6d0c1 90%,
-    #f0e8d7 100%
+    -4deg,
+    #d8d5ce 0%,
+    #f5f2ea 10%,
+    #d8d5ce 20%,
+    #f5f2ea 30%,
+    #f5f2ea 60%,
+    #d8d5ce 70%,
+    #f5f2ea 80%,
+    #f5f2ea 90%,
+    #d8d5ce 100%
   );
   border-radius: 0 0 30px 30px;
   border: 1px solid #1f1809;
@@ -130,18 +130,7 @@ const MenuLink = styled(Link)`
   display: flex;
   justify-content: space-between;
   padding: 0.5rem;
-  background: linear-gradient(
-    -135deg,
-    #f0e8d7 0%,
-    #f0e8d7 10%,
-    #faf2df 20%,
-    #f0e8d7 30%,
-    #e1d7c0 60%,
-    #d6d0c1 70%,
-    #f0e8d7 80%,
-    #d6d0c1 90%,
-    #f0e8d7 100%
-  );
+  background: transparent;
   border: 1px solid #a08733;
   border-radius: 0.375rem;
   text-decoration: none;
