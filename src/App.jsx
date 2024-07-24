@@ -20,7 +20,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
   background: linear-gradient(
-    185deg,
+    45deg,
     #d8d5ce 0%,
     #f5f2ea 10%,
     #d8d5ce 20%,

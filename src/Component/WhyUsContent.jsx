@@ -71,6 +71,7 @@ const List = styled.div`
   flex-direction: column;
   gap: 20px;
   padding: 0;
+  color: ${Colors.coolBlack};
   list-style: none;
 `;
 const ListItem = styled.div`

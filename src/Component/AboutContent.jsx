@@ -34,7 +34,7 @@ const Container = styled.div`
 `;
 const Content = styled.p`
   font-weight: 100 !important;
-
+  color: ${Colors.coolBlack};
   text-align: center;
 
   font-family: "Philosopher", sans-serif !important;

@@ -85,9 +85,12 @@ const Services = () => {
 const Container = styled.div`
   position: relative;
   padding: 2rem;
+
   margin: 2rem;
   background: ${Colors.offWhite};
-
+  box-shadow:
+    rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
   border-radius: 50px;
   display: flex;
   flex-direction: column;
@@ -129,6 +132,7 @@ const Content = styled.div`
   border-radius: 10px;
   margin-bottom: 2rem;
   max-width: 300px;
+  color: ${Colors.coolBlack};
   background: url(${bgg}) no-repeat center/cover;
   z-index: 3 !important;
   background-size: 30%;
@@ -159,6 +163,7 @@ const Bg = styled.div`
 const Intro = styled.p`
   margin: 0;
   padding-top: 10px;
+  color: ${Colors.coolBlack};
 `;
 const Prices = styled.div`
   display: flex;

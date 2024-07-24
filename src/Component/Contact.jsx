@@ -1,11 +1,10 @@
 import React from "react";
 import Heading from "./Heading";
 import styled from "styled-components";
-import WhyUsContent from "./WhyUsContent";
+import ContactContent from "./ContactContent";
 import { Colors } from "./ColorComponent";
-import bg from "../Images/nurse.png";
-import Faqs from "./Faqs";
-import GlowingDivider from "./GlowingDivider";
+import bg from "../Images/contact.png";
+
 const Container = styled.div`
   background: url(${bg}) no-repeat center/cover;
 `;
@@ -14,17 +13,17 @@ const Content = styled.div`
   background: rgb(245, 242, 234, 0.9);
 `;
 
-const WhyUs = () => {
+const Contact = () => {
   return (
     <>
       <Container>
         <Content>
-          <Heading>Why Us?</Heading>
-          <WhyUsContent />
+          <Heading>Contact Us?</Heading>
+          <ContactContent />
         </Content>
       </Container>
     </>
   );
 };
 
-export default WhyUs;
+export default Contact;

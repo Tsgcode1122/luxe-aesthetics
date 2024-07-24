@@ -4,7 +4,8 @@ import { motion } from "framer-motion";
 import { Colors } from "./ColorComponent";
 import Heading from "./Heading";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
-
+import StarsBackground from "./StarsBackground";
+import bg from "../Images/filler.png";
 const Faqs = () => {
   const [selectedFaq, setSelectedFaq] = useState(null);
 
@@ -47,28 +48,30 @@ const Faqs = () => {
   return (
     <>
       <FaqsContainer>
-        <Heading>Faqs</Heading>
-        <SubHead>Frequently Asked Questions</SubHead>
-        {faqs.map((faq, index) => (
-          <FaqItem key={index}>
-            <Question onClick={() => toggleFaq(index)}>
-              {faq.question}
-              <IconWrapper>
-                {selectedFaq === index ? <FaChevronUp /> : <FaChevronDown />}
-              </IconWrapper>
-            </Question>
-            <Answer
-              initial={{ height: 0, opacity: 0 }}
-              animate={{
-                height: selectedFaq === index ? "auto" : 0,
-                opacity: selectedFaq === index ? 1 : 0,
-              }}
-              transition={{ duration: 0.3 }}
-            >
-              <p>{faq.answer}</p>
-            </Answer>
-          </FaqItem>
-        ))}
+        <Content>
+          <Heading>Faqs</Heading>
+          <SubHead>Frequently Asked Questions</SubHead>
+          {faqs.map((faq, index) => (
+            <FaqItem key={index}>
+              <Question onClick={() => toggleFaq(index)}>
+                {faq.question}
+                <IconWrapper>
+                  {selectedFaq === index ? <FaChevronUp /> : <FaChevronDown />}
+                </IconWrapper>
+              </Question>
+              <Answer
+                initial={{ height: 0, opacity: 0 }}
+                animate={{
+                  height: selectedFaq === index ? "auto" : 0,
+                  opacity: selectedFaq === index ? 1 : 0,
+                }}
+                transition={{ duration: 0.3 }}
+              >
+                <p>{faq.answer}</p>
+              </Answer>
+            </FaqItem>
+          ))}
+        </Content>
       </FaqsContainer>
     </>
   );
@@ -78,16 +81,25 @@ export default Faqs;
 
 const FaqsContainer = styled.div`
   position: relative;
-  padding: 2rem;
+  box-shadow:
+    rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
   margin: 2rem;
-  background: ${Colors.offWhite};
+  background: url(${bg}) no-repeat center/cover;
+  background-position: 10% top;
+  background-size: 100%;
+  /* background: ${Colors.offWhite}; */
   border-radius: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 `;
-
+const Content = styled.div`
+  padding: 2rem;
+  border-radius: 50px;
+  background: rgb(245, 242, 234, 0.9);
+`;
 const SubHead = styled.h5`
   margin: 0;
   font-size: 1.2rem;
@@ -126,8 +138,9 @@ const Question = styled.div`
 const Answer = styled(motion.div)`
   overflow: hidden;
   padding: 0 1rem;
-  background: white;
+  background: #f5f2ea;
   border-radius: 4px;
+  color: ${Colors.coolBlack};
   p {
     margin: 0;
     padding: 1rem 0;
