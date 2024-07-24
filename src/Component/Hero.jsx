@@ -27,28 +27,16 @@ const Hero = () => {
 const HeroSection = styled.section`
   display: flex;
   justify-content: center;
-
+  padding: 40px 20px;
   text-align: center;
-  background: linear-gradient(
-    185deg,
-    #d8d5ce 0%,
-    #f5f2ea 10%,
-    #d8d5ce 20%,
-    #f5f2ea 30%,
-    #f5f2ea 60%,
-    #d8d5ce 70%,
-    #f5f2ea 80%,
-    #f5f2ea 90%,
-    #d8d5ce 100%
-  );
 
   color: #333;
-  height: 90vh;
+  /* height: 90vh; */
 `;
 
 const HeroContent = styled.div`
   position: relative;
-  padding: 60px 0px;
+
   background: none;
   border-radius: 8px;
   overflow: hidden;
@@ -82,7 +70,7 @@ const Heading = styled.h1`
   font-weight: 500;
   position: relative;
   font-family: "Philosopher", sans-serif;
-  /* font-family: "Quincy CF", sans-serif; */
+
   margin-bottom: 20px;
   z-index: 2 !important;
 `;
@@ -91,7 +79,7 @@ const Subheading = styled.p`
   font-size: 1.2rem;
   color: #070b0d;
   font-weight: 500;
-  font-family: "Quincy CF", sans-serif;
+  font-family: "Philosopher", sans-serif;
   margin-bottom: 30px;
   z-index: 2 !important;
 `;
@@ -111,7 +99,7 @@ const CTAButton = styled.a`
     #2f240d 90%,
     #181501 100%
   );
-  font-family: "Quincy CF", sans-serif;
+  font-family: "Philosopher", sans-serif;
   box-shadow:
     0 0 10px #f3d57f,
     0 0 11px #f3d57f,
@@ -127,10 +115,10 @@ const CTAButton = styled.a`
 `;
 const Image = styled.div`
   border-radius: 200px;
-
+  /* padding: 20px; */
   img {
     max-width: 100%;
-    border-radius: 50px 50px 0 0;
+    border-radius: 50px;
     background: linear-gradient(
       185deg,
       #d8d5ce 0%,

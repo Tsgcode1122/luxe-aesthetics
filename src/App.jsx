@@ -19,7 +19,18 @@ const GlobalStyle = createGlobalStyle`
   html, body {
     margin: 0;
     padding: 0;
-    /* background: linear-gradient(135deg, #FFFFFF, #e7e7e7, #f7faff) !important; */
+  background: linear-gradient(
+    185deg,
+    #d8d5ce 0%,
+    #f5f2ea 10%,
+    #d8d5ce 20%,
+    #f5f2ea 30%,
+    #f5f2ea 60%,
+    #d8d5ce 70%,
+    #f5f2ea 80%,
+    #f5f2ea 90%,
+    #d8d5ce 100%
+  );
     font-family: "Montserrat", sans-serif;
     /* font-family: "Quincy CF", sans-serif; */
 
