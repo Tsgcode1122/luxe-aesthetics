@@ -11,7 +11,7 @@ const Container = styled.div`
 const ZoomInComponent = ({ children }) => {
   const controls = useAnimation();
   const [ref, inView] = useInView({
-    triggerOnce: true, // Trigger animation only once when in view
+    triggerOnce: false,
     threshold: 0.1,
   });
 
@@ -25,17 +25,17 @@ const ZoomInComponent = ({ children }) => {
 
   const variants = {
     hidden: {
-      opacity: 0,
-      scale: 0.9, // Initial scale (zoomed out)
+      opacity: 0.8,
+      scale: 0.95,
     },
     visible: {
       opacity: 1,
-      scale: 1, // Final scale (zoomed in)
+      scale: 1,
       transition: {
         type: "spring",
-        stiffness: 50,
+        stiffness: 60,
         damping: 10,
-        duration: 0.5,
+        duration: 4.5,
       },
     },
   };

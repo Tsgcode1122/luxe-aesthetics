@@ -5,18 +5,22 @@ import i1 from "../Images/i1.png";
 import i2 from "../Images/i2.png";
 import i3 from "../Images/i3.png";
 import i4 from "../Images/i4.png";
+import ZoomInComponent from "./ZoomInComponent";
+
 const WhyUsContent = () => {
   return (
     <Container>
       <SubHead>Why Choose Gem Luxe Aesthetics</SubHead>
       <List>
-        <ListItem>
-          <img src={i3} />
-          <p>
-            We provide more than just medications; we offer comprehensive weight
-            loss solutions.
-          </p>
-        </ListItem>
+        <ZoomInComponent>
+          <ListItem>
+            <img src={i3} />
+            <p>
+              We provide more than just medications; we offer comprehensive
+              weight loss solutions.
+            </p>
+          </ListItem>
+        </ZoomInComponent>
         <ListItem>
           <img src={i4} />
           <p>
@@ -31,13 +35,15 @@ const WhyUsContent = () => {
             journey.
           </p>
         </ListItem>
-        <ListItem>
-          <img src={i1} />
-          <p>
-            With us, you're not just losing weight – you're gaining a new
-            outlook on life.
-          </p>
-        </ListItem>
+        <ZoomInComponent>
+          <ListItem>
+            <img src={i1} />
+            <p>
+              With us, you're not just losing weight – you're gaining a new
+              outlook on life.
+            </p>
+          </ListItem>
+        </ZoomInComponent>
       </List>
     </Container>
   );
