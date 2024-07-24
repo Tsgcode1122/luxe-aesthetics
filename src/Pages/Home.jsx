@@ -14,10 +14,10 @@ const Home = () => {
       <About />
       <GlowingDivider />
       <Services />
-      {/* <GlowingDivider /> */}
 
       <WhyUs />
       <GlowingDivider />
+      <Faqs />
     </>
   );
 };
