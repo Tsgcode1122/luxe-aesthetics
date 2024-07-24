@@ -5,9 +5,8 @@ const Content = styled.p`
   font-weight: 100 !important;
   /* line-height: 1; */
   text-align: center;
-  font-family: "Quincy CF", sans-serif;
 
-  /* font-family: "Playwrite DE Grund", cursive; */
+  font-family: "Philosopher", sans-serif !important;
 `;
 const AboutContent = () => {
   return (
