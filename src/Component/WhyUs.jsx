@@ -3,16 +3,22 @@ import Heading from "./Heading";
 import styled from "styled-components";
 import WhyUsContent from "./WhyUsContent";
 import { Colors } from "./ColorComponent";
-
+import bg from "../Images/nurse.png";
 const Container = styled.div`
-  padding: 0rem 2rem 2rem 2rem;
+  background: url(${bg}) no-repeat center/cover;
+`;
+const Content = styled.div`
+  padding: 2rem 0rem;
+  background: rgb(245, 242, 234, 0.92);
 `;
 const WhyUs = () => {
   return (
     <>
       <Container>
-        <Heading>Why Us?</Heading>
-        <WhyUsContent />
+        <Content>
+          <Heading>Why Us?</Heading>
+          <WhyUsContent />
+        </Content>
       </Container>
     </>
   );
