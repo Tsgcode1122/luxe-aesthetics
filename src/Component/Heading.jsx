@@ -1,24 +1,11 @@
 // Heading.js
 import React from "react";
 import styled from "styled-components";
+import { Gradients } from "./ColorComponent";
 
 const StyledHeading = styled.h1`
   text-align: center;
-  background: linear-gradient(
-    180deg,
-    #0b090a 0%,
-    #a08733 10%,
-    #f3d57f 20%,
-    #7d6023 30%,
-    #f3d57f 40%,
-    #9c782c 50%,
-    #7d6023 60%,
-    #8c6c28 70%,
-    #9a762a 80%,
-    #f3d57f 90%,
-
-    #0b090a 100%
-  );
+  background: ${Gradients.goldGradient};
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

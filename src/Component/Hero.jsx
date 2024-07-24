@@ -3,6 +3,9 @@ import styled from "styled-components";
 import bgg from "../Images/drug.png";
 import belly from "../Images/belly.png";
 import SwipeComponent from "./SwipeComponent";
+import Button from "./Button";
+import { Gradients } from "./ColorComponent";
+
 const Hero = () => {
   return (
     <HeroSection>
@@ -15,7 +18,7 @@ const Hero = () => {
             Tailored Weight Loss Solutions for a Vibrant You!
           </Subheading>
         </SwipeComponent>
-        <CTAButton href="#packages">Book Appointment</CTAButton>
+        <Button href="#packages">Book Appointment</Button>
         <Image>
           <img src={belly} />
         </Image>
@@ -47,21 +50,7 @@ const HeroContent = styled.div`
 
 const Heading = styled.h1`
   font-size: 2.5rem;
-  background: linear-gradient(
-    180deg,
-    #0b090a 0%,
-    #a08733 10%,
-    #f3d57f 20%,
-    #7d6023 30%,
-    #f3d57f 40%,
-    #9c782c 50%,
-    #7d6023 60%,
-    #8c6c28 70%,
-    #9a762a 80%,
-    #f3d57f 90%,
-
-    #0b090a 100%
-  );
+  background: ${Gradients.goldGradient};
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -84,35 +73,7 @@ const Subheading = styled.p`
   z-index: 2 !important;
 `;
 
-const CTAButton = styled.a`
-  display: inline-block;
-  padding: 10px 20px;
-  margin-bottom: 2rem;
-  font-size: 1.2rem;
-  color: #fff;
-  background: linear-gradient(
-    190deg,
-    #1f1809 10%,
-    #181501 30%,
-    #1f1809 50%,
-    #181501 70%,
-    #2f240d 90%,
-    #181501 100%
-  );
-  font-family: "Philosopher", sans-serif;
-  box-shadow:
-    0 0 10px #f3d57f,
-    0 0 11px #f3d57f,
-    0 0 4px #a08733,
-    0 0 6px#a08733;
-  border-radius: 30px;
-  text-decoration: none;
-  transition: background-color 0.3s;
-
-  &:hover {
-    background-color: #f7d782;
-  }
-`;
+const CTAButton = styled.a``;
 const Image = styled.div`
   border-radius: 200px;
   /* padding: 20px; */
@@ -131,23 +92,9 @@ const Image = styled.div`
       #f5f2ea 90%,
       #d8d5ce 100%
     );
-    /* background: linear-gradient(
-      -135deg,
-      #f0e8d7 0%,
-      #f0e8d7 10%,
-      #faf2df 20%,
-      #f0e8d7 30%,
-      #e1d7c0 60%,
-      #d6d0c1 70%,
-      #f0e8d7 80%,
-      #d6d0c1 90%,
-      #f0e8d7 100%
-    ); */
-    box-shadow:
-      0 0 2px #f3d57f,
-      0 0 2px #f3d57f,
-      0 0 2px #a08733,
-      0 0 2px#a08733;
+
+    /* box-shadow:
+       */
   }
 `;
 export default Hero;

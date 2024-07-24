@@ -7,6 +7,7 @@ const DividerWrapper = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
+  background: transparent !important;
 `;
 
 const Divider = styled.div`

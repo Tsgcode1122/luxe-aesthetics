@@ -1,16 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 import SwipeComponent from "./SwipeComponent";
-const Content = styled.p`
-  font-weight: 100 !important;
-  /* line-height: 1; */
-  text-align: center;
+import Button from "./Button";
+import aboutimg from "../Images/belly2.jpg";
+import { Colors, Gradients } from "./ColorComponent";
 
-  font-family: "Philosopher", sans-serif !important;
-`;
 const AboutContent = () => {
   return (
-    <>
+    <Container>
       <SwipeComponent direction="left-to-right">
         <Content>
           Welcome to Gem Luxe Aesthetics, where your path to a healthier, more
@@ -20,9 +17,34 @@ const AboutContent = () => {
           lifestyle
         </Content>
       </SwipeComponent>
-      <Content></Content>
-    </>
+      <SwipeComponent direction="right-to-left">
+        <Button>Book Now</Button>
+      </SwipeComponent>
+      <AboutImg>
+        <img src={aboutimg} />
+      </AboutImg>
+    </Container>
   );
 };
+const Container = styled.div`
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`;
+const Content = styled.p`
+  font-weight: 100 !important;
 
+  text-align: center;
+
+  font-family: "Philosopher", sans-serif !important;
+`;
+const AboutImg = styled.div`
+  img {
+    max-width: 100%;
+
+    border-radius: 50px;
+    background: ${Gradients.lightGoldToGold};
+  }
+`;
 export default AboutContent;
