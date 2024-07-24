@@ -5,7 +5,7 @@ import styled, { keyframes } from "styled-components";
 import bgg from "../Images/sema.png";
 import bg from "../Images/tirz.png";
 import arrow from "../Images/arrow.png";
-
+import Button from "./Button";
 import "animate.css";
 import StarsBackground from "./StarsBackground";
 import SwipeComponent from "./SwipeComponent";
@@ -34,14 +34,14 @@ const Services = () => {
                   </Price>
                 </Prices>
               </Bg>
-              <Button href="#packages">
+              <Button2 href="#packages">
                 View Details{" "}
                 <img
                   src={arrow}
                   alt="Arrow"
                   className="animate__animated animate__headShake animate__slower animate__infinite"
                 />
-              </Button>
+              </Button2>
             </Content>
           </SwipeComponent>
           <SwipeComponent direction="right-to-left">
@@ -64,24 +64,26 @@ const Services = () => {
                 </Prices>
               </Bg>
 
-              <Button>
+              <Button2>
                 View Details{" "}
                 <img
                   src={arrow}
                   alt="Arrow"
                   className="animate__animated  animate__headShake animate__slower animate__infinite"
                 />
-              </Button>
+              </Button2>
             </Content2>
           </SwipeComponent>
         </>
       </Package>
+      <Button>Book Now</Button>
       <StarsBackground />
     </Container>
   );
 };
 
 const Container = styled.div`
+  position: relative;
   padding: 2rem;
   margin: 2rem;
   background: ${Colors.offWhite};
@@ -125,6 +127,7 @@ const Head = styled.div`
 `;
 const Content = styled.div`
   border-radius: 10px;
+  margin-bottom: 2rem;
   max-width: 300px;
   background: url(${bgg}) no-repeat center/cover;
   z-index: 3 !important;
@@ -134,7 +137,7 @@ const Content = styled.div`
     rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 `;
 const Content2 = styled.div`
-  margin-top: 2rem;
+  margin-bottom: 2rem;
   max-width: 300px;
   border-radius: 10px;
   background: url(${bg}) no-repeat center/cover;
@@ -195,7 +198,7 @@ const rippleAnimation = keyframes`
     opacity: 0;
   }
 `;
-const Button = styled.div`
+const Button2 = styled.div`
   padding: 10px 20px;
   position: relative;
   cursor: pointer;

@@ -5,6 +5,8 @@ import { Gradients } from "./ColorComponent";
 
 const StyledHeading = styled.h1`
   text-align: center;
+  padding: 1rem 0 0.5rem 0;
+  margin: 0 !important;
   background: ${Gradients.goldGradient};
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

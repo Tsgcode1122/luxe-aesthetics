@@ -3,6 +3,7 @@ import Hero from "../Component/Hero";
 import About from "../Component/About";
 import GlowingDivider from "../Component/GlowingDivider";
 import Services from "../Component/Services";
+import WhyUs from "../Component/WhyUs";
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <GlowingDivider />
       <Services />
       <GlowingDivider />
+      <WhyUs />
     </>
   );
 };
