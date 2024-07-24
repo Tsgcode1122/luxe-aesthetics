@@ -6,7 +6,7 @@ const moveStars = keyframes`
     transform: translateY(0);
   }
   to {
-    transform: translateY(-700px);
+    transform: translateY(-200px);
   }
 `;
 
@@ -24,7 +24,7 @@ const moveArrows = keyframes`
 const Star = styled.div`
   width: 1px;
   height: 1px;
-  background: white;
+  background: black;
   position: absolute;
   top: ${() => Math.random() * 100}%;
   left: ${() => Math.random() * 100}%;
@@ -36,7 +36,7 @@ const Arrow = styled.div`
   height: 0;
   border-left: 2px solid transparent;
   border-right: 2px solid transparent;
-  border-bottom: 5px solid white;
+  border-bottom: 5px solid black;
   position: absolute;
   top: ${() => Math.random() * 100}%;
   left: ${() => Math.random() * 100}%;

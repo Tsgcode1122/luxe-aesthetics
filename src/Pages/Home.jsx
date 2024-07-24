@@ -10,7 +10,9 @@ const Home = () => {
       <Hero />
       <GlowingDivider />
       <About />
+      <GlowingDivider />
       <Services />
+      <GlowingDivider />
     </>
   );
 };

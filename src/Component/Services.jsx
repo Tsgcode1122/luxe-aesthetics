@@ -1,10 +1,14 @@
 import React from "react";
 import Heading from "./Heading";
 import { Colors, Gradients } from "./ColorComponent";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import bgg from "../Images/sema.png";
-// import Button from "./Button";
+import bg from "../Images/tirz.png";
+import arrow from "../Images/arrow.png";
 
+import "animate.css";
+import StarsBackground from "./StarsBackground";
+import SwipeComponent from "./SwipeComponent";
 Gradients;
 const Services = () => {
   return (
@@ -13,40 +17,66 @@ const Services = () => {
       <SubHead>Offering two Innovative Packages</SubHead>
       <Package>
         <>
-          <Head>GLP-1 Semaglutide</Head>
-          <Content>
-            <Bg>
-              <Prices>
-                <Price>
-                  <span>$ 299.00</span>
-                  <p> USD/monthly</p>
-                </Price>
-                <Price>
-                  <span>$ 150.00 </span> <p>/ first month special</p>
-                </Price>
-              </Prices>
+          <SwipeComponent direction="left-to-right">
+            <Content>
+              <Head>GLP-1 Semaglutide</Head>
+              <Bg>
+                <Intro>
+                  A treatment that create calorie defict for weight loss.
+                </Intro>
+                <Prices>
+                  <Price>
+                    <span>$ 299.00</span>
+                    <p> USD/monthly</p>
+                  </Price>
+                  <Price>
+                    <span>$ 150.00 </span> <p>/ first month special</p>
+                  </Price>
+                </Prices>
+              </Bg>
+              <Button href="#packages">
+                View Details{" "}
+                <img
+                  src={arrow}
+                  alt="Arrow"
+                  className="animate__animated animate__headShake animate__slower animate__infinite"
+                />
+              </Button>
+            </Content>
+          </SwipeComponent>
+          <SwipeComponent direction="right-to-left">
+            <Content2>
+              <Head>GIP/GLP-1 TIRZEPATIDE</Head>
 
-              <Button href="#packages">View Details</Button>
-            </Bg>
-          </Content>
-          <Head>GLP-1 Semaglutide</Head>
-          <Content>
-            <Bg>
-              <Prices>
-                <Price>
-                  <span>$ 299.00</span>
-                  <p> USD/monthly</p>
-                </Price>
-                <Price>
-                  <span>$ 150.00 </span> <p>/ first month special</p>
-                </Price>
-              </Prices>
+              <Bg>
+                <Intro>
+                  A treatment that regulates appetite and blood sugar, enhancing
+                  weight loss.
+                </Intro>
+                <Prices>
+                  <Price>
+                    <span>$ 349.00</span>
+                    <p> USD/monthly</p>
+                  </Price>
+                  <Price>
+                    <span>$ 199.00 </span> <p>/ first month special</p>
+                  </Price>
+                </Prices>
+              </Bg>
 
-              <Button href="#packages">View Details</Button>
-            </Bg>
-          </Content>
+              <Button>
+                View Details{" "}
+                <img
+                  src={arrow}
+                  alt="Arrow"
+                  className="animate__animated  animate__headShake animate__slower animate__infinite"
+                />
+              </Button>
+            </Content2>
+          </SwipeComponent>
         </>
       </Package>
+      <StarsBackground />
     </Container>
   );
 };
@@ -76,38 +106,69 @@ const SubHead = styled.h5`
   margin-bottom: 30px;
 `;
 const Head = styled.div`
-  background-color: ${Colors.darkGold};
-  border-radius: 5px;
+  background: linear-gradient(
+    -1deg,
+    #0b090a 0%,
+    #f0e8d7 10%,
+    #f4ebd0 20%,
+
+    #f4ebd0 50%,
+    #f0e8d7 70%,
+    #f4ebd0 90%,
+    #0b090a 100%
+  );
+  border-radius: 10px 10px 0 0;
   padding: 4px 2px 10px 2px;
-  margin: 0 4px -2px 4px;
-  color: white;
+
+  color: black;
+  z-index: 1;
 `;
 const Content = styled.div`
-  border: 2px solid #d8d5ce;
   border-radius: 10px;
+  max-width: 300px;
   background: url(${bgg}) no-repeat center/cover;
-
+  z-index: 3 !important;
   background-size: 30%;
+  box-shadow:
+    rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+`;
+const Content2 = styled.div`
+  margin-top: 2rem;
+  max-width: 300px;
+  border-radius: 10px;
+  background: url(${bg}) no-repeat center/cover;
+  z-index: 3 !important;
+  background-size: 30%;
+  box-shadow:
+    rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 `;
 const Bg = styled.div`
-  background: rgba(255, 255, 255, 0.7);
-  padding: 1rem 2rem 1rem 2rem;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 0rem 1rem 1rem 1rem;
   justify-content: space-between;
-  gap: 2rem;
+  gap: 0.5rem;
   display: flex;
   flex-direction: column;
+  border-radius: 10px;
+`;
+const Intro = styled.p`
+  margin: 0;
+  padding-top: 10px;
 `;
 const Prices = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 1px;
 `;
-const Price = styled.div`
+const Price = styled.p`
   display: flex;
   align-items: center;
   gap: 5px;
-  margin-bottom: -10px;
+  margin-bottom: -1rem;
+  margin-top: -0.2rem;
   span {
     font-size: 1.5rem;
     background: ${Gradients.goldGradient};
@@ -124,33 +185,68 @@ const Price = styled.div`
     font-style: italic;
   }
 `;
+const rippleAnimation = keyframes`
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(4);
+    opacity: 0;
+  }
+`;
 const Button = styled.div`
-  display: inline-block;
   padding: 10px 20px;
+  position: relative;
   cursor: pointer;
   font-size: 1.2rem;
-  color: #fff;
+  gap: 20px;
+  color: black;
   background: linear-gradient(
-    190deg,
-    #1f1809 10%,
-    #181501 30%,
-    #1f1809 50%,
-    #181501 70%,
-    #2f240d 90%,
-    #181501 100%
+    -1deg,
+    #0b090a 0%,
+    #f0e8d7 10%,
+    #f4ebd0 20%,
+
+    #f4ebd0 50%,
+    #f0e8d7 70%,
+    #f4ebd0 90%,
+    #0b090a 100%
   );
   font-family: "Philosopher", sans-serif;
-  box-shadow:
-    0 0 10px #f3d57f,
-    0 0 11px #f3d57f,
-    0 0 4px #a08733,
-    0 0 6px#a08733;
-  border-radius: 20px;
+  border-radius: 0 0 10px 10px;
   text-decoration: none;
   transition: background-color 0.3s;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    width: 20%;
+    height: 20%;
+    background: rgba(55, 54, 54, 0.2);
 
+    transform: translate(-50%, -50%) scale(0);
+    animation: ${rippleAnimation} 2s infinite;
+    z-index: 1;
+  }
   &:hover {
     background: #f7d782;
   }
+  img {
+    max-width: 100%;
+    height: 10px;
+    --animate-duration: 10.5s;
+    @media screen and (max-width: 320px) {
+      height: 10px;
+    }
+    @media (min-width: 321px) and (max-width: 399px) {
+      height: 12px;
+    }
+    @media (min-width: 400px) and (max-width: 499px) {
+      height: 12px;
+    }
+  }
 `;
+
 export default Services;
