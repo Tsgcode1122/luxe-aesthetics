@@ -121,7 +121,7 @@ const Head = styled.div`
   );
   border-radius: 10px 10px 0 0;
   padding: 4px 2px 10px 2px;
-
+  font-weight: 600;
   color: black;
   z-index: 1;
 `;
