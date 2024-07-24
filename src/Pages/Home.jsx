@@ -4,6 +4,7 @@ import About from "../Component/About";
 import GlowingDivider from "../Component/GlowingDivider";
 import Services from "../Component/Services";
 import WhyUs from "../Component/WhyUs";
+import Faqs from "../Component/Faqs";
 
 const Home = () => {
   return (
@@ -13,8 +14,10 @@ const Home = () => {
       <About />
       <GlowingDivider />
       <Services />
-      <GlowingDivider />
+      {/* <GlowingDivider /> */}
+
       <WhyUs />
+      <GlowingDivider />
     </>
   );
 };

@@ -26,7 +26,7 @@ const ZoomInComponent = ({ children }) => {
   const variants = {
     hidden: {
       opacity: 0.8,
-      scale: 0.95,
+      scale: 0.9,
     },
     visible: {
       opacity: 1,
