@@ -8,15 +8,18 @@ import {
   FacebookOutlined,
 } from "@ant-design/icons";
 import { Colors } from "./ColorComponent";
+import ZoomInComponent from "./ZoomInComponent";
 
 const ContactContent = () => {
   return (
     <ContactContainer>
       <SubHead>Get In Touch With Us</SubHead>
-      <ContactItem>
-        <EnvironmentOutlined />
-        <span>1418 Manoa Rd Wynnewood Pa 19096</span>
-      </ContactItem>
+      <ZoomInComponent>
+        <ContactItem>
+          <EnvironmentOutlined />
+          <span>1418 Manoa Rd Wynnewood Pa 19096</span>
+        </ContactItem>
+      </ZoomInComponent>
       <ContactItem>
         <PhoneOutlined />
         <a href="tel:+12673127031">(267) 312-7031</a>
@@ -31,10 +34,12 @@ const ContactContent = () => {
           gemluxeaesthetics
         </a>
       </ContactItem>
-      <ContactItem>
-        <MailOutlined />
-        <a href="mailto:gemluxemedspa@gmail.com">gemluxemedspa@gmail.com</a>
-      </ContactItem>
+      <ZoomInComponent>
+        <ContactItem>
+          <MailOutlined />
+          <a href="mailto:gemluxemedspa@gmail.com">gemluxemedspa@gmail.com</a>
+        </ContactItem>
+      </ZoomInComponent>
       <ContactItem>
         <FacebookOutlined />
         <a

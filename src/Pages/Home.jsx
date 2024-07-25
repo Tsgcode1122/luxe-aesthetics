@@ -6,6 +6,7 @@ import Services from "../Component/Services";
 import WhyUs from "../Component/WhyUs";
 import Faqs from "../Component/Faqs";
 import Contact from "../Component/Contact";
+import Bottle from "../Component/Bottle";
 
 const Home = () => {
   return (
@@ -17,7 +18,8 @@ const Home = () => {
       <Services />
 
       <WhyUs />
-      {/* <GlowingDivider /> */}
+      <Bottle />
+      <GlowingDivider />
       <Faqs />
       <Contact />
     </>

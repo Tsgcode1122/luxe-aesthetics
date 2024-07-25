@@ -4,6 +4,7 @@ import styled from "styled-components";
 import ContactContent from "./ContactContent";
 import { Colors } from "./ColorComponent";
 import bg from "../Images/contact.png";
+import MapComponent from "./MapComponent";
 
 const Container = styled.div`
   background: url(${bg}) no-repeat center/cover;
@@ -22,6 +23,7 @@ const Contact = () => {
           <ContactContent />
         </Content>
       </Container>
+      <MapComponent />
     </>
   );
 };
