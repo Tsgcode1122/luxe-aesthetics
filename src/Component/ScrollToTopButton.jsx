@@ -7,9 +7,9 @@ import { Colors, Gradients, Shadows } from "./ColorComponent";
 const ScrollToTop = styled.div`
   position: fixed;
   bottom: 20px;
-  height: 30px;
-  right: 10px;
-  width: 30px;
+  height: 40px;
+  right: 20px;
+  width: 40px;
   cursor: pointer;
   display: flex;
   align-items: center;
