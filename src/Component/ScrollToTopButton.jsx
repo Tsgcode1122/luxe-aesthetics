@@ -25,7 +25,7 @@ const ScrollToTop = styled.div`
   animation: pulse 2s infinite;
   img {
     max-width: 100%;
-    height: 10px;
+    height: 15px;
   }
   @media screen and (max-width: 320px) {
     right: 10px;
