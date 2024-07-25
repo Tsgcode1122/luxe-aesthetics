@@ -1,10 +1,13 @@
 import React from "react";
 import styled from "styled-components";
-
+import logo from "../Images/logo.png";
 const Footer = () => {
   return (
     <Container>
       <Content>
+        <img src={logo} />
+        <p>Business Hours: Monday- Friday</p>
+        <p> 9:00 a.m. - 5:00 p.m. </p>
         <p>© 2024 Gem Luxe Aesthetics. All rights reserved.</p>
       </Content>
     </Container>
@@ -38,6 +41,11 @@ const Content = styled.div`
 
   p {
     margin: 0;
+    padding: 5px;
+  }
+  img {
+    max-width: 100%;
+    height: 60px;
   }
 `;
 

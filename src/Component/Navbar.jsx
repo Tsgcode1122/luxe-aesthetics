@@ -35,7 +35,9 @@ const Navbar = () => {
     <>
       <StyledNavbar style={{ top: visible ? 0 : "-5rem" }}>
         <HeadSpace>
-          <Logo src={logo} alt="Logo" />
+          <Link to="/">
+            <Logo src={logo} alt="Logo" />
+          </Link>
           <MenuToggle onClick={toggleSidebar}>
             <Hamburger
               toggled={isSidebarOpen}
