@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Hero from "../Component/Hero";
 import About from "../Component/About";
 import GlowingDivider from "../Component/GlowingDivider";
@@ -9,6 +9,9 @@ import Contact from "../Component/Contact";
 import Bottle from "../Component/Bottle";
 
 const Home = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
   return (
     <>
       <Hero />
