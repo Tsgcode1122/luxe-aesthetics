@@ -5,10 +5,12 @@ import belly from "../Images/belly.png";
 import SwipeComponent from "./SwipeComponent";
 import Button from "./Button";
 import { Gradients } from "./ColorComponent";
-
+import StarsBackground from "./StarsBackground";
+import WhiteStar from "./WhiteStar";
 const Hero = () => {
   return (
     <HeroSection>
+      <WhiteStar />
       <HeroContent>
         <SwipeComponent direction="left-to-right">
           <Heading>Achieve Your Dream Body with Gem Luxe Aesthetics</Heading>
@@ -32,7 +34,7 @@ const HeroSection = styled.section`
   justify-content: center;
   padding: 40px 20px;
   text-align: center;
-
+  position: relative;
   color: #333;
   /* height: 90vh; */
 `;
@@ -43,7 +45,7 @@ const HeroContent = styled.div`
   background: none;
   border-radius: 8px;
   overflow: hidden;
-  background: url(${bgg}) no-repeat center;
+  /* background: url(${bgg}) no-repeat center; */
   background-position: 50% center;
   background-size: 110%;
 `;

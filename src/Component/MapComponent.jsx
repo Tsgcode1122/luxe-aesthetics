@@ -46,6 +46,9 @@ const MapComponent = () => {
       style={{ height: "400px", width: "100%" }}
       zoomControl={false} // Disable the zoom control
       scrollWheelZoom={false} // Disable scroll wheel zoom
+      doubleClickZoom={false} // Disable double-click zoom
+      touchZoom={false} // Disable touch zoom
+      dragging={false}
     >
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

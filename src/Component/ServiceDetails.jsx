@@ -41,13 +41,12 @@ const ServiceDetails = () => {
           loss efforts.
         </Description>
 
-        <ZoomInComponent>
-          <BottleWrapper>
-            <WhiteStar />
-            <Circle />
-            <BottleImage src={Sema} alt="Bottle" />
-          </BottleWrapper>
-        </ZoomInComponent>
+        <BottleWrapper>
+          <WhiteStar />
+          <Circle />
+          <BottleImage src={Sema} alt="Bottle" />
+        </BottleWrapper>
+
         <KeyBenefits>
           <h4>KEY BENEFITS:</h4>
           <List>
@@ -99,13 +98,12 @@ const ServiceDetails = () => {
           intake, fostering a conducive environment for weight loss.
         </Description>
 
-        <ZoomInComponent>
-          <BottleWrapper>
-            <WhiteStar />
-            <Circle />
-            <BottleImage src={Tirz} alt="Bottle" />
-          </BottleWrapper>
-        </ZoomInComponent>
+        <BottleWrapper>
+          <WhiteStar />
+          <Circle />
+          <BottleImage src={Tirz} alt="Bottle" />
+        </BottleWrapper>
+
         <KeyBenefits>
           <h4>KEY BENEFITS:</h4>
           <List>
