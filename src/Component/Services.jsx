@@ -9,6 +9,8 @@ import Button from "./Button";
 import "animate.css";
 import StarsBackground from "./StarsBackground";
 import SwipeComponent from "./SwipeComponent";
+import { Link } from "react-router-dom";
+
 Gradients;
 const Services = () => {
   return (
@@ -35,14 +37,16 @@ const Services = () => {
                   </Price>
                 </Prices>
               </Bg>
-              <Button2 href="#packages">
-                View Details{" "}
-                <img
-                  src={arrow}
-                  alt="Arrow"
-                  className="animate__animated animate__headShake animate__slower animate__infinite"
-                />
-              </Button2>
+              <Link to="/services">
+                <Button2 to="/services">
+                  View Details{" "}
+                  <img
+                    src={arrow}
+                    alt="Arrow"
+                    className="animate__animated animate__headShake animate__slower animate__infinite"
+                  />
+                </Button2>
+              </Link>
             </Content>
           </SwipeComponent>
           <SwipeComponent direction="right-to-left">
@@ -64,15 +68,16 @@ const Services = () => {
                   </Price>
                 </Prices>
               </Bg>
-
-              <Button2>
-                View Details{" "}
-                <img
-                  src={arrow}
-                  alt="Arrow"
-                  className="animate__animated  animate__headShake animate__slower animate__infinite"
-                />
-              </Button2>
+              <Link to="/services">
+                <Button2>
+                  View Details{" "}
+                  <img
+                    src={arrow}
+                    alt="Arrow"
+                    className="animate__animated  animate__headShake animate__slower animate__infinite"
+                  />
+                </Button2>
+              </Link>
             </Content2>
           </SwipeComponent>
         </>
@@ -139,6 +144,9 @@ const Content = styled.div`
   box-shadow:
     rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
     rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  a {
+    text-decoration: none;
+  }
 `;
 const Content2 = styled.div`
   margin-bottom: 2rem;
@@ -150,6 +158,9 @@ const Content2 = styled.div`
   box-shadow:
     rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
     rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  a {
+    text-decoration: none;
+  }
 `;
 const Bg = styled.div`
   background: rgba(255, 255, 255, 0.8);

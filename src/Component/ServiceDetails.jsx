@@ -8,6 +8,7 @@ import Sema from "../Images/semagl.png";
 import Tirz from "../Images/tirze.png";
 import ZoomInComponent from "./ZoomInComponent";
 import WhiteStar from "./WhiteStar";
+import SwipeComponent from "./SwipeComponent";
 const ServiceDetails = () => {
   return (
     <Container>
@@ -50,10 +51,12 @@ const ServiceDetails = () => {
         <KeyBenefits>
           <h4>KEY BENEFITS:</h4>
           <List>
-            <ListItem>
-              <img src={i4} />{" "}
-              <p>Average weight loss of 5-10 lbs per month. </p>
-            </ListItem>
+            <SwipeComponent direction="left-to-right">
+              <ListItem>
+                <img src={i4} />{" "}
+                <p>Average weight loss of 5-10 lbs per month. </p>
+              </ListItem>
+            </SwipeComponent>
             <ListItem>
               <img src={i4} />
               <p>
@@ -61,13 +64,15 @@ const ServiceDetails = () => {
                 reduction.
               </p>
             </ListItem>
-            <ListItem>
-              <img src={i4} />
-              <p>
-                Helps maintain better glycemic control, reducing HbA1c levels
-                and the need for additional diabetes medications.
-              </p>
-            </ListItem>
+            <SwipeComponent direction="right-to-left">
+              <ListItem>
+                <img src={i4} />
+                <p>
+                  Helps maintain better glycemic control, reducing HbA1c levels
+                  and the need for additional diabetes medications.
+                </p>
+              </ListItem>
+            </SwipeComponent>
           </List>
         </KeyBenefits>
         <Button>Book Now!!!</Button>
@@ -104,14 +109,16 @@ const ServiceDetails = () => {
         <KeyBenefits>
           <h4>KEY BENEFITS:</h4>
           <List>
-            <ListItem>
-              <img src={i4} />
-              <p>
-                Innovative average weight loss formula for a comprehensive
-                weight management strategy designed for individuals seeking a
-                potent solution to complement their weight loss journey.
-              </p>
-            </ListItem>
+            <SwipeComponent direction="left-to-right">
+              <ListItem>
+                <img src={i4} />
+                <p>
+                  Innovative average weight loss formula for a comprehensive
+                  weight management strategy designed for individuals seeking a
+                  potent solution to complement their weight loss journey.
+                </p>
+              </ListItem>
+            </SwipeComponent>
             <ListItem>
               <img src={i4} />
               <p>
@@ -119,13 +126,16 @@ const ServiceDetails = () => {
                 healthier body composition.
               </p>
             </ListItem>
-            <ListItem>
-              <img src={i4} />
-              <p>
-                Combines the benefits of GIP and GLP-1 agonists, offering a more
-                comprehensive approach to appetite and blood sugar regulation.
-              </p>
-            </ListItem>
+            <SwipeComponent direction="right-to-left">
+              <ListItem>
+                <img src={i4} />
+                <p>
+                  Combines the benefits of GIP and GLP-1 agonists, offering a
+                  more comprehensive approach to appetite and blood sugar
+                  regulation.
+                </p>
+              </ListItem>
+            </SwipeComponent>
           </List>
         </KeyBenefits>
         <Button>Book Now!!!</Button>
