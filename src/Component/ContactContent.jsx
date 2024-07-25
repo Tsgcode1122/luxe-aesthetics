@@ -11,13 +11,17 @@ import { Colors } from "./ColorComponent";
 import ZoomInComponent from "./ZoomInComponent";
 
 const ContactContent = () => {
+  const googleMapsLink =
+    "https://www.google.com/maps/search/?api=1&query=1418+Manoa+Rd,+Wynnewood,+PA+19096";
   return (
     <ContactContainer>
       <SubHead>Get In Touch With Us</SubHead>
       <ZoomInComponent>
         <ContactItem>
           <EnvironmentOutlined />
-          <span>1418 Manoa Rd Wynnewood Pa 19096</span>
+          <a href={googleMapsLink} target="_blank" rel="noopener noreferrer">
+            1418 Manoa Rd Wynnewood Pa 19096
+          </a>
         </ContactItem>
       </ZoomInComponent>
       <ContactItem>

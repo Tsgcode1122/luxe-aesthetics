@@ -4,11 +4,13 @@ import bottleImage from "../Images/bottle1.png";
 import { Colors, Gradients } from "./ColorComponent";
 import SwipeComponent from "./SwipeComponent";
 import ZoomInComponent from "./ZoomInComponent";
+import WhiteStar from "./WhiteStar";
 
 const Bottle = () => {
   return (
     <ZoomInComponent>
       <BottleWrapper>
+        <WhiteStar />
         <Circle />
         <BottleImage src={bottleImage} alt="Bottle" />
       </BottleWrapper>

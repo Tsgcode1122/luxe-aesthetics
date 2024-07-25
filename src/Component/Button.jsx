@@ -1,9 +1,13 @@
 import React from "react";
 import styled from "styled-components";
-
+const Pp = styled.div`
+  /* display: inline-block; */
+`;
 const StyledButton = styled.a`
+  position: relative;
   display: inline-block;
   padding: 10px 20px;
+  cursor: pointer;
   margin-bottom: 2rem;
   font-size: 1.2rem;
   color: #fff;
@@ -27,7 +31,8 @@ const StyledButton = styled.a`
   transition: background-color 0.3s;
 
   &:hover {
-    background-color: #f7d782;
+    background: #f7d782;
+    color: black;
   }
 `;
 

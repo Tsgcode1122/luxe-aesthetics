@@ -13,6 +13,7 @@ Gradients;
 const Services = () => {
   return (
     <Container>
+      <StarsBackground />
       <Heading>Services</Heading>
       <SubHead>Offering two Innovative Packages</SubHead>
       <Package>
@@ -75,9 +76,8 @@ const Services = () => {
             </Content2>
           </SwipeComponent>
         </>
+        <Button>Book Now</Button>
       </Package>
-      <Button>Book Now</Button>
-      <StarsBackground />
     </Container>
   );
 };
@@ -99,7 +99,7 @@ const Container = styled.div`
 `;
 const Package = styled.div`
   align-items: center;
-
+  position: relative;
   text-align: center;
 `;
 const SubHead = styled.h5`

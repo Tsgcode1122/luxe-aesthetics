@@ -3,6 +3,7 @@ import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import locationIcon from "../Images/placeholder.png";
+import styled from "styled-components";
 
 const MapComponent = () => {
   const position = [40.006, -75.272];
@@ -28,10 +29,16 @@ const MapComponent = () => {
       />
       <Marker position={position} icon={customIcon}>
         <Popup>
-          GenLuxeAesthetics
-          <a href={googleMapsLink} target="_blank" rel="noopener noreferrer">
-            Open in Google Maps
-          </a>
+          <PopupContent>
+            <PopupTitle>Gem Luxe Aesthetics</PopupTitle>
+            <PopupLink
+              href={googleMapsLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Open in Google Maps
+            </PopupLink>
+          </PopupContent>
         </Popup>
       </Marker>
     </MapContainer>
@@ -39,3 +46,28 @@ const MapComponent = () => {
 };
 
 export default MapComponent;
+
+const PopupContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px;
+`;
+
+const PopupTitle = styled.h3`
+  margin: 0;
+  font-size: 1rem;
+  color: #333;
+`;
+
+const PopupLink = styled.a`
+  margin-top: 5px;
+  font-size: 0.9rem;
+  color: #007bff;
+  text-decoration: underline;
+  cursor: pointer;
+
+  &:hover {
+    color: #0056b3;
+  }
+`;
