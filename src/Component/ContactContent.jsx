@@ -67,6 +67,15 @@ const ContactContainer = styled.div`
   margin: 0;
   align-items: center;
   border-radius: 8px;
+  @media screen and (max-width: 320px) {
+    padding: 0 1rem !important;
+  }
+  @media (min-width: 321px) and (max-width: 399px) {
+    padding: 0 1.3rem !important;
+  }
+  @media (min-width: 400px) and (max-width: 499px) {
+    padding: 0 1.5rem !important;
+  }
 `;
 const SubHead = styled.h5`
   font-size: 1.2rem;
@@ -96,6 +105,7 @@ const ContactItem = styled.div`
   margin-bottom: 1rem;
   font-size: 1rem;
   color: ${Colors.coolBlack};
+
   &:hover {
     background: #f7d782;
   }
