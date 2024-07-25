@@ -36,7 +36,7 @@ const Content = styled.p`
   font-weight: 100 !important;
   color: ${Colors.coolBlack};
   text-align: center;
-
+  margin-bottom: 1rem;
   font-family: "Philosopher", sans-serif !important;
   @media screen and (max-width: 320px) {
     margin-bottom: 1rem;

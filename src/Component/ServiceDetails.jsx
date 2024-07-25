@@ -166,7 +166,7 @@ const Price = styled.p`
   align-items: center;
   color: black;
   gap: 5px;
-  margin-bottom: -1rem;
+  margin-bottom: 0.5rem;
   margin-top: -0.2rem;
   @media screen and (max-width: 320px) {
     margin-bottom: 0.5rem;

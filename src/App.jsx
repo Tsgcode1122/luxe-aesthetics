@@ -31,8 +31,7 @@ const GlobalStyle = createGlobalStyle`
     #f5f2ea 90%,
     #d8d5ce 100%
   );
-  font-family: "Philosopher", sans-serif;
-    /* font-family: "Quincy CF", sans-serif; */
+ font-family: "Philosopher", sans-serif !important;
 
     min-height: 100%;
   }
