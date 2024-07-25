@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import ContactContent from "../Component/ContactContent";
 import styled from "styled-components";
 import MapComponent from "../Component/MapComponent";
-import backgroundImage from "../Images/logo.png";
+import backgroundImage from "../Images/contactb.jpg";
 import bg from "../Images/contact.png";
 import PageHeading from "../Component/PageHeading";
 const Contact = () => {

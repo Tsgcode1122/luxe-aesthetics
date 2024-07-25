@@ -15,10 +15,9 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background: ${({ backgroundImage }) => `url(${backgroundImage})`} no-repeat
-    cover;
-  background-position: 10px top;
-  background-size: 80%;
+  background-image: ${({ backgroundImage }) => `url(${backgroundImage})`};
+  background-position: 50% center;
+  background-size: cover;
 
   position: relative;
   z-index: 1;
@@ -30,7 +29,7 @@ const Container = styled.div`
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.9); /* Add a semi-transparent overlay */
+    background: rgba(0, 0, 0, 0.86); /* Add a semi-transparent overlay */
     z-index: 2;
   }
 `;

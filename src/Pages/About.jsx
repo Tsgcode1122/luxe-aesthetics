@@ -4,7 +4,7 @@ import AboutContent from "../Component/AboutContent";
 import WhyUsContent from "../Component/WhyUsContent";
 import Bottle from "../Component/Bottle";
 import PageHeading from "../Component/PageHeading";
-import backgroundImage from "../Images/logo.png";
+import backgroundImage from "../Images/about.jpg";
 import styled from "styled-components";
 const About = () => {
   useEffect(() => {
