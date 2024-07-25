@@ -88,17 +88,41 @@ const FaqsContainer = styled.div`
   background: url(${bg}) no-repeat center/cover;
   background-position: 10% top;
   background-size: 100%;
-  /* background: ${Colors.offWhite}; */
+
   border-radius: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  @media screen and (max-width: 320px) {
+    border-radius: 30px;
+    margin: 1rem;
+  }
+  @media (min-width: 321px) and (max-width: 399px) {
+    border-radius: 40px;
+    margin: 1.3rem;
+  }
+  @media (min-width: 400px) and (max-width: 499px) {
+    border-radius: 40px;
+    margin: 1.5rem;
+  }
 `;
 const Content = styled.div`
   padding: 2rem;
   border-radius: 50px;
   background: rgb(245, 242, 234, 0.9);
+  @media screen and (max-width: 320px) {
+    border-radius: 30px;
+    padding: 1rem;
+  }
+  @media (min-width: 321px) and (max-width: 399px) {
+    border-radius: 40px;
+    padding: 1.3rem;
+  }
+  @media (min-width: 400px) and (max-width: 499px) {
+    border-radius: 40px;
+    padding: 1.5rem;
+  }
 `;
 const SubHead = styled.h5`
   margin: 0;
@@ -133,6 +157,19 @@ const Question = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media screen and (max-width: 320px) {
+    font-size: 0.9rem;
+    padding: 0.8rem;
+  }
+  @media (min-width: 321px) and (max-width: 399px) {
+    font-size: 1rem;
+
+    padding: 0.9rem;
+  }
+  @media (min-width: 400px) and (max-width: 499px) {
+    padding: 1rem;
+    font-size: 1rem;
+  }
 `;
 
 const Answer = styled(motion.div)`

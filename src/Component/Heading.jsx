@@ -16,6 +16,15 @@ const StyledHeading = styled.h1`
   font-weight: 500;
   position: relative;
   font-family: "Philosopher", sans-serif;
+  @media screen and (max-width: 320px) {
+    font-size: 1.8rem;
+  }
+  @media (min-width: 321px) and (max-width: 399px) {
+    font-size: 2rem;
+  }
+  @media (min-width: 400px) and (max-width: 499px) {
+    font-size: 2rem;
+  }
 `;
 
 const Heading = ({ children }) => {

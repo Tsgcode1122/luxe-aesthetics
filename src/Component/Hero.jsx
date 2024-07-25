@@ -10,7 +10,7 @@ import WhiteStar from "./WhiteStar";
 const Hero = () => {
   return (
     <HeroSection>
-      <WhiteStar />
+      <StarsBackground />
       <HeroContent>
         <SwipeComponent direction="left-to-right">
           <Heading>Achieve Your Dream Body with Gem Luxe Aesthetics</Heading>
@@ -36,7 +36,15 @@ const HeroSection = styled.section`
   text-align: center;
   position: relative;
   color: #333;
-  /* height: 90vh; */
+  @media screen and (max-width: 320px) {
+    padding: 30px 10px;
+  }
+  @media (min-width: 321px) and (max-width: 399px) {
+    padding: 50px 15px 30px 15px;
+  }
+  @media (min-width: 400px) and (max-width: 499px) {
+    padding: 80px 15px 30px 15px;
+  }
 `;
 
 const HeroContent = styled.div`
@@ -45,9 +53,6 @@ const HeroContent = styled.div`
   background: none;
   border-radius: 8px;
   overflow: hidden;
-  /* background: url(${bgg}) no-repeat center; */
-  background-position: 50% center;
-  background-size: 110%;
 `;
 
 const Heading = styled.h1`
@@ -64,6 +69,15 @@ const Heading = styled.h1`
 
   margin-bottom: 20px;
   z-index: 2 !important;
+  @media screen and (max-width: 320px) {
+    font-size: 1.8rem;
+  }
+  @media (min-width: 321px) and (max-width: 399px) {
+    font-size: 2.4rem;
+  }
+  @media (min-width: 400px) and (max-width: 499px) {
+    font-size: 2.4rem;
+  }
 `;
 
 const Subheading = styled.p`
@@ -73,12 +87,21 @@ const Subheading = styled.p`
   font-family: "Philosopher", sans-serif;
   margin-bottom: 30px;
   z-index: 2 !important;
+  @media screen and (max-width: 320px) {
+    font-size: 1rem;
+    padding: 0 25px;
+  }
+  @media (min-width: 321px) and (max-width: 399px) {
+    font-size: 1.1rem;
+    padding: 0 20px;
+  }
+  @media (min-width: 400px) and (max-width: 499px) {
+    font-size: 1.1rem;
+    padding: 0 20px;
+  }
 `;
 
-const CTAButton = styled.a``;
 const Image = styled.div`
-  border-radius: 200px;
-  /* padding: 20px; */
   img {
     max-width: 100%;
     border-radius: 50px;
@@ -94,9 +117,15 @@ const Image = styled.div`
       #f5f2ea 90%,
       #d8d5ce 100%
     );
-
-    /* box-shadow:
-       */
+  }
+  @media screen and (max-width: 320px) {
+    padding: 0 25px;
+  }
+  @media (min-width: 321px) and (max-width: 399px) {
+    padding: 0 20px;
+  }
+  @media (min-width: 400px) and (max-width: 499px) {
+    padding: 0 20px;
   }
 `;
 export default Hero;

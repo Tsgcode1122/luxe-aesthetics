@@ -36,16 +36,31 @@ const Container = styled.div`
 const Content = styled.div`
   text-align: center;
   color: white;
-  font-size: 0.9rem;
-  font-family: "Arial", sans-serif;
 
+  font-family: "Arial", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+  @media screen and (max-width: 320px) {
+    padding: 0 0.8rem;
+  }
+  @media (min-width: 321px) and (max-width: 399px) {
+    padding: 0 1rem;
+  }
+  @media (min-width: 400px) and (max-width: 499px) {
+    padding: 0 1rem;
+  }
   p {
     margin: 0;
-    padding: 5px;
+
+    padding: 1px;
   }
   img {
     max-width: 100%;
     height: 60px;
+    margin-bottom: 1rem;
   }
 `;
 

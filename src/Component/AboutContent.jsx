@@ -38,6 +38,15 @@ const Content = styled.p`
   text-align: center;
 
   font-family: "Philosopher", sans-serif !important;
+  @media screen and (max-width: 320px) {
+    margin-bottom: 1rem;
+  }
+  @media (min-width: 321px) and (max-width: 399px) {
+    margin-bottom: 1rem;
+  }
+  @media (min-width: 400px) and (max-width: 499px) {
+    margin-bottom: 1rem;
+  }
 `;
 const AboutImg = styled.div`
   img {

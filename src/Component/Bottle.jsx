@@ -25,8 +25,17 @@ const BottleWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  /* margin-top: 5rem; */
+
   padding: 7rem 0 5rem 0;
+  @media screen and (max-width: 320px) {
+    padding: 5rem 0 3rem 0;
+  }
+  @media (min-width: 321px) and (max-width: 399px) {
+    padding: 5rem 0 3rem 0;
+  }
+  @media (min-width: 400px) and (max-width: 499px) {
+    padding: 5rem 0 3rem 0;
+  }
 `;
 
 const Circle = styled.div`
@@ -35,6 +44,18 @@ const Circle = styled.div`
   border-radius: 50%;
   background: ${Gradients.goldGradient};
   position: absolute;
+  @media screen and (max-width: 320px) {
+    height: 250px;
+    width: 250px;
+  }
+  @media (min-width: 321px) and (max-width: 399px) {
+    height: 280px;
+    width: 280px;
+  }
+  @media (min-width: 400px) and (max-width: 499px) {
+    height: 280px;
+    width: 280px;
+  }
 `;
 
 const BottleImage = styled.img`
@@ -42,4 +63,13 @@ const BottleImage = styled.img`
   height: 300px;
   position: relative;
   margin-top: -3.53rem;
+  @media screen and (max-width: 320px) {
+    height: 250px;
+  }
+  @media (min-width: 321px) and (max-width: 399px) {
+    height: 280px;
+  }
+  @media (min-width: 400px) and (max-width: 499px) {
+    height: 280px;
+  }
 `;

@@ -101,6 +101,21 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  @media screen and (max-width: 320px) {
+    padding: 0.5rem;
+    border-radius: 30px;
+    margin: 1rem;
+  }
+  @media (min-width: 321px) and (max-width: 399px) {
+    padding: 1rem;
+
+    margin: 1.3rem;
+  }
+  @media (min-width: 400px) and (max-width: 499px) {
+    padding: 1rem;
+
+    margin: 1.5rem;
+  }
 `;
 const Package = styled.div`
   align-items: center;
@@ -110,10 +125,21 @@ const Package = styled.div`
 const SubHead = styled.h5`
   margin: 0;
   font-size: 1.2rem;
+  text-align: center;
   color: #070b0d;
   font-weight: 500;
   font-family: "Philosopher", sans-serif;
   margin-bottom: 30px;
+  @media screen and (max-width: 320px) {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  @media (min-width: 321px) and (max-width: 399px) {
+    font-size: 1.1rem;
+  }
+  @media (min-width: 400px) and (max-width: 499px) {
+    font-size: 1.2rem;
+  }
 `;
 const Head = styled.div`
   background: linear-gradient(
@@ -170,6 +196,13 @@ const Bg = styled.div`
   display: flex;
   flex-direction: column;
   border-radius: 10px;
+  @media screen and (max-width: 320px) {
+    padding: 0rem 0.5rem 0.5rem 0.5rem;
+  }
+  @media (min-width: 321px) and (max-width: 399px) {
+  }
+  @media (min-width: 400px) and (max-width: 499px) {
+  }
 `;
 const Intro = styled.p`
   margin: 0;
@@ -186,6 +219,7 @@ const Price = styled.p`
   display: flex;
   align-items: center;
   gap: 5px;
+  color: black;
   margin-bottom: -1rem;
   margin-top: -0.2rem;
   span {
@@ -199,9 +233,27 @@ const Price = styled.p`
     font-weight: 500;
     position: relative;
     font-family: "Philosopher", sans-serif;
+    @media screen and (max-width: 320px) {
+      font-size: 1.1rem;
+    }
+    @media (min-width: 321px) and (max-width: 399px) {
+      font-size: 1.3rem;
+    }
+    @media (min-width: 400px) and (max-width: 499px) {
+      font-size: 1.3rem;
+    }
   }
   p {
     font-style: italic;
+  }
+  @media screen and (max-width: 320px) {
+    margin-bottom: 0.5rem;
+  }
+  @media (min-width: 321px) and (max-width: 399px) {
+    margin-bottom: 0.5rem;
+  }
+  @media (min-width: 400px) and (max-width: 499px) {
+    margin-bottom: 0.5rem;
   }
 `;
 const rippleAnimation = keyframes`
@@ -217,10 +269,22 @@ const rippleAnimation = keyframes`
 const Button2 = styled.div`
   padding: 10px 20px;
   position: relative;
+  width: 100%;
   cursor: pointer;
+  display: flex;
   font-size: 1.2rem;
+  align-items: center;
+  justify-content: center;
   gap: 20px;
   color: black;
+  @media screen and (max-width: 320px) {
+  }
+  @media (min-width: 321px) and (max-width: 399px) {
+    font-size: 1.2rem;
+  }
+  @media (min-width: 400px) and (max-width: 499px) {
+    font-size: 1.2rem;
+  }
   background: linear-gradient(
     -1deg,
     #0b090a 0%,
@@ -260,10 +324,10 @@ const Button2 = styled.div`
       height: 10px;
     }
     @media (min-width: 321px) and (max-width: 399px) {
-      height: 12px;
+      height: 10px;
     }
     @media (min-width: 400px) and (max-width: 499px) {
-      height: 12px;
+      height: 10px;
     }
   }
 `;

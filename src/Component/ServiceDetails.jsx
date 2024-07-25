@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Colors, Gradients } from "./ColorComponent";
-import Heading from "./Heading";
+// import Heading from "./Heading";
 import Button from "./Button";
 import i4 from "../Images/i4.png";
 import Sema from "../Images/semagl.png";
@@ -50,12 +50,12 @@ const ServiceDetails = () => {
         <KeyBenefits>
           <h4>KEY BENEFITS:</h4>
           <List>
-            <SwipeComponent direction="left-to-right">
+            <ZoomInComponent>
               <ListItem>
                 <img src={i4} />{" "}
                 <p>Average weight loss of 5-10 lbs per month. </p>
               </ListItem>
-            </SwipeComponent>
+            </ZoomInComponent>
             <ListItem>
               <img src={i4} />
               <p>
@@ -63,7 +63,7 @@ const ServiceDetails = () => {
                 reduction.
               </p>
             </ListItem>
-            <SwipeComponent direction="right-to-left">
+            <ZoomInComponent>
               <ListItem>
                 <img src={i4} />
                 <p>
@@ -71,7 +71,7 @@ const ServiceDetails = () => {
                   and the need for additional diabetes medications.
                 </p>
               </ListItem>
-            </SwipeComponent>
+            </ZoomInComponent>
           </List>
         </KeyBenefits>
         <Button>Book Now!!!</Button>
@@ -107,7 +107,7 @@ const ServiceDetails = () => {
         <KeyBenefits>
           <h4>KEY BENEFITS:</h4>
           <List>
-            <SwipeComponent direction="left-to-right">
+            <ZoomInComponent>
               <ListItem>
                 <img src={i4} />
                 <p>
@@ -116,7 +116,7 @@ const ServiceDetails = () => {
                   potent solution to complement their weight loss journey.
                 </p>
               </ListItem>
-            </SwipeComponent>
+            </ZoomInComponent>
             <ListItem>
               <img src={i4} />
               <p>
@@ -124,7 +124,7 @@ const ServiceDetails = () => {
                 healthier body composition.
               </p>
             </ListItem>
-            <SwipeComponent direction="right-to-left">
+            <ZoomInComponent>
               <ListItem>
                 <img src={i4} />
                 <p>
@@ -133,7 +133,7 @@ const ServiceDetails = () => {
                   regulation.
                 </p>
               </ListItem>
-            </SwipeComponent>
+            </ZoomInComponent>
           </List>
         </KeyBenefits>
         <Button>Book Now!!!</Button>
@@ -164,9 +164,19 @@ const Prices = styled.div`
 const Price = styled.p`
   display: flex;
   align-items: center;
+  color: black;
   gap: 5px;
   margin-bottom: -1rem;
   margin-top: -0.2rem;
+  @media screen and (max-width: 320px) {
+    margin-bottom: 0.5rem;
+  }
+  @media (min-width: 321px) and (max-width: 399px) {
+    margin-bottom: 0.5rem;
+  }
+  @media (min-width: 400px) and (max-width: 499px) {
+    margin-bottom: 0.5rem;
+  }
   span {
     font-size: 1.5rem;
     background: ${Gradients.goldGradient};
@@ -195,6 +205,15 @@ const Container = styled.div`
   padding: 2rem;
   text-align: center;
   background: ${Colors.offWhite};
+  @media screen and (max-width: 320px) {
+    padding: 1rem;
+  }
+  @media (min-width: 321px) and (max-width: 399px) {
+    padding: 1.3rem;
+  }
+  @media (min-width: 400px) and (max-width: 499px) {
+    padding: 1.5rem;
+  }
 `;
 
 const Intro = styled.div`
@@ -210,9 +229,43 @@ const Intro = styled.div`
   p {
     font-size: 1.2rem;
     color: ${Colors.coolBlack};
+    @media screen and (max-width: 320px) {
+      font-size: 1rem;
+    }
+    @media (min-width: 321px) and (max-width: 399px) {
+      font-size: 1.1rem;
+    }
+    @media (min-width: 400px) and (max-width: 499px) {
+      font-size: 1.2rem;
+    }
   }
 `;
-
+const Heading = styled.div`
+  text-align: center;
+  padding: 1rem 0 0.5rem 0;
+  margin: 0 !important;
+  background: ${Gradients.goldGradient};
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 0.9;
+  -webkit-text-stroke: 0.91px #8c6c28;
+  font-weight: 500;
+  position: relative;
+  font-family: "Philosopher", sans-serif;
+  @media screen and (max-width: 320px) {
+    font-size: 1.8rem;
+    padding: 1rem 1rem 0.5rem 1rem;
+  }
+  @media (min-width: 321px) and (max-width: 399px) {
+    font-size: 2rem;
+    padding: 1rem 1rem 0.5rem 1rem;
+  }
+  @media (min-width: 400px) and (max-width: 499px) {
+    font-size: 2rem;
+    padding: 1rem 2rem 0.5rem 2rem;
+  }
+`;
 const Package = styled.div`
   position: relative;
   overflow: hidden !important;
@@ -221,7 +274,15 @@ const Package = styled.div`
   margin-bottom: 2rem;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
+  @media screen and (max-width: 320px) {
+    padding: 1.1rem;
+  }
+  @media (min-width: 321px) and (max-width: 399px) {
+    padding: 1.3rem;
+  }
+  @media (min-width: 400px) and (max-width: 499px) {
+    padding: 1.4rem;
+  }
   h2 {
     font-size: 1.8rem;
     color: ${Colors.gold};
@@ -250,6 +311,18 @@ const Circle = styled.div`
   border-radius: 50%;
   background: ${Gradients.goldGradient};
   position: absolute;
+  @media screen and (max-width: 320px) {
+    height: 250px;
+    width: 250px;
+  }
+  @media (min-width: 321px) and (max-width: 399px) {
+    height: 280px;
+    width: 280px;
+  }
+  @media (min-width: 400px) and (max-width: 499px) {
+    height: 280px;
+    width: 280px;
+  }
 `;
 
 const BottleImage = styled.img`
@@ -257,6 +330,15 @@ const BottleImage = styled.img`
   height: 300px;
   position: relative;
   margin-top: -3.53rem;
+  @media screen and (max-width: 320px) {
+    height: 250px;
+  }
+  @media (min-width: 321px) and (max-width: 399px) {
+    height: 280px;
+  }
+  @media (min-width: 400px) and (max-width: 499px) {
+    height: 280px;
+  }
 `;
 
 const Description = styled.p`
@@ -277,6 +359,24 @@ const KeyBenefits = styled.div`
     font-weight: 500;
     position: relative;
     font-family: "Philosopher", sans-serif;
+    @media screen and (max-width: 320px) {
+      /* padding-bottom: 1.1rem; */
+    }
+    @media (min-width: 321px) and (max-width: 399px) {
+      padding-bottom: 1.1rem;
+    }
+    @media (min-width: 400px) and (max-width: 499px) {
+      padding-bottom: 1.1rem;
+    }
+  }
+  @media screen and (max-width: 320px) {
+    margin-top: 1.5rem;
+  }
+  @media (min-width: 321px) and (max-width: 399px) {
+    margin-top: 2.5rem;
+  }
+  @media (min-width: 400px) and (max-width: 499px) {
+    margin-top: 2.5rem;
   }
 `;
 const List = styled.div`

@@ -26,7 +26,7 @@ const ContactContent = () => {
       </ZoomInComponent>
       <ContactItem>
         <PhoneOutlined />
-        <a href="tel:+12673127031">(267) 312-7031</a>
+        <a href="tel:+14849952726">(484) 995-2726</a>
       </ContactItem>
       <ContactItem>
         <InstagramOutlined />

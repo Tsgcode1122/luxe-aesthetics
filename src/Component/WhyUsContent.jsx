@@ -55,6 +55,15 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  @media screen and (max-width: 320px) {
+    padding: 0 1rem;
+  }
+  @media (min-width: 321px) and (max-width: 399px) {
+    padding: 0 1.3rem;
+  }
+  @media (min-width: 400px) and (max-width: 499px) {
+    padding: 0 1.5rem;
+  }
 `;
 const SubHead = styled.h5`
   margin: 0;
@@ -64,6 +73,15 @@ const SubHead = styled.h5`
   text-align: center;
   font-family: "Philosopher", sans-serif;
   margin-bottom: 30px;
+  @media screen and (max-width: 320px) {
+    font-size: 1rem;
+  }
+  @media (min-width: 321px) and (max-width: 399px) {
+    font-size: 1.1rem;
+  }
+  @media (min-width: 400px) and (max-width: 499px) {
+    font-size: 1.2rem;
+  }
 `;
 const List = styled.div`
   margin: 0;
