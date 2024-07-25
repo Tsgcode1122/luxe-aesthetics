@@ -16,8 +16,8 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   background: ${({ backgroundImage }) => `url(${backgroundImage})`} no-repeat
-    center;
-  /* background-position: 50% center; */
+    cover;
+  background-position: 10px top;
   background-size: 80%;
 
   position: relative;

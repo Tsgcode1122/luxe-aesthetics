@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 
 import Bottle from "../Component/Bottle";
 import PageHeading from "../Component/PageHeading";
-import backgroundImage from "../Images/logo.png";
+import backgroundImage from "../Images/services.jpg";
 import styled from "styled-components";
 import ServiceDetails from "../Component/ServiceDetails";
 const Services = () => {

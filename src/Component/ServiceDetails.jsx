@@ -4,6 +4,10 @@ import { Colors, Gradients } from "./ColorComponent";
 import Heading from "./Heading";
 import Button from "./Button";
 import i4 from "../Images/i4.png";
+import Sema from "../Images/semagl.png";
+import Tirz from "../Images/tirze.png";
+import ZoomInComponent from "./ZoomInComponent";
+import WhiteStar from "./WhiteStar";
 const ServiceDetails = () => {
   return (
     <Container>
@@ -35,6 +39,14 @@ const ServiceDetails = () => {
           apart is the addition of a potent enhancer that amplifies your weight
           loss efforts.
         </Description>
+
+        <ZoomInComponent>
+          <BottleWrapper>
+            <WhiteStar />
+            <Circle />
+            <BottleImage src={Sema} alt="Bottle" />
+          </BottleWrapper>
+        </ZoomInComponent>
         <KeyBenefits>
           <h4>KEY BENEFITS:</h4>
           <List>
@@ -81,6 +93,14 @@ const ServiceDetails = () => {
           manage blood while simultaneously reducing appetite and caloric
           intake, fostering a conducive environment for weight loss.
         </Description>
+
+        <ZoomInComponent>
+          <BottleWrapper>
+            <WhiteStar />
+            <Circle />
+            <BottleImage src={Tirz} alt="Bottle" />
+          </BottleWrapper>
+        </ZoomInComponent>
         <KeyBenefits>
           <h4>KEY BENEFITS:</h4>
           <List>
@@ -207,10 +227,28 @@ const Package = styled.div`
   }
 `;
 
-const SpecialPrice = styled.p`
-  font-size: 1.2rem;
-  color: ${Colors.lightGold};
-  font-weight: bold;
+const BottleWrapper = styled.div`
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin-top: 5rem; */
+  padding: 3rem 0 1rem 0;
+`;
+
+const Circle = styled.div`
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: ${Gradients.goldGradient};
+  position: absolute;
+`;
+
+const BottleImage = styled.img`
+  max-width: 100%;
+  height: 300px;
+  position: relative;
+  margin-top: -3.53rem;
 `;
 
 const Description = styled.p`
