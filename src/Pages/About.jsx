@@ -18,7 +18,9 @@ const About = () => {
           <AboutContent />
         </AContain>
         <Cont>
-          <WhyUsContent />
+          <div>
+            <WhyUsContent />
+          </div>
           <Bottle />
         </Cont>
       </Container>
@@ -31,8 +33,15 @@ const AContain = styled.div`
 `;
 const Cont = styled.div`
   @media screen and (min-width: 1000px) {
-    display: grid;
-    grid-template-columns: 50% 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  div {
+    @media screen and (min-width: 1000px) {
+      flex: 1;
+    }
   }
 `;
 export default About;

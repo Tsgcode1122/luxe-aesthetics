@@ -241,6 +241,7 @@ const Intro = styled.div`
   }
 `;
 const Heading = styled.div`
+  font-size: 2rem;
   text-align: center;
   padding: 1rem 0 0.5rem 0;
   margin: 0 !important;
@@ -348,6 +349,7 @@ const Description = styled.p`
 `;
 
 const KeyBenefits = styled.div`
+  margin-top: 2.5rem;
   h4 {
     font-size: 1.2rem;
     background: ${Gradients.goldGradient};
