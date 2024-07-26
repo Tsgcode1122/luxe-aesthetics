@@ -8,6 +8,11 @@ import MapComponent from "./MapComponent";
 
 const Container = styled.div`
   background: url(${bg}) no-repeat center/cover;
+  div {
+    @media screen and (min-width: 1000px) {
+      flex: 1;
+    }
+  }
 `;
 const Content = styled.div`
   padding: 2rem 0rem;
@@ -16,16 +21,23 @@ const Content = styled.div`
 
 const Contact = () => {
   return (
-    <>
-      <Container>
-        <Content>
-          <Heading>Contact Us?</Heading>
-          <ContactContent />
-        </Content>
-      </Container>
+    <Cont>
+      <div>
+        <Container>
+          <Content>
+            <Heading>Contact Us?</Heading>
+            <ContactContent />
+          </Content>
+        </Container>
+      </div>
       <MapComponent />
-    </>
+    </Cont>
   );
 };
-
+const Cont = styled.div`
+  @media screen and (min-width: 1000px) {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+`;
 export default Contact;

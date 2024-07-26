@@ -37,13 +37,17 @@ const Home = () => {
 };
 const Divider = styled.div`
   @media screen and (min-width: 1000px) {
+    padding: 2rem 3rem 1rem 3rem;
     display: flex;
+    align-items: center;
+    justify-content: center;
     div {
       flex: 1;
     }
   }
   @media screen and (min-width: 1200px) {
     display: flex;
+    padding: 2rem 8rem 1rem 8rem;
   }
 `;
 export default Home;

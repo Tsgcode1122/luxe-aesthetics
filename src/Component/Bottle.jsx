@@ -36,6 +36,9 @@ const BottleWrapper = styled.div`
   @media (min-width: 400px) and (max-width: 499px) {
     padding: 5rem 0 3rem 0;
   }
+  @media screen and (min-width: 1000px) {
+    padding: 8rem 0 5rem 0;
+  }
 `;
 
 const Circle = styled.div`
@@ -56,6 +59,10 @@ const Circle = styled.div`
     height: 280px;
     width: 280px;
   }
+  @media screen and (min-width: 1000px) {
+    width: 350px;
+    height: 350px;
+  }
 `;
 
 const BottleImage = styled.img`
@@ -71,5 +78,8 @@ const BottleImage = styled.img`
   }
   @media (min-width: 400px) and (max-width: 499px) {
     height: 280px;
+  }
+  @media screen and (min-width: 1000px) {
+    height: 350px;
   }
 `;

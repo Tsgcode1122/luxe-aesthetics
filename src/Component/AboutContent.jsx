@@ -23,7 +23,6 @@ const AboutContent = () => {
         <SwipeComponent direction="right-to-left">
           <Button>Book Now</Button>
         </SwipeComponent>
-        
       </div>
       <AboutImg>
         <img src={aboutimg} />
