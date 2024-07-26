@@ -17,8 +17,10 @@ const About = () => {
         <AContain>
           <AboutContent />
         </AContain>
-        <WhyUsContent />
-        <Bottle />
+        <Cont>
+          <WhyUsContent />
+          <Bottle />
+        </Cont>
       </Container>
     </>
   );
@@ -26,5 +28,11 @@ const About = () => {
 const Container = styled.div``;
 const AContain = styled.div`
   padding: 2rem;
+`;
+const Cont = styled.div`
+  @media screen and (min-width: 1000px) {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
 `;
 export default About;

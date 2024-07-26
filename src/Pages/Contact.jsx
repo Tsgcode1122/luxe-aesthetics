@@ -30,6 +30,9 @@ const Container = styled.div`
 const Content = styled.div`
   padding: 2rem 0rem;
   background: rgb(245, 242, 234, 0.9);
+  @media screen and (min-width: 1000px) {
+    padding: 4rem 0rem;
+  }
 `;
 const Cont = styled.div`
   @media screen and (min-width: 1000px) {
