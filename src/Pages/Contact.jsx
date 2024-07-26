@@ -12,12 +12,15 @@ const Contact = () => {
   return (
     <>
       <PageHeading backgroundImage={backgroundImage} text="Contact Us" />
-      <Container>
-        <Content>
-          <ContactContent />
-        </Content>
-      </Container>
-      <MapComponent />
+
+      <Cont>
+        <Container>
+          <Content>
+            <ContactContent />
+          </Content>
+        </Container>
+        <MapComponent />
+      </Cont>
     </>
   );
 };
@@ -27,5 +30,11 @@ const Container = styled.div`
 const Content = styled.div`
   padding: 2rem 0rem;
   background: rgb(245, 242, 234, 0.9);
+`;
+const Cont = styled.div`
+  @media screen and (min-width: 1000px) {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
 `;
 export default Contact;
