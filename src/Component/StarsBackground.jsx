@@ -52,14 +52,14 @@ const Background = styled.div`
 `;
 
 const StarsBackground = () => {
-  const [numStars, setNumStars] = useState(100);
+  const [numStars, setNumStars] = useState(300);
 
   useEffect(() => {
     const updateNumStars = () => {
       if (window.innerWidth >= 1000) {
-        setNumStars(800);
+        setNumStars(1000);
       } else {
-        setNumStars(100);
+        setNumStars(300);
       }
     };
 
