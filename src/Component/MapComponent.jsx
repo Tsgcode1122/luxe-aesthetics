@@ -43,7 +43,7 @@ const MapComponent = () => {
     <MapContainer
       center={position}
       zoom={15}
-      style={{ height: "400px", width: "100%" }}
+      style={{ height: "600px", width: "100%" }}
       zoomControl={false} // Disable the zoom control
       scrollWheelZoom={false} // Disable scroll wheel zoom
       doubleClickZoom={false} // Disable double-click zoom
