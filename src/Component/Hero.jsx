@@ -7,30 +7,36 @@ import Button from "./Button";
 import { Gradients } from "./ColorComponent";
 import StarsBackground from "./StarsBackground";
 import WhiteStar from "./WhiteStar";
+import HeroMoving from "./HeroMoving";
 const Hero = () => {
   return (
     <HeroSection>
       <StarsBackground />
       <HeroContent>
-        <SwipeComponent direction="left-to-right">
-          <Heading>Achieve Your Dream Body with Gem Luxe Aesthetics</Heading>
-        </SwipeComponent>
-        <SwipeComponent direction="right-to-left">
-          <Subheading>
-            Tailored Weight Loss Solutions for a Vibrant You!
-          </Subheading>
-        </SwipeComponent>
-        <Button href="#packages">Book Appointment</Button>
+        <div>
+          <SwipeComponent direction="left-to-right">
+            <Heading>Achieve Your Dream Body with Gem Luxe Aesthetics</Heading>
+          </SwipeComponent>
+          <SwipeComponent direction="right-to-left">
+            <Subheading>
+              Tailored Weight Loss Solutions for a Vibrant You!
+            </Subheading>
+          </SwipeComponent>
+          <Button href="#packages">Book Appointment</Button>
+        </div>
         <Image>
           <img src={belly} />
         </Image>
       </HeroContent>
+      <HeroMoving />
     </HeroSection>
   );
 };
 
 const HeroSection = styled.section`
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   padding: 40px 20px;
   text-align: center;
@@ -45,6 +51,15 @@ const HeroSection = styled.section`
   @media (min-width: 400px) and (max-width: 499px) {
     padding: 80px 15px 30px 15px;
   }
+  @media screen and (min-width: 600px) {
+    padding: 6rem 2rem 1rem 2rem;
+  }
+  @media screen and (min-width: 1000px) {
+    padding: 7rem 3rem 1rem 3rem;
+  }
+  @media screen and (min-width: 1200px) {
+    padding: 7rem 8rem 1rem 8rem;
+  }
 `;
 
 const HeroContent = styled.div`
@@ -53,6 +68,17 @@ const HeroContent = styled.div`
   background: none;
   border-radius: 8px;
   overflow: hidden;
+  @media screen and (min-width: 1000px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+  div {
+    @media screen and (min-width: 1000px) {
+      flex: 1;
+    }
+  }
 `;
 
 const Heading = styled.h1`
@@ -78,6 +104,9 @@ const Heading = styled.h1`
   @media (min-width: 400px) and (max-width: 499px) {
     font-size: 2.4rem;
   }
+  @media screen and (min-width: 600px) {
+    font-size: 3rem;
+  }
 `;
 
 const Subheading = styled.p`
@@ -98,6 +127,10 @@ const Subheading = styled.p`
   @media (min-width: 400px) and (max-width: 499px) {
     font-size: 1.1rem;
     padding: 0 20px;
+  }
+  @media screen and (min-width: 600px) {
+    font-size: 1.4rem;
+    padding: 0 2rem;
   }
 `;
 
@@ -126,6 +159,13 @@ const Image = styled.div`
   }
   @media (min-width: 400px) and (max-width: 499px) {
     padding: 0 20px;
+  }
+  @media screen and (min-width: 600px) {
+    padding: 0 3rem;
+  }
+  @media screen and (min-width: 1000px) {
+    transform: scaleX(-1);
+    padding: 0;
   }
 `;
 export default Hero;

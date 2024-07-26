@@ -84,13 +84,93 @@ const Navbar = () => {
         </Sidebar>
       )}
       {isSidebarOpen && <Overlay onClick={closeSidebar} />}
+      <FixedNavbar>
+        <HeadSpace>
+          <Link to="/">
+            <Logo src={logo} alt="Logo" />
+          </Link>
+          <MenuList>
+            <ul>
+              <ListLink to="/">Home</ListLink>
+
+              <ListLink to="/about">About</ListLink>
+
+              <ListLink to="/services">Services</ListLink>
+
+              <ListLink to="/contact">Contact Us</ListLink>
+
+              <ListLink to="/appointment">Book Appointment</ListLink>
+            </ul>
+          </MenuList>
+        </HeadSpace>
+      </FixedNavbar>
     </>
   );
 };
+const FixedNavbar = styled.div`
+  display: none;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 999 !important;
+  background: linear-gradient(
+    190deg,
+    #1f1809 10%,
+    #181501 30%,
+    #1f1809 50%,
+    #181501 70%,
+    #2f240d 90%,
+    #181501 100%
+  );
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: top 0.3s;
+  img {
+    max-width: 100%;
+    height: 20px;
+  }
+  @media screen and (min-width: 900px) {
+    display: block;
+  }
+`;
+const MenuList = styled.div`
+  ul {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+    text-decoration: none;
+    color: white;
+
+    @media screen and (min-width: 1100px) {
+      gap: 20px;
+    }
+  }
+`;
+const ListLink = styled(Link)`
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  background: transparent;
+
+  border-radius: 0.375rem;
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s;
+  &:hover {
+    color: #070b0d;
+    background-color: #d0ad5b;
+    border-color: #f7d782;
+  }
+`;
 
 const Logo = styled.img`
   max-width: 100%;
   height: 30px !important;
+  @media screen and (min-width: 1100px) {
+    height: 40px !important;
+  }
+  @media screen and (min-width: 1200px) {
+    height: 45px !important;
+  }
 `;
 
 const Sidebar = styled(motion.div)`
@@ -169,6 +249,9 @@ const StyledNavbar = styled.div`
     max-width: 100%;
     height: 20px;
   }
+  @media screen and (min-width: 900px) {
+    display: none;
+  }
 `;
 
 const HeadSpace = styled.div`
@@ -176,6 +259,18 @@ const HeadSpace = styled.div`
   display: flex;
   margin: 2px 10px;
   justify-content: space-between;
+  @media screen and (min-width: 700px) {
+    margin: 5px 2rem;
+  }
+  @media screen and (min-width: 900px) {
+    margin: 5px 3rem;
+  }
+  @media screen and (min-width: 1100px) {
+    margin: 5px 4rem;
+  }
+  @media screen and (min-width: 1200px) {
+    margin: 5px 8rem;
+  }
 `;
 
 const MenuToggle = styled.div`

@@ -17,8 +17,9 @@ import Services from "./Pages/Services";
 
 const GlobalStyle = createGlobalStyle`
   html, body {
-    margin: 0;
-    padding: 0;
+    margin: 0 !important;
+    padding: 0 !important;
+
   background: linear-gradient(
     45deg,
     #d8d5ce 0%,
