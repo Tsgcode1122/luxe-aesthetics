@@ -4,6 +4,7 @@ import SwipeComponent from "./SwipeComponent";
 import Button from "./Button";
 import aboutimg from "../Images/clop.png";
 import { Colors, Gradients } from "./ColorComponent";
+import { Link } from "react-router-dom";
 // import Heading from "./Heading";
 
 const AboutContent = () => {
@@ -21,7 +22,9 @@ const AboutContent = () => {
           </Content>
         </SwipeComponent>
         <SwipeComponent direction="right-to-left">
-          <Button>Book Now</Button>
+          <Link to="appointment">
+            <Button>Book Now</Button>
+          </Link>
         </SwipeComponent>
       </div>
       <AboutImg>

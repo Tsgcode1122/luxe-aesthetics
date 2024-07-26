@@ -8,7 +8,8 @@ import Sema from "../Images/semagl.png";
 import Tirz from "../Images/tirze.png";
 import ZoomInComponent from "./ZoomInComponent";
 import WhiteStar from "./WhiteStar";
-import SwipeComponent from "./SwipeComponent";
+import { Link } from "react-router-dom";
+
 const ServiceDetails = () => {
   return (
     <Container>
@@ -75,7 +76,9 @@ const ServiceDetails = () => {
             </ZoomInComponent>
           </List>
         </KeyBenefits>
-        <Button>Book Now!!!</Button>
+        <Link to="appointment">
+          <Button>Book Now!!!</Button>
+        </Link>
       </Package>
       <Package>
         <SideCross>Highly Recommended</SideCross>
@@ -139,7 +142,9 @@ const ServiceDetails = () => {
             </ZoomInComponent>
           </List>
         </KeyBenefits>
-        <Button>Book Now!!!</Button>
+        <Link to="appointment">
+          <Button>Book Now!!!</Button>
+        </Link>
       </Package>
     </Container>
   );

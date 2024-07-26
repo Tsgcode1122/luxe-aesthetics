@@ -58,9 +58,9 @@ const Container = styled.div`
 
 const Iframe = styled.iframe`
   width: 100%;
-
+  height: 100vh;
   border: none;
   @media screen and (max-width: 768px) {
-    height: 70vh; // Adjust for smaller screens if needed
+    height: 90vh;
   }
 `;

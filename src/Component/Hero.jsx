@@ -8,6 +8,7 @@ import { Gradients } from "./ColorComponent";
 import StarsBackground from "./StarsBackground";
 import WhiteStar from "./WhiteStar";
 import HeroMoving from "./HeroMoving";
+import { Link } from "react-router-dom";
 const Hero = () => {
   return (
     <HeroSection>
@@ -22,7 +23,9 @@ const Hero = () => {
               Tailored Weight Loss Solutions for a Vibrant You!
             </Subheading>
           </SwipeComponent>
-          <Button href="#packages">Book Appointment</Button>
+          <Link to="appointment">
+            <Button href="#packages">Book Appointment</Button>
+          </Link>
         </div>
         <Image>
           <img src={belly} />
