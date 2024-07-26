@@ -380,6 +380,12 @@ const Description = styled.p`
 
 const KeyBenefits = styled.div`
   margin-top: 2.5rem;
+  @media screen and (min-width: 800px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
   h4 {
     padding-bottom: 1.1rem;
     font-size: 1.2rem;
@@ -421,6 +427,9 @@ const List = styled.div`
   padding-bottom: 2rem;
   color: ${Colors.coolBlack};
   list-style: none;
+  @media screen and (min-width: 800px) {
+    max-width: 500px;
+  }
 `;
 const ListItem = styled.div`
   p {
