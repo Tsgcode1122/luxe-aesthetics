@@ -8,6 +8,7 @@ import Faqs from "../Component/Faqs";
 import Contact from "../Component/Contact";
 import Bottle from "../Component/Bottle";
 import styled from "styled-components";
+import ImageWithClipPath from "../Component/ImageWithClipPath";
 
 const Home = () => {
   useEffect(() => {
@@ -18,6 +19,7 @@ const Home = () => {
       <Hero />
       <GlowingDivider />
       <About />
+      <ImageWithClipPath />
       <GlowingDivider />
       <Services />
 

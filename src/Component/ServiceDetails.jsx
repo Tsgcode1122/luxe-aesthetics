@@ -21,10 +21,9 @@ const ServiceDetails = () => {
       <Package>
         <SideCross>Popular by Demand</SideCross>
         <Heading>Semaglutide Package</Heading>
-
+        <SubHead>GLP-1 SEMAGLUTIDE</SubHead>
         <Divide>
-          <span>
-            <SubHead>GLP-1 SEMAGLUTIDE</SubHead>
+          <div>
             <Prices>
               <Price>
                 <span>$ 299.00</span>
@@ -42,7 +41,7 @@ const ServiceDetails = () => {
               sets our Semaglutide apart is the addition of a potent enhancer
               that amplifies your weight loss efforts.
             </Description>
-          </span>
+          </div>
           <BottleWrapper>
             <WhiteStar />
             <Circle />
@@ -79,11 +78,11 @@ const ServiceDetails = () => {
         <Button>Book Now!!!</Button>
       </Package>
       <Package>
+        <SideCross>Highly Recommended</SideCross>
         <Heading>Tirzepatide Package</Heading>
         <SubHead>GIP/GLP-1 TIRZEPATIDE</SubHead>
         <Divide>
-          <span>
-            <SideCross>Highly Recommended</SideCross>
+          <div>
             <Prices>
               <Price>
                 <span>$ 349.00</span>
@@ -101,7 +100,7 @@ const ServiceDetails = () => {
               and caloric intake, fostering a conducive environment for weight
               loss.
             </Description>
-          </span>
+          </div>
           <BottleWrapper>
             <WhiteStar />
             <Circle />
@@ -149,11 +148,21 @@ const ServiceDetails = () => {
 export default ServiceDetails;
 const Divide = styled.div`
   @media screen and (min-width: 800px) {
-    display: grid;
-    grid-template-columns: 50% 50%;
+    padding: 0rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
   }
-  span {
+  @media screen and (min-width: 1000px) {
+    padding: 0rem 2rem;
+  }
+  @media screen and (min-width: 1200px) {
+    padding: 0rem 4rem;
+  }
+  div {
     @media screen and (min-width: 800px) {
+      flex: 1;
     }
   }
 `;
