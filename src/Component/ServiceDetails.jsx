@@ -351,6 +351,7 @@ const Description = styled.p`
 const KeyBenefits = styled.div`
   margin-top: 2.5rem;
   h4 {
+    padding-bottom: 1.1rem;
     font-size: 1.2rem;
     background: ${Gradients.goldGradient};
     -webkit-background-clip: text;

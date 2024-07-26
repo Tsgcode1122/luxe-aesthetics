@@ -67,12 +67,6 @@ const Container = styled.div`
   @media screen and (min-width: 600px) {
     padding: 0 2rem;
   }
-  @media screen and (min-width: 1000px) {
-    padding: 1rem 3rem;
-  }
-  @media screen and (min-width: 1200px) {
-    padding: 2rem 8rem;
-  }
 `;
 const SubHead = styled.h5`
   margin: 0;
@@ -90,6 +84,11 @@ const SubHead = styled.h5`
   }
   @media (min-width: 400px) and (max-width: 499px) {
     font-size: 1.2rem;
+  }
+  @media screen and (min-width: 1000px) {
+    font-size: 1.4rem;
+
+    font-weight: 600;
   }
 `;
 const List = styled.div`
