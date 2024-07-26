@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled, { keyframes } from "styled-components";
 
 const moveStars = keyframes`
@@ -45,7 +45,6 @@ const Arrow = styled.div`
 
 const Background = styled.div`
   position: absolute;
-
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -53,7 +52,26 @@ const Background = styled.div`
 `;
 
 const StarsBackground = () => {
-  const starElements = Array.from({ length: 100 }, (_, index) => (
+  const [numStars, setNumStars] = useState(100);
+
+  useEffect(() => {
+    const updateNumStars = () => {
+      if (window.innerWidth >= 1000) {
+        setNumStars(800);
+      } else {
+        setNumStars(100);
+      }
+    };
+
+    window.addEventListener("resize", updateNumStars);
+    updateNumStars();
+
+    return () => {
+      window.removeEventListener("resize", updateNumStars);
+    };
+  }, []);
+
+  const starElements = Array.from({ length: numStars }, (_, index) => (
     <Star key={index} />
   ));
   const arrowElements = Array.from({ length: 3 }, (_, index) => (

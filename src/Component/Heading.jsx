@@ -14,6 +14,7 @@ const StyledHeading = styled.h1`
   line-height: 0.9;
   -webkit-text-stroke: 0.91px #8c6c28;
   font-weight: 500;
+  font-size: 2rem;
   position: relative;
   font-family: "Philosopher", sans-serif;
   @media screen and (max-width: 320px) {

@@ -19,7 +19,7 @@ const Services = () => {
       <Heading>Services</Heading>
       <SubHead>Offering two Innovative Packages</SubHead>
       <Package>
-        <>
+        <Divide>
           <SwipeComponent direction="left-to-right">
             <Content>
               <Head>GLP-1 Semaglutide</Head>
@@ -80,7 +80,7 @@ const Services = () => {
               </Link>
             </Content2>
           </SwipeComponent>
-        </>
+        </Divide>
         <Button>Book Now</Button>
       </Package>
     </Container>
@@ -116,11 +116,29 @@ const Container = styled.div`
 
     margin: 1.5rem;
   }
+  @media screen and (min-width: 600px) {
+    padding: 2rem 2rem 1rem 2rem;
+  }
+  @media screen and (min-width: 1000px) {
+    padding: 2rem 3rem 1rem 3rem;
+    margin: 2rem 3rem 1rem 3rem;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding: 2rem 8rem 1rem 8rem;
+    margin: 2rem 8rem 1rem 8rem;
+  }
 `;
 const Package = styled.div`
   align-items: center;
   position: relative;
   text-align: center;
+`;
+const Divide = styled.div`
+  @media screen and (min-width: 800px) {
+    display: flex;
+    gap: 2rem;
+  }
 `;
 const SubHead = styled.h5`
   margin: 0;
@@ -207,7 +225,7 @@ const Bg = styled.div`
 const Intro = styled.p`
   margin: 0;
   padding-top: 10px;
-  color: ${Colors.coolBlack};
+  color: black;
 `;
 const Prices = styled.div`
   display: flex;

@@ -64,6 +64,15 @@ const Container = styled.div`
   @media (min-width: 400px) and (max-width: 499px) {
     padding: 0 1.5rem;
   }
+  @media screen and (min-width: 600px) {
+    padding: 0 2rem;
+  }
+  @media screen and (min-width: 1000px) {
+    padding: 1rem 3rem;
+  }
+  @media screen and (min-width: 1200px) {
+    padding: 2rem 8rem;
+  }
 `;
 const SubHead = styled.h5`
   margin: 0;
@@ -97,6 +106,12 @@ const ListItem = styled.div`
     margin: 0;
     padding: 0;
     font-size: 15px;
+    @media screen and (min-width: 1000px) {
+      font-size: 17px;
+    }
+    @media screen and (min-width: 1200px) {
+      font-size: 20px;
+    }
   }
 
   display: flex;
