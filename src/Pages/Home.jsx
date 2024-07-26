@@ -19,7 +19,7 @@ const Home = () => {
       <Hero />
       <GlowingDivider />
       <About />
-      <ImageWithClipPath />
+
       <GlowingDivider />
       <Services />
 

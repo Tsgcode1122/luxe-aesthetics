@@ -5,7 +5,7 @@ import { Colors, Gradients } from "./ColorComponent";
 import PendulumSwing from "./PendulumSwing";
 
 const Container = styled.div`
-  padding: 0rem 2rem 2rem 2rem;
+  padding: 0rem 2rem 0rem 2rem;
   @media screen and (max-width: 320px) {
     padding: 0rem 1rem 1rem 1rem;
   }

@@ -1,17 +1,17 @@
 import React from "react";
 import styled from "styled-components";
-import exampleImage from "../Images/clop.jpg";
+import exampleImage from "../Images/chopp.png";
 
 const ImageContainer = styled.div`
-  height: 400px;
+  /* height: 400px; */
   overflow: hidden;
   position: relative;
 `;
 
 const ClippedImage = styled.img`
-  width: 100%;
+  max-width: 100%;
   height: 100%;
-  object-fit: cover;
+  /* object-fit: cover; */
 `;
 
 const ImageWithClipPath = () => (

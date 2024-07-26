@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import SwipeComponent from "./SwipeComponent";
 import Button from "./Button";
-import aboutimg from "../Images/belly2.jpg";
+import aboutimg from "../Images/clop.png";
 import { Colors, Gradients } from "./ColorComponent";
 // import Heading from "./Heading";
 
