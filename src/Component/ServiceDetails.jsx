@@ -21,32 +21,34 @@ const ServiceDetails = () => {
       <Package>
         <SideCross>Popular by Demand</SideCross>
         <Heading>Semaglutide Package</Heading>
-        <SubHead>GLP-1 SEMAGLUTIDE</SubHead>
 
-        <Prices>
-          <Price>
-            <span>$ 299.00</span>
-            <p> USD/monthly</p>
-          </Price>
-          <Price>
-            <span>$ 150.00 </span> <p>/ first month special</p>
-          </Price>
-        </Prices>
-        <Description>
-          Unlock the power of Semaglutide, a revolutionary GLP-1 agonist that
-          not only aids in enhanced insulin secretion but also significantly
-          reduces your appetite. This mechanism creates a calorie deficit,
-          paving the way for effective weight loss. What sets our Semaglutide
-          apart is the addition of a potent enhancer that amplifies your weight
-          loss efforts.
-        </Description>
-
-        <BottleWrapper>
-          <WhiteStar />
-          <Circle />
-          <BottleImage src={Sema} alt="Bottle" />
-        </BottleWrapper>
-
+        <Divide>
+          <span>
+            <SubHead>GLP-1 SEMAGLUTIDE</SubHead>
+            <Prices>
+              <Price>
+                <span>$ 299.00</span>
+                <p> USD/monthly</p>
+              </Price>
+              <Price>
+                <span>$ 150.00 </span> <p>/ first month special</p>
+              </Price>
+            </Prices>
+            <Description>
+              Unlock the power of Semaglutide, a revolutionary GLP-1 agonist
+              that not only aids in enhanced insulin secretion but also
+              significantly reduces your appetite. This mechanism creates a
+              calorie deficit, paving the way for effective weight loss. What
+              sets our Semaglutide apart is the addition of a potent enhancer
+              that amplifies your weight loss efforts.
+            </Description>
+          </span>
+          <BottleWrapper>
+            <WhiteStar />
+            <Circle />
+            <BottleImage src={Sema} alt="Bottle" />
+          </BottleWrapper>
+        </Divide>
         <KeyBenefits>
           <h4>KEY BENEFITS:</h4>
           <List>
@@ -77,33 +79,35 @@ const ServiceDetails = () => {
         <Button>Book Now!!!</Button>
       </Package>
       <Package>
-        <SideCross>Highly Recommended</SideCross>
         <Heading>Tirzepatide Package</Heading>
         <SubHead>GIP/GLP-1 TIRZEPATIDE</SubHead>
-
-        <Prices>
-          <Price>
-            <span>$ 349.00</span>
-            <p> USD/monthly</p>
-          </Price>
-          <Price>
-            <span>$ 199.00 </span> <p>/ first month special</p>
-          </Price>
-        </Prices>
-        <Description>
-          Explore the benefits of Tirzepatide, a combined GIP/GLP-1 receptor
-          agonist that offers a comprehensive approach to weight management. By
-          targeting two key pathways, Tirzepatide supports insulin production to
-          manage blood while simultaneously reducing appetite and caloric
-          intake, fostering a conducive environment for weight loss.
-        </Description>
-
-        <BottleWrapper>
-          <WhiteStar />
-          <Circle />
-          <BottleImage src={Tirz} alt="Bottle" />
-        </BottleWrapper>
-
+        <Divide>
+          <span>
+            <SideCross>Highly Recommended</SideCross>
+            <Prices>
+              <Price>
+                <span>$ 349.00</span>
+                <p> USD/monthly</p>
+              </Price>
+              <Price>
+                <span>$ 199.00 </span> <p>/ first month special</p>
+              </Price>
+            </Prices>
+            <Description>
+              Explore the benefits of Tirzepatide, a combined GIP/GLP-1 receptor
+              agonist that offers a comprehensive approach to weight management.
+              By targeting two key pathways, Tirzepatide supports insulin
+              production to manage blood while simultaneously reducing appetite
+              and caloric intake, fostering a conducive environment for weight
+              loss.
+            </Description>
+          </span>
+          <BottleWrapper>
+            <WhiteStar />
+            <Circle />
+            <BottleImage src={Tirz} alt="Bottle" />
+          </BottleWrapper>
+        </Divide>
         <KeyBenefits>
           <h4>KEY BENEFITS:</h4>
           <List>
@@ -143,6 +147,16 @@ const ServiceDetails = () => {
 };
 
 export default ServiceDetails;
+const Divide = styled.div`
+  @media screen and (min-width: 800px) {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+  span {
+    @media screen and (min-width: 800px) {
+    }
+  }
+`;
 const SideCross = styled.div`
   background: ${Gradients.blackToGold};
   position: absolute;
@@ -214,6 +228,12 @@ const Container = styled.div`
   @media (min-width: 400px) and (max-width: 499px) {
     padding: 1.5rem;
   }
+  @media screen and (min-width: 1000px) {
+    padding: 2rem 3rem;
+  }
+  @media screen and (min-width: 1200px) {
+    padding: 1rem 8rem;
+  }
 `;
 
 const Intro = styled.div`
@@ -284,6 +304,7 @@ const Package = styled.div`
   @media (min-width: 400px) and (max-width: 499px) {
     padding: 1.4rem;
   }
+
   h2 {
     font-size: 1.8rem;
     color: ${Colors.gold};
