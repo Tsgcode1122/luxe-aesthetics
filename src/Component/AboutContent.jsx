@@ -119,7 +119,6 @@ const AboutImg = styled.div`
     padding: 0 3rem;
   }
   @media screen and (min-width: 1000px) {
-    transform: scaleX(-1);
     padding: 0;
   }
 `;
