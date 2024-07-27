@@ -8,7 +8,9 @@ const WorkInProgress = () => {
     <Container>
       <Message>🚧 Work in Progress 🚧</Message>
       <Description>Working to bring you this feature. Stay tuned!</Description>
-      <Button to="/"> Back Home</Button>
+      <Link to="/">
+        <Button> Back Home</Button>
+      </Link>
     </Container>
   );
 };
