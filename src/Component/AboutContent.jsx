@@ -18,7 +18,7 @@ const AboutContent = () => {
             vibrant self begins. We specialize in providing tailored weight loss
             solutions designed to align perfectly with your wellness goals. Our
             expert team crafts personalized plans that fit seamlessly into your
-            lifestyle
+            lifestyle.
           </Content>
         </SwipeComponent>
         <SwipeComponent direction="right-to-left">
