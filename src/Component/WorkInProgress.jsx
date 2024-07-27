@@ -1,12 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import Button from "./Button";
+
 const WorkInProgress = () => {
   return (
     <Container>
       <Message>🚧 Work in Progress 🚧</Message>
       <Description>Working to bring you this feature. Stay tuned!</Description>
-      <HomeButton to="/"> Back Home</HomeButton>
+      <Button to="/"> Back Home</Button>
     </Container>
   );
 };
@@ -32,21 +34,7 @@ const Message = styled.h1`
 
 const Description = styled.p`
   font-size: 1.2rem;
+  margin-bottom: 20px;
 `;
-const HomeButton = styled(Link)`
-  display: inline-block;
-  padding: 12px 24px;
-  background-color: black;
-  color: white;
-  font-size: 1rem;
-  border: none;
-  border-radius: 5px;
-  text-decoration: none;
-  cursor: pointer;
-  transition: background-color 0.3s;
 
-  &:hover {
-    background-color: #e5533d;
-  }
-`;
 export default WorkInProgress;
