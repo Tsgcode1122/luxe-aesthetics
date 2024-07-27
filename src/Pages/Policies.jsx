@@ -4,6 +4,7 @@ import Heading from "../Component/Heading";
 import PageHeading from "../Component/PageHeading";
 import backgroundImage from "../Images/about.jpg";
 import ZoomInComponent from "../Component/ZoomInComponent";
+import { Colors, Gradients } from "../Component/ColorComponent";
 
 const Container = styled.div`
   padding: 2rem;
@@ -29,6 +30,21 @@ const Paragraph = styled.p`
   margin-bottom: 1rem;
   line-height: 1.6;
 `;
+const SubHead = styled.h5`
+  margin: 0;
+  font-size: 1.2rem;
+  background: ${Gradients.goldGradient};
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 0.9;
+  -webkit-text-stroke: 0.91px #8c6c28;
+  font-weight: 500;
+
+  text-align: center;
+  font-family: "Philosopher", sans-serif;
+  margin-bottom: 10px;
+`;
 
 const Policies = () => {
   return (
@@ -36,7 +52,7 @@ const Policies = () => {
       {" "}
       <PageHeading backgroundImage={backgroundImage} text="Policies" />
       <Container>
-        <Heading>Our Policies</Heading>
+        <SubHead>Kindly Read Our Policies</SubHead>
         <Section>
           <ZoomInComponent>
             <Paragraph>
