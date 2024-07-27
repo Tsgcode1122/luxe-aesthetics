@@ -27,7 +27,7 @@ const Section = styled.div`
 `;
 
 const Paragraph = styled.p`
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   line-height: 1.6;
 `;
 const SubHead = styled.h5`
