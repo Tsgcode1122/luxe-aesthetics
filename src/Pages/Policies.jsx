@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import Heading from "../Component/Heading";
 import PageHeading from "../Component/PageHeading";
@@ -48,6 +48,9 @@ const SubHead = styled.h5`
 `;
 
 const Policies = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
   return (
     <>
       {" "}
