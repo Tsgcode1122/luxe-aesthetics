@@ -76,7 +76,7 @@ const ServiceDetails = () => {
             </ZoomInComponent>
           </List>
         </KeyBenefits>
-        <Link to="appointment">
+        <Link to="/appointment">
           <Button>Book Now!!!</Button>
         </Link>
       </Package>
@@ -142,7 +142,7 @@ const ServiceDetails = () => {
             </ZoomInComponent>
           </List>
         </KeyBenefits>
-        <Link to="appointment">
+        <Link to="/appointment">
           <Button>Book Now!!!</Button>
         </Link>
       </Package>

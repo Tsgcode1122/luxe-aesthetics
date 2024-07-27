@@ -97,11 +97,11 @@ const routes = [
     element: <Layout />,
     children: [
       { index: true, path: "/", element: <Home /> },
-      { path: "about", element: <About /> },
-      { path: "contact", element: <Contact /> },
-      { path: "appointment", element: <Appointment /> },
-      { path: "whyus", element: <WhyUs /> },
-      { path: "services", element: <Services /> },
+      { path: "/about", element: <About /> },
+      { path: "/contact", element: <Contact /> },
+      { path: "/appointment", element: <Appointment /> },
+      { path: "/whyus", element: <WhyUs /> },
+      { path: "/services", element: <Services /> },
 
       { path: "*", element: <InvalidPath /> },
     ],

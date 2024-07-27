@@ -81,7 +81,7 @@ const Services = () => {
             </Content2>
           </SwipeComponent>
         </Divide>
-        <Link to="appointment">
+        <Link to="/appointment">
           <Button>Book Now</Button>
         </Link>
       </Package>

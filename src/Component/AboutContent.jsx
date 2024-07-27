@@ -22,7 +22,7 @@ const AboutContent = () => {
           </Content>
         </SwipeComponent>
         <SwipeComponent direction="right-to-left">
-          <Link to="appointment">
+          <Link to="/appointment">
             <Button>Book Now</Button>
           </Link>
         </SwipeComponent>
