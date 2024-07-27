@@ -80,6 +80,17 @@ const Navbar = () => {
                 Book Appointment <IoIosArrowDropright />
               </MenuLink>
             </MenuItem>
+            <MenuItem onClick={closeSidebar}>
+              <MenuLink to="/gallery">
+                Gallery
+                <IoIosArrowDropright />
+              </MenuLink>
+            </MenuItem>
+            <MenuItem onClick={closeSidebar}>
+              <MenuLink to="/policies">
+                Policies <IoIosArrowDropright />
+              </MenuLink>
+            </MenuItem>
           </ul>
         </Sidebar>
       )}
@@ -100,6 +111,8 @@ const Navbar = () => {
               <ListLink to="/contact">Contact Us</ListLink>
 
               <ListLink to="/appointment">Book Appointment</ListLink>
+              <ListLink to="/gallery">Gallery</ListLink>
+              <ListLink to="/policies">Policies</ListLink>
             </ul>
           </MenuList>
         </HeadSpace>

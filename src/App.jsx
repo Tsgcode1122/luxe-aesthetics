@@ -13,6 +13,8 @@ import Contact from "./Pages/Contact";
 import WhyUs from "./Pages/WhyUs";
 import { Result, Button } from "antd";
 import Services from "./Pages/Services";
+import Gallery from "./Pages/Gallery";
+import Policies from "./Pages/Policies";
 
 const GlobalStyle = createGlobalStyle`
 
@@ -62,10 +64,10 @@ const GlobalStyle = createGlobalStyle`
 
 const StyledResult = styled(Result)`
   .ant-result-title {
-    color: white !important;
+    color: black !important;
   }
   .ant-result-subtitle {
-    color: white !important;
+    color: black !important;
   }
 `;
 
@@ -83,7 +85,11 @@ const InvalidPath = () => {
       title="404 Not Found"
       subTitle="Oops! The page you are looking for does not exist."
       extra={
-        <Button type="primary" onClick={handleBackHome}>
+        <Button
+          type="primary"
+          onClick={handleBackHome}
+          style={{ background: "black" }}
+        >
           Back Home
         </Button>
       }
@@ -103,6 +109,8 @@ const routes = [
       { path: "/appointment", element: <Appointment /> },
       { path: "/whyus", element: <WhyUs /> },
       { path: "/services", element: <Services /> },
+      { path: "/gallery", element: <Gallery /> },
+      { path: "/policies", element: <Policies /> },
 
       { path: "*", element: <InvalidPath /> },
     ],
