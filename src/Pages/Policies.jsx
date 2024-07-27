@@ -3,6 +3,8 @@ import styled from "styled-components";
 import Heading from "../Component/Heading";
 import PageHeading from "../Component/PageHeading";
 import backgroundImage from "../Images/about.jpg";
+import ZoomInComponent from "../Component/ZoomInComponent";
+
 const Container = styled.div`
   padding: 2rem;
   background: #f5f5f5;
@@ -36,11 +38,14 @@ const Policies = () => {
       <Container>
         <Heading>Our Policies</Heading>
         <Section>
-          <Paragraph>
-            We are committed to ensuring you receive the best care and services.
-            To maintain our high standards and ensure a smooth experience for
-            all clients, we have established the following policies.
-          </Paragraph>
+          <ZoomInComponent>
+            <Paragraph>
+              We are committed to ensuring you receive the best care and
+              services. To maintain our high standards and ensure a smooth
+              experience for all clients, we have established the following
+              policies.
+            </Paragraph>
+          </ZoomInComponent>
           <Paragraph>
             <strong>Payment Policy:</strong> All treatments, including those
             involving GLP-1 Semaglutide and GIP/GLP-1 Tirzepatide, require
@@ -48,12 +53,14 @@ const Policies = () => {
             but can be credited towards other services within the same calendar
             year. We accept Cash, Check, Visa, MasterCard, and American Express.
           </Paragraph>
-          <Paragraph>
-            <strong>Appointment Scheduling:</strong> We recommend arriving 10-15
-            minutes prior to your appointment. Late arrivals (more than 15% of
-            the scheduled time) may result in a condensed treatment or
-            rescheduling, forfeiting your booking deposit.
-          </Paragraph>
+          <ZoomInComponent>
+            <Paragraph>
+              <strong>Appointment Scheduling:</strong> We recommend arriving
+              10-15 minutes prior to your appointment. Late arrivals (more than
+              15% of the scheduled time) may result in a condensed treatment or
+              rescheduling, forfeiting your booking deposit.
+            </Paragraph>
+          </ZoomInComponent>
           <Paragraph>
             <strong>Cancellation Policy:</strong> You may cancel or modify your
             appointment without charge up to 24 hours before the scheduled time.
@@ -61,22 +68,26 @@ const Policies = () => {
             service cost. No-shows will be charged the full price of the
             scheduled service.
           </Paragraph>
-          <Paragraph>
-            <strong>Treatment Packages:</strong> Unused treatments within a
-            package can be credited towards other services within a year of the
-            purchase date. All treatments are non-refundable and
-            non-transferable.
-          </Paragraph>
+          <ZoomInComponent>
+            <Paragraph>
+              <strong>Treatment Packages:</strong> Unused treatments within a
+              package can be credited towards other services within a year of
+              the purchase date. All treatments are non-refundable and
+              non-transferable.
+            </Paragraph>
+          </ZoomInComponent>
           <Paragraph>
             <strong>Price and Policy Changes:</strong> All prices are subject to
             change. Please follow our social media for updates.
           </Paragraph>
-          <Paragraph>
-            <strong>Appointment Confirmation:</strong> We send appointment
-            confirmation messages 48 hours in advance via SMS and email. Failure
-            to confirm may result in your appointment slot being given to
-            another client.
-          </Paragraph>
+          <ZoomInComponent>
+            <Paragraph>
+              <strong>Appointment Confirmation:</strong> We send appointment
+              confirmation messages 48 hours in advance via SMS and email.
+              Failure to confirm may result in your appointment slot being given
+              to another client.
+            </Paragraph>
+          </ZoomInComponent>
           <Paragraph>
             By booking an appointment, you agree to these terms. Thank you for
             choosing Gem Luxe Aesthetics. We look forward to helping you achieve
