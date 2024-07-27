@@ -1,4 +1,3 @@
-// src/App.js
 import React from "react";
 import styled, { createGlobalStyle } from "styled-components";
 import {
@@ -16,6 +15,7 @@ import { Result, Button } from "antd";
 import Services from "./Pages/Services";
 
 const GlobalStyle = createGlobalStyle`
+
   html, body {
     margin: 0 !important;
     padding: 0 !important;
@@ -99,6 +99,7 @@ const routes = [
       { index: true, path: "/", element: <Home /> },
       { path: "/about", element: <About /> },
       { path: "/contact", element: <Contact /> },
+      { path: "/appointment", element: <Appointment /> },
       { path: "/appointment", element: <Appointment /> },
       { path: "/whyus", element: <WhyUs /> },
       { path: "/services", element: <Services /> },
