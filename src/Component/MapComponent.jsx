@@ -35,7 +35,7 @@ const MapComponent = () => {
   const popupContent = `
     <div style="display: flex; flex-direction: column; align-items: flex-start; padding: 10px;">
       <h3 style="margin: 0; font-size: 1rem; color: #333;">Gem Luxe Aesthetics</h3>
-      <a href="${googleMapsLink}" target="_blank" rel="noopener noreferrer" style="margin-top: 5px; font-size: 0.9rem; color: #007bff; text-decoration: underline; cursor: pointer;">Open in Google Maps</a>
+      <a href="${googleMapsLink}" target="_blank" rel="noopener noreferrer" style="margin-top: 5px; font-size: 0.9rem; color: #007bff; text-decoration: underline; cursor: pointer;"> Click to Open in Google Maps</a>
     </div>
   `;
 
