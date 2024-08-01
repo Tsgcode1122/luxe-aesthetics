@@ -6,8 +6,10 @@ const Footer = () => {
     <Container>
       <Content>
         <img src={logo} />
-        <p>Business Hours: Monday- Friday</p>
-        <p> 9:00 a.m. - 5:00 p.m. </p>
+        <p>
+          <strong>Business Hours:</strong> By Appointment Only.
+        </p>
+        {/* <p> 9:00 a.m. - 5:00 p.m. </p> */}
         <p>© 2024 Gem Luxe Aesthetics. All rights reserved.</p>
       </Content>
     </Container>
