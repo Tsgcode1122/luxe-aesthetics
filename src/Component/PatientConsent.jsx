@@ -115,7 +115,7 @@ Chiles.</p>
         
         
           <p style=" font-size: 20px; ">The letter should be mailed to:
-           <ul style=" listStyle: none;">
+           <ul style=" listStyle: none; listStyleType: none;">
           <li>44 Treaty Lane</li>
           <li>P.O. Box 65</li>
           <li>Clayton, DE 19938</li>
