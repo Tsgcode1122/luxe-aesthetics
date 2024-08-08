@@ -305,10 +305,6 @@ const ConsentForEmail = () => {
           is:
           <Form.Item name="patientNumber" noStyle>
             <Input
-              value={formData.patientNumber}
-              onChange={(e) =>
-                handleInputChange("patientNumber", e.target.value)
-              }
               style={{
                 border: "none",
                 borderBottom: "1px solid #000",
@@ -327,10 +323,6 @@ const ConsentForEmail = () => {
           I permit the Practice to call the following <>telephone number:</>
           <Form.Item name="patientNumber" noStyle>
             <Input
-              value={formData.patientNumber}
-              onChange={(e) =>
-                handleInputChange("patientNumber", e.target.value)
-              }
               style={{
                 border: "none",
                 borderBottom: "1px solid #000",
