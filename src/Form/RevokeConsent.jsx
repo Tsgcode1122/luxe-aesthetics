@@ -11,7 +11,7 @@ import {
 import styled from "styled-components";
 import axios from "axios";
 import moment from "moment";
-
+import LoaderModal from "./LoaderModal";
 const { TextArea } = Input;
 
 const StyledForm = styled(Form)`
@@ -74,8 +74,9 @@ const RevokeConsent = () => {
   const [form] = Form.useForm();
   const [loading, setLoading] = useState(false);
   const [modalVisible, setModalVisible] = useState(false);
-
+  const [loader, setLoader] = useState(false);
   const onFinish = async (values) => {
+    setLoader(true);
     setLoading(true);
     try {
       const htmlContent = `
@@ -130,6 +131,7 @@ const RevokeConsent = () => {
     } catch (error) {
       console.error("There was an error submitting the form:", error);
     } finally {
+      setLoader(false);
       setLoading(false);
     }
   };
@@ -140,180 +142,196 @@ const RevokeConsent = () => {
   };
 
   return (
-    <StyledForm form={form} onFinish={onFinish}>
-      <Title>
-        REVOCATION OF CONSENT TO TELEPHONE CALL APPOINTMENT REMINDERS, EMAIL
-        AND/OR TEXT USAGE
-      </Title>
-      <Paragraph>
-        I hereby <strong>revoke</strong> my request to receive: (Check which
-        apply)
-      </Paragraph>
-      <Group>
+    <>
+      {" "}
+      {loader && <LoaderModal />}
+      <StyledForm form={form} onFinish={onFinish}>
+        <Title>
+          REVOCATION OF CONSENT TO TELEPHONE CALL APPOINTMENT REMINDERS, EMAIL
+          AND/OR TEXT USAGE
+        </Title>
         <Paragraph>
-          <Form.Item name="communicationCheck" valuePropName="checked" noStyle>
-            <Checkbox>
-              Any future communications, including appointment reminders, via
-              telephone.
-            </Checkbox>
+          I hereby <strong>revoke</strong> my request to receive: (Check which
+          apply)
+        </Paragraph>
+        <Group>
+          <Paragraph>
+            <Form.Item
+              name="communicationCheck"
+              valuePropName="checked"
+              noStyle
+            >
+              <Checkbox>
+                Any future communications, including appointment reminders, via
+                telephone.
+              </Checkbox>
+            </Form.Item>
+          </Paragraph>
+          <Form.Item>
+            <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+              <Form.Item name="patientInitials" noStyle>
+                <Input
+                  style={{
+                    border: "none",
+                    borderBottom: "1px solid #000",
+                    width: "40%",
+                  }}
+                  placeholder="Enter your Initials"
+                />
+              </Form.Item>
+              <span>Patient Initials: </span>
+            </div>
           </Form.Item>
+        </Group>
+        <Group>
+          <Paragraph>
+            <Form.Item
+              name="remindersTextCheck"
+              valuePropName="checked"
+              noStyle
+            >
+              <Checkbox>
+                Any future communications, including appointment reminders,
+                feedback inquiries, special offers, newsletters, and general
+                health information via text messages.
+              </Checkbox>
+            </Form.Item>
+          </Paragraph>
+          <Form.Item>
+            <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+              <Form.Item name="patientInitials" noStyle>
+                <Input
+                  style={{
+                    border: "none",
+                    borderBottom: "1px solid #000",
+                    width: "40%",
+                  }}
+                  placeholder="Enter your Initials"
+                />
+              </Form.Item>
+              <span>Patient Initials: </span>
+            </div>
+          </Form.Item>
+        </Group>
+        <Group>
+          <Paragraph>
+            <Form.Item
+              name="reminderEmailCheck"
+              valuePropName="checked"
+              noStyle
+            >
+              <Checkbox>
+                Any future communications, including appointment reminders,
+                feedback inquiries, special offers, newsletters, and general
+                health information via email.
+              </Checkbox>
+            </Form.Item>
+          </Paragraph>
+          <Form.Item>
+            <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+              <Form.Item name="patientInitials" noStyle>
+                <Input
+                  style={{
+                    border: "none",
+                    borderBottom: "1px solid #000",
+                    width: "40%",
+                  }}
+                  placeholder="Enter your Initials"
+                />
+              </Form.Item>
+              <span>Patient Initials: </span>
+            </div>
+          </Form.Item>
+        </Group>
+        <Paragraph style={{ paddingTop: "20px" }}>
+          The foregoing revocation only applies to communications from the
+          practice.
         </Paragraph>
         <Form.Item>
-          <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-            <Form.Item name="patientInitials" noStyle>
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "30% 70%",
+              alignItems: "center",
+              gap: "10px",
+            }}
+          >
+            <span>Patient Name: </span>
+            <Form.Item name="patientName" noStyle>
               <Input
                 style={{
                   border: "none",
                   borderBottom: "1px solid #000",
-                  width: "40%",
+                  width: "90%",
                 }}
-                placeholder="Enter your Initials"
+                placeholder="Enter Your full Name"
               />
             </Form.Item>
-            <span>Patient Initials: </span>
           </div>
         </Form.Item>
-      </Group>
-      <Group>
-        <Paragraph>
-          <Form.Item name="remindersTextCheck" valuePropName="checked" noStyle>
-            <Checkbox>
-              Any future communications, including appointment reminders,
-              feedback inquiries, special offers, newsletters, and general
-              health information via text messages.
-            </Checkbox>
-          </Form.Item>
-        </Paragraph>
         <Form.Item>
-          <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-            <Form.Item name="patientInitials" noStyle>
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "30% 70%",
+              alignItems: "center",
+              gap: "10px",
+            }}
+          >
+            <span>Patient signature: </span>
+            <Form.Item name="patientSignature" noStyle>
               <Input
                 style={{
                   border: "none",
                   borderBottom: "1px solid #000",
-                  width: "40%",
+                  width: "70%",
                 }}
-                placeholder="Enter your Initials"
+                placeholder="Patient Signature"
               />
             </Form.Item>
-            <span>Patient Initials: </span>
           </div>
         </Form.Item>
-      </Group>
-      <Group>
-        <Paragraph>
-          <Form.Item name="reminderEmailCheck" valuePropName="checked" noStyle>
-            <Checkbox>
-              Any future communications, including appointment reminders,
-              feedback inquiries, special offers, newsletters, and general
-              health information via email.
-            </Checkbox>
-          </Form.Item>
-        </Paragraph>
         <Form.Item>
-          <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-            <Form.Item name="patientInitials" noStyle>
-              <Input
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "30% 70%",
+              alignItems: "center",
+              gap: "10px",
+            }}
+          >
+            <span>Date: </span>
+            <Form.Item name="date" noStyle>
+              <DatePicker
                 style={{
                   border: "none",
                   borderBottom: "1px solid #000",
-                  width: "40%",
+                  width: "60%",
                 }}
-                placeholder="Enter your Initials"
+                placeholder="Select Date"
               />
             </Form.Item>
-            <span>Patient Initials: </span>
           </div>
         </Form.Item>
-      </Group>
-      <Paragraph style={{ paddingTop: "20px" }}>
-        The foregoing revocation only applies to communications from the
-        practice.
-      </Paragraph>
-      <Form.Item>
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "30% 70%",
-            alignItems: "center",
-            gap: "10px",
-          }}
+        <StyledButton htmlType="submit" loading={loading}>
+          Submit
+        </StyledButton>
+        <Modal
+          title="Success"
+          visible={modalVisible}
+          onCancel={closeModal}
+          footer={null} // Remove footer
+          afterClose={() => form.resetFields()}
         >
-          <span>Patient Name: </span>
-          <Form.Item name="patientName" noStyle>
-            <Input
-              style={{
-                border: "none",
-                borderBottom: "1px solid #000",
-                width: "90%",
-              }}
-              placeholder="Enter Your full Name"
-            />
-          </Form.Item>
-        </div>
-      </Form.Item>
-      <Form.Item>
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "30% 70%",
-            alignItems: "center",
-            gap: "10px",
-          }}
-        >
-          <span>Patient signature: </span>
-          <Form.Item name="patientSignature" noStyle>
-            <Input
-              style={{
-                border: "none",
-                borderBottom: "1px solid #000",
-                width: "70%",
-              }}
-              placeholder="Patient Signature"
-            />
-          </Form.Item>
-        </div>
-      </Form.Item>
-      <Form.Item>
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "30% 70%",
-            alignItems: "center",
-            gap: "10px",
-          }}
-        >
-          <span>Date: </span>
-          <Form.Item name="date" noStyle>
-            <DatePicker
-              style={{
-                border: "none",
-                borderBottom: "1px solid #000",
-                width: "60%",
-              }}
-              placeholder="Select Date"
-            />
-          </Form.Item>
-        </div>
-      </Form.Item>
-      <StyledButton htmlType="submit" loading={loading}>
-        Submit
-      </StyledButton>
-      <Modal
-        title="Success"
-        visible={modalVisible}
-        onCancel={closeModal}
-        footer={null} // Remove footer
-        afterClose={() => form.resetFields()}
-      >
-        <p>Your consent form has been submitted successfully!</p>
-      </Modal>
-      <Footer>
-        <p>1418 Manoa Road, Wynnewood, PA 19096</p>
-        <p>(484) 995-2726</p>
-        <p>Gemluxemedspa@gmail.com</p>
-      </Footer>
-    </StyledForm>
+          <p>Your consent form has been submitted successfully!</p>
+        </Modal>
+        <Footer>
+          <p>1418 Manoa Road, Wynnewood, PA 19096</p>
+          <p>(484) 995-2726</p>
+          <p>Gemluxemedspa@gmail.com</p>
+        </Footer>
+      </StyledForm>
+    </>
   );
 };
 

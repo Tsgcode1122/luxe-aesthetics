@@ -10,7 +10,7 @@ import {
   InputNumber,
   Typography,
 } from "antd";
-
+import LoaderModal from "./LoaderModal";
 import axios from "axios";
 import styled from "styled-components";
 import QuestionnaireSubmit from "./QuestionnaireSubmit";
@@ -103,9 +103,10 @@ const Questionnaire = () => {
   const [form] = Form.useForm();
   const [modalVisible, setModalVisible] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [loader, setLoader] = useState(false);
   const [formData, setFormData] = useState(null);
   const onFinish = async (values) => {
-    console.log("Form Values:", values);
+    setLoader(true);
 
     setLoading(true);
     try {
@@ -120,7 +121,7 @@ const Questionnaire = () => {
           patientName: values.name,
         },
       );
-
+      setLoader(false);
       setLoading(false);
 
       setModalVisible(true);
@@ -128,6 +129,9 @@ const Questionnaire = () => {
     } catch (error) {
       setLoading(false);
       console.error("Error sending email:", error);
+    } finally {
+      setLoader(false);
+      setLoading(false);
     }
   };
   const closeModal = () => {
@@ -137,6 +141,7 @@ const Questionnaire = () => {
 
   return (
     <>
+      {loader && <LoaderModal />}
       <StyledForm form={form} onFinish={onFinish}>
         <Heading>GEM LUXE AESTHETICS</Heading>
         <Form.Item>

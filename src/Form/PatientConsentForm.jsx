@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { Form, Input, Button, DatePicker, Typography, Modal } from "antd";
 import styled from "styled-components";
 import axios from "axios";
-
+import LoaderModal from "./LoaderModal";
+import { notification } from "antd";
 const { Paragraph } = Typography;
 const { TextArea } = Input;
 
@@ -48,10 +49,13 @@ const Underline = styled.span`
 const PatientConsentForm = () => {
   const [form] = Form.useForm();
   const [loading, setLoading] = useState(false);
+  const [loader, setLoader] = useState(false);
   const [modalVisible, setModalVisible] = useState(false);
 
   const onFinish = async (values) => {
+    setLoader(true);
     setLoading(true);
+
     try {
       const htmlContent = `
         <div style="padding: 20px 30px;">
@@ -78,12 +82,16 @@ const PatientConsentForm = () => {
         htmlContent,
         patientName: values.patientName,
       });
-
       setModalVisible(true);
       form.resetFields(); // Clear the input fields after submission
     } catch (error) {
       console.error("There was an error submitting the form:", error);
+      notification.error({
+        message: "Form Submission Error",
+        description: "An unexpected error occurred. Please try again later.",
+      });
     } finally {
+      setLoader(false);
       setLoading(false);
     }
   };
@@ -94,6 +102,8 @@ const PatientConsentForm = () => {
 
   return (
     <>
+      {loader && <LoaderModal />}
+
       <StyledForm form={form} layout="vertical" onFinish={onFinish}>
         <div id="pdfContent">
           <Typography>

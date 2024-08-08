@@ -4,7 +4,7 @@ import styled from "styled-components";
 import axios from "axios";
 import moment from "moment";
 import TextArea from "antd/es/input/TextArea";
-
+import LoaderModal from "./LoaderModal";
 const StyledForm = styled(Form)`
   max-width: 800px;
   padding: 20px;
@@ -74,6 +74,7 @@ const HippaConsent = () => {
   });
   const [form] = Form.useForm();
   const [loading, setLoading] = useState(false);
+  const [loader, setLoader] = useState(false);
   const [modalVisible, setModalVisible] = useState(false);
   const [formData, setFormData] = useState({
     patientName: "",
@@ -95,6 +96,7 @@ const HippaConsent = () => {
   };
 
   const onFinish = async (values) => {
+    setLoader(true);
     setLoading(true);
     try {
       const htmlContent = `
@@ -239,7 +241,7 @@ const HippaConsent = () => {
           patientName: values.patientName,
         },
       );
-
+      setLoader(false);
       setLoading(false);
 
       setModalVisible(true);
@@ -256,314 +258,319 @@ const HippaConsent = () => {
   };
 
   return (
-    <StyledForm form={form} onFinish={onFinish} initialValues={formData}>
-      <Heading>GEM LUXE AESTHETICS</Heading>
-      <Title>
-        Patient Consent for Use and Disclosure of Protected Health Information
-      </Title>
-      <strong>Patient Information</strong>
-      <Unlist>
-        <li>
-          <div>
-            <span style={{ fontWeight: "500" }}>Name: </span>
-            <Form.Item name="patientName" noStyle>
-              <Input
-                placeholder="Enter your Name"
-                style={{
-                  border: "none",
-                  borderBottom: "1px solid #000",
-                  width: "70%",
-                }}
-              />
-            </Form.Item>
-          </div>
-        </li>
-        <li>
-          <div>
-            <span style={{ fontWeight: "500" }}>Address: </span>
-            <Form.Item name="address" noStyle>
-              <TextArea
-                style={{
-                  borderBottom: "1px solid #000",
-                  // width: "70%",
-                }}
-                placeholder="Enter your  address"
-              />
-            </Form.Item>
-          </div>
-        </li>
-        <li>
-          <div>
-            <span style={{ fontWeight: "500" }}>City: </span>
-            <Form.Item name="city" noStyle>
-              <Input
-                style={{
-                  border: "none",
-                  borderBottom: "1px solid #000",
-                  width: "70%",
-                }}
-                placeholder="your city"
-              />
-            </Form.Item>
-          </div>
-        </li>
-        <li style={{ display: "flex", alignItems: "center" }}>
-          <div>
-            <span style={{ fontWeight: "500" }}>State: </span>
-            <Form.Item name="state" noStyle>
+    <>
+      {" "}
+      {loader && <LoaderModal />}
+      <StyledForm form={form} onFinish={onFinish} initialValues={formData}>
+        <Heading>GEM LUXE AESTHETICS</Heading>
+        <Title>
+          Patient Consent for Use and Disclosure of Protected Health Information
+        </Title>
+        <strong>Patient Information</strong>
+        <Unlist>
+          <li>
+            <div>
+              <span style={{ fontWeight: "500" }}>Name: </span>
+              <Form.Item name="patientName" noStyle>
+                <Input
+                  placeholder="Enter your Name"
+                  style={{
+                    border: "none",
+                    borderBottom: "1px solid #000",
+                    width: "70%",
+                  }}
+                />
+              </Form.Item>
+            </div>
+          </li>
+          <li>
+            <div>
+              <span style={{ fontWeight: "500" }}>Address: </span>
+              <Form.Item name="address" noStyle>
+                <TextArea
+                  style={{
+                    borderBottom: "1px solid #000",
+                    // width: "70%",
+                  }}
+                  placeholder="Enter your  address"
+                />
+              </Form.Item>
+            </div>
+          </li>
+          <li>
+            <div>
+              <span style={{ fontWeight: "500" }}>City: </span>
+              <Form.Item name="city" noStyle>
+                <Input
+                  style={{
+                    border: "none",
+                    borderBottom: "1px solid #000",
+                    width: "70%",
+                  }}
+                  placeholder="your city"
+                />
+              </Form.Item>
+            </div>
+          </li>
+          <li style={{ display: "flex", alignItems: "center" }}>
+            <div>
+              <span style={{ fontWeight: "500" }}>State: </span>
+              <Form.Item name="state" noStyle>
+                <Input
+                  style={{
+                    border: "none",
+                    borderBottom: "1px solid #000",
+                    width: "60%",
+                  }}
+                  placeholder="Enter your state"
+                />
+              </Form.Item>
+            </div>
+            <div>
+              <span style={{ fontWeight: "500" }}>Zip Code: </span>
+              <Form.Item name="zipCode" noStyle>
+                <Input
+                  style={{
+                    border: "none",
+                    borderBottom: "1px solid #000",
+                    width: "50%",
+                  }}
+                  placeholder="Enter zipcode"
+                />
+              </Form.Item>
+            </div>
+          </li>
+          <li>
+            <span style={{ fontWeight: "500" }}>Phone Number: </span>
+            <Form.Item name="phoneNumber" noStyle>
               <Input
                 style={{
                   border: "none",
                   borderBottom: "1px solid #000",
                   width: "60%",
                 }}
-                placeholder="Enter your state"
+                placeholder="Enter Your number"
               />
             </Form.Item>
-          </div>
-          <div>
-            <span style={{ fontWeight: "500" }}>Zip Code: </span>
-            <Form.Item name="zipCode" noStyle>
+          </li>
+          <li>
+            <span style={{ fontWeight: "500" }}>Email: </span>
+            <Form.Item name="email" noStyle>
               <Input
                 style={{
                   border: "none",
                   borderBottom: "1px solid #000",
-                  width: "50%",
+                  width: "80%",
                 }}
-                placeholder="Enter zipcode"
+                placeholder="Enter Email"
+              />
+            </Form.Item>
+          </li>
+          <li>
+            <span style={{ fontWeight: "500" }}>Date of Birth: </span>
+            <Form.Item name="dateOfBirth" noStyle>
+              <DatePicker
+                style={{
+                  border: "none",
+                  borderBottom: "1px solid #000",
+                  width: "40%",
+                }}
+                format="YYYY-MM-DD"
+              />
+            </Form.Item>
+          </li>
+        </Unlist>
+        <SubHead>Consent</SubHead>
+        <Paragraph style={{ paddingTop: "10px" }}>
+          <strong>Purpose:</strong> This consent form allows GEM LUXE AESTHETICS
+          to use and disclose your protected health information (PHI) for the
+          purposes of treatment, payment, and health care operations.
+        </Paragraph>
+        <strong>Statement of Consent:</strong>
+        <Paragraph style={{ textAlign: "left" }}>
+          I understand that GEM LUXE AESTHETICS will use and disclose my PHI to
+          carry out:
+        </Paragraph>
+        <ul style={{ listStyleType: "decimal", paddingLeft: "40px" }}>
+          <li style={{ marginBottom: "10px" }}>
+            <strong>Treatment:</strong> This includes the provision,
+            coordination, or management of my health care and related services,
+            including consultation between health care providers regarding my
+            treatment and referrals for my care from one health care provider to
+            another.
+          </li>
+          <li style={{ marginBottom: "10px" }}>
+            <strong> Payment:</strong>
+            This includes activities related to obtaining reimbursement for
+            services, confirming coverage, billing or collection activities, and
+            utilization review.
+          </li>
+          <li style={{ marginBottom: "10px" }}>
+            <strong> Health Care Operations:</strong>
+            This includes business aspects of running the practice, such as
+            quality assessment and improvement, auditing functions,
+            cost-management analysis, and customer service.
+          </li>
+        </ul>
+        <strong>Disclosure of Information:</strong>{" "}
+        <Paragraph style={{ textAlign: "left" }}>
+          I understand that GEM LUXE AESTHETICS may disclose my PHI to third
+          parties who perform services for the practice in the administration of
+          my care. These third parties are required to protect the
+          confidentiality of my information and are not allowed to use or
+          disclose any information other than as specified in our contract.
+        </Paragraph>
+        <strong>Right to Revoke:</strong>{" "}
+        <Paragraph style={{ textAlign: "left" }}>
+          I have the right to revoke this consent in writing at any time, except
+          to the extent that GEM LUXE AESTHETICS has already made disclosures
+          based on my prior consent.
+        </Paragraph>
+        <strong>Privacy Practices:</strong>{" "}
+        <Paragraph style={{ textAlign: "left" }}>
+          I have been provided with a copy of the Notice of Privacy Practices
+          that outlines how my information will be used and disclosed. I
+          understand that GEM LUXE AESTHETICS has the right to change the Notice
+          of Privacy Practices and that I may obtain a revised copy by
+          requesting one at the office.
+        </Paragraph>
+        <strong>Effective Period:</strong>{" "}
+        <Paragraph style={{ textAlign: "left" }}>
+          This consent is effective upon signing and will remain in effect until
+          revoked in writing.
+        </Paragraph>
+        <strong>Acknowledgment:</strong>{" "}
+        <Paragraph style={{ textAlign: "left" }}>
+          I have read and understand the above information. I have received a
+          copy of this form, and I am aware of my rights under HIPAA.
+        </Paragraph>
+        <strong>Signature</strong>
+        <div>
+          <div>
+            <span style={{ fontWeight: "500" }}>Patient Signature: </span>
+            <Form.Item name="patientSignature" noStyle>
+              <Input
+                placeholder="Enter signature"
+                style={{
+                  border: "none",
+                  borderBottom: "1px solid #000",
+                  // width: "60%",
+                }}
               />
             </Form.Item>
           </div>
-        </li>
-        <li>
-          <span style={{ fontWeight: "500" }}>Phone Number: </span>
-          <Form.Item name="phoneNumber" noStyle>
-            <Input
-              style={{
-                border: "none",
-                borderBottom: "1px solid #000",
-                width: "60%",
-              }}
-              placeholder="Enter Your number"
-            />
-          </Form.Item>
-        </li>
-        <li>
-          <span style={{ fontWeight: "500" }}>Email: </span>
-          <Form.Item name="email" noStyle>
-            <Input
-              style={{
-                border: "none",
-                borderBottom: "1px solid #000",
-                width: "80%",
-              }}
-              placeholder="Enter Email"
-            />
-          </Form.Item>
-        </li>
-        <li>
-          <span style={{ fontWeight: "500" }}>Date of Birth: </span>
-          <Form.Item name="dateOfBirth" noStyle>
-            <DatePicker
-              style={{
-                border: "none",
-                borderBottom: "1px solid #000",
-                width: "40%",
-              }}
-              format="YYYY-MM-DD"
-            />
-          </Form.Item>
-        </li>
-      </Unlist>
-      <SubHead>Consent</SubHead>
-      <Paragraph style={{ paddingTop: "10px" }}>
-        <strong>Purpose:</strong> This consent form allows GEM LUXE AESTHETICS
-        to use and disclose your protected health information (PHI) for the
-        purposes of treatment, payment, and health care operations.
-      </Paragraph>
-      <strong>Statement of Consent:</strong>
-      <Paragraph style={{ textAlign: "left" }}>
-        I understand that GEM LUXE AESTHETICS will use and disclose my PHI to
-        carry out:
-      </Paragraph>
-      <ul style={{ listStyleType: "decimal", paddingLeft: "40px" }}>
-        <li style={{ marginBottom: "10px" }}>
-          <strong>Treatment:</strong> This includes the provision, coordination,
-          or management of my health care and related services, including
-          consultation between health care providers regarding my treatment and
-          referrals for my care from one health care provider to another.
-        </li>
-        <li style={{ marginBottom: "10px" }}>
-          <strong> Payment:</strong>
-          This includes activities related to obtaining reimbursement for
-          services, confirming coverage, billing or collection activities, and
-          utilization review.
-        </li>
-        <li style={{ marginBottom: "10px" }}>
-          <strong> Health Care Operations:</strong>
-          This includes business aspects of running the practice, such as
-          quality assessment and improvement, auditing functions,
-          cost-management analysis, and customer service.
-        </li>
-      </ul>
-      <strong>Disclosure of Information:</strong>{" "}
-      <Paragraph style={{ textAlign: "left" }}>
-        I understand that GEM LUXE AESTHETICS may disclose my PHI to third
-        parties who perform services for the practice in the administration of
-        my care. These third parties are required to protect the confidentiality
-        of my information and are not allowed to use or disclose any information
-        other than as specified in our contract.
-      </Paragraph>
-      <strong>Right to Revoke:</strong>{" "}
-      <Paragraph style={{ textAlign: "left" }}>
-        I have the right to revoke this consent in writing at any time, except
-        to the extent that GEM LUXE AESTHETICS has already made disclosures
-        based on my prior consent.
-      </Paragraph>
-      <strong>Privacy Practices:</strong>{" "}
-      <Paragraph style={{ textAlign: "left" }}>
-        I have been provided with a copy of the Notice of Privacy Practices that
-        outlines how my information will be used and disclosed. I understand
-        that GEM LUXE AESTHETICS has the right to change the Notice of Privacy
-        Practices and that I may obtain a revised copy by requesting one at the
-        office.
-      </Paragraph>
-      <strong>Effective Period:</strong>{" "}
-      <Paragraph style={{ textAlign: "left" }}>
-        This consent is effective upon signing and will remain in effect until
-        revoked in writing.
-      </Paragraph>
-      <strong>Acknowledgment:</strong>{" "}
-      <Paragraph style={{ textAlign: "left" }}>
-        I have read and understand the above information. I have received a copy
-        of this form, and I am aware of my rights under HIPAA.
-      </Paragraph>
-      <strong>Signature</strong>
-      <div>
-        <div>
-          <span style={{ fontWeight: "500" }}>Patient Signature: </span>
-          <Form.Item name="patientSignature" noStyle>
-            <Input
-              placeholder="Enter signature"
-              style={{
-                border: "none",
-                borderBottom: "1px solid #000",
-                // width: "60%",
-              }}
-            />
-          </Form.Item>
-        </div>
 
-        <div>
-          <span style={{ fontWeight: "500" }}>Date: </span>
-          <Form.Item name="date" noStyle>
-            <DatePicker
+          <div>
+            <span style={{ fontWeight: "500" }}>Date: </span>
+            <Form.Item name="date" noStyle>
+              <DatePicker
+                style={{
+                  border: "none",
+                  borderBottom: "1px solid #000",
+                  // width: "40%",
+                }}
+                format="YYYY-MM-DD"
+              />
+            </Form.Item>
+          </div>
+        </div>
+        <div style={{ paddingTop: "20px", paddingBottom: "20px" }}>
+          <span style={{ fontWeight: "500" }}>
+            Guardian or Legal Representative Signature (if applicable):{" "}
+          </span>
+          <Form.Item name="guardianSignature" noStyle>
+            <Input
               style={{
                 border: "none",
                 borderBottom: "1px solid #000",
-                // width: "40%",
+                // width: "100%",
               }}
-              format="YYYY-MM-DD"
+              placeholder="Enter  guardian your signature"
             />
           </Form.Item>
         </div>
-      </div>
-      <div style={{ paddingTop: "20px", paddingBottom: "20px" }}>
-        <span style={{ fontWeight: "500" }}>
-          Guardian or Legal Representative Signature (if applicable):{" "}
-        </span>
-        <Form.Item name="guardianSignature" noStyle>
-          <Input
-            style={{
-              border: "none",
-              borderBottom: "1px solid #000",
-              // width: "100%",
-            }}
-            placeholder="Enter  guardian your signature"
-          />
+        <Form.Item>
+          <div>
+            <span style={{ fontWeight: "500" }}>Date: </span>
+            <Form.Item name="guardianDate" noStyle>
+              <DatePicker
+                style={{
+                  border: "none",
+                  borderBottom: "1px solid #000",
+                  width: "40%",
+                }}
+                format="YYYY-MM-DD"
+              />
+            </Form.Item>
+          </div>
         </Form.Item>
-      </div>
-      <Form.Item>
-        <div>
-          <span style={{ fontWeight: "500" }}>Date: </span>
-          <Form.Item name="guardianDate" noStyle>
-            <DatePicker
-              style={{
-                border: "none",
-                borderBottom: "1px solid #000",
-                width: "40%",
-              }}
-              format="YYYY-MM-DD"
-            />
-          </Form.Item>
-        </div>
-      </Form.Item>
-      <Form.Item>
-        <div>
-          <span style={{ fontWeight: "500" }}>Relationship to Patient:</span>
+        <Form.Item>
+          <div>
+            <span style={{ fontWeight: "500" }}>Relationship to Patient:</span>
 
-          <Form.Item name="relationshipToPatient" noStyle>
-            <Input
-              placeholder=" enter relationship to patient"
-              style={{
-                border: "none",
-                borderBottom: "1px solid #000",
-                // width: "60%",
-              }}
-            />
-          </Form.Item>
-        </div>
-      </Form.Item>
-      <strong>Office Use Only</strong>
-      <div style={{ alignItems: "center" }}>
-        <div>
-          <span style={{ fontWeight: "500" }}>Staff Member Name: </span>
-          <Form.Item name="staffName" noStyle>
-            <Input
-              placeholder="Enter Staff Name"
-              style={{
-                border: "none",
-                borderBottom: "1px solid #000",
-                // width: "60%",
-              }}
-            />
-          </Form.Item>
-        </div>
+            <Form.Item name="relationshipToPatient" noStyle>
+              <Input
+                placeholder=" enter relationship to patient"
+                style={{
+                  border: "none",
+                  borderBottom: "1px solid #000",
+                  // width: "60%",
+                }}
+              />
+            </Form.Item>
+          </div>
+        </Form.Item>
+        <strong>Office Use Only</strong>
+        <div style={{ alignItems: "center" }}>
+          <div>
+            <span style={{ fontWeight: "500" }}>Staff Member Name: </span>
+            <Form.Item name="staffName" noStyle>
+              <Input
+                placeholder="Enter Staff Name"
+                style={{
+                  border: "none",
+                  borderBottom: "1px solid #000",
+                  // width: "60%",
+                }}
+              />
+            </Form.Item>
+          </div>
 
-        <div>
-          <span>Date Received: </span>
-          <Form.Item name="staffDate" noStyle>
-            <DatePicker
-              style={{
-                border: "none",
-                borderBottom: "1px solid #000",
-                width: "40%",
-              }}
-              format="YYYY-MM-DD"
-            />
-          </Form.Item>
+          <div>
+            <span>Date Received: </span>
+            <Form.Item name="staffDate" noStyle>
+              <DatePicker
+                style={{
+                  border: "none",
+                  borderBottom: "1px solid #000",
+                  width: "40%",
+                }}
+                format="YYYY-MM-DD"
+              />
+            </Form.Item>
+          </div>
         </div>
-      </div>
-      <StyledButton type="primary" htmlType="submit" loading={loading}>
-        Submit
-      </StyledButton>
-      <Footer>
-        <p>1418 Manoa Road, Wynnewood, PA 19096</p>
-        <p>(484) 995-2726</p>
-        <p>Gemluxemedspa@gmail.com</p>
-      </Footer>
-      <Modal
-        title="Success"
-        visible={modalVisible}
-        onCancel={closeModal}
-        footer={null} // Remove footer
-        afterClose={() => form.resetFields()}
-      >
-        <Typography.Text>
-          The consent form has been submitted successfully.
-        </Typography.Text>
-      </Modal>
-    </StyledForm>
+        <StyledButton type="primary" htmlType="submit" loading={loading}>
+          Submit
+        </StyledButton>
+        <Footer>
+          <p>1418 Manoa Road, Wynnewood, PA 19096</p>
+          <p>(484) 995-2726</p>
+          <p>Gemluxemedspa@gmail.com</p>
+        </Footer>
+        <Modal
+          title="Success"
+          visible={modalVisible}
+          onCancel={closeModal}
+          footer={null} // Remove footer
+          afterClose={() => form.resetFields()}
+        >
+          <Typography.Text>
+            The consent form has been submitted successfully.
+          </Typography.Text>
+        </Modal>
+      </StyledForm>
+    </>
   );
 };
 
