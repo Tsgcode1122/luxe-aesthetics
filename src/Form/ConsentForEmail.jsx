@@ -149,10 +149,13 @@ const ConsentForEmail = () => {
         </div>
       `;
 
-      await axios.post("http://localhost:5009/api/email/emailConsent", {
-        htmlContent,
-        patientName: values.patientName,
-      });
+      await axios.post(
+        "https://gemluxebackend.onrender.com/api/email/emailConsent",
+        {
+          htmlContent,
+          patientName: values.patientName,
+        },
+      );
 
       setLoading(false);
 

@@ -74,7 +74,7 @@ const PatientConsentForm = () => {
         </div>
       `;
 
-      await axios.post("http://localhost:5009/api/email/send", {
+      await axios.post("https://gemluxebackend.onrender.com/api/email/send", {
         htmlContent,
         patientName: values.patientName,
       });
