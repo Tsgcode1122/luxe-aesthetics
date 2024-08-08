@@ -184,8 +184,6 @@ const ConsentForEmail = () => {
           <Form.Item name="patientName" noStyle>
             <Input
               placeholder="Enter your Name"
-              value={formData.patientName}
-              onChange={(e) => handleInputChange("patientName", e.target.value)}
               style={{
                 border: "none",
                 borderBottom: "1px solid #000",
@@ -233,10 +231,6 @@ const ConsentForEmail = () => {
         <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
           <Form.Item name="patientInitials" noStyle>
             <Input
-              value={formData.patientInitials}
-              onChange={(e) =>
-                handleInputChange("patientInitials", e.target.value)
-              }
               style={{
                 border: "none",
                 borderBottom: "1px solid #000",
@@ -281,10 +275,6 @@ const ConsentForEmail = () => {
         <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
           <Form.Item name="patientInitials" noStyle>
             <Input
-              value={formData.patientInitials}
-              onChange={(e) =>
-                handleInputChange("patientInitials", e.target.value)
-              }
               style={{
                 border: "none",
                 borderBottom: "1px solid #000",
@@ -346,10 +336,6 @@ const ConsentForEmail = () => {
         <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
           <Form.Item name="patientInitials" noStyle>
             <Input
-              value={formData.patientInitials}
-              onChange={(e) =>
-                handleInputChange("patientInitials", e.target.value)
-              }
               style={{
                 border: "none",
                 borderBottom: "1px solid #000",
@@ -377,8 +363,6 @@ const ConsentForEmail = () => {
           <Form.Item name="patientName" noStyle>
             <Input
               placeholder="Enter your Name"
-              value={formData.patientName}
-              onChange={(e) => handleInputChange("patientName", e.target.value)}
               style={{
                 border: "none",
                 borderBottom: "1px solid #000",
@@ -393,10 +377,6 @@ const ConsentForEmail = () => {
           <span>Patient Signature: </span>
           <Form.Item name="patientSignature" noStyle>
             <Input
-              value={formData.patientSignature}
-              onChange={(e) =>
-                handleInputChange("patientSignature", e.target.value)
-              }
               style={{
                 border: "none",
                 borderBottom: "1px solid #000",
@@ -435,7 +415,7 @@ const ConsentForEmail = () => {
         title="Success"
         visible={modalVisible}
         onCancel={closeModal}
-        footer={null} // Remove footer
+        footer={null}
         afterClose={() => form.resetFields()}
       >
         <Typography.Text>

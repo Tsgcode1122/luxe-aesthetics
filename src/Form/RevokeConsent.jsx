@@ -154,7 +154,7 @@ const RevokeConsent = () => {
           <Form.Item name="communicationCheck" valuePropName="checked" noStyle>
             <Checkbox>
               Any future communications, including appointment reminders, via
-              telephone
+              telephone.
             </Checkbox>
           </Form.Item>
         </Paragraph>

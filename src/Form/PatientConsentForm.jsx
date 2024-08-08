@@ -158,6 +158,7 @@ const PatientConsentForm = () => {
         visible={modalVisible}
         onOk={handleOk}
         onCancel={handleOk}
+        footer={null}
         okText="OK"
         centered // Center the modal
       >
@@ -166,7 +167,7 @@ const PatientConsentForm = () => {
           button below to fill consent for email call appointment reminders
           communications.
         </p>
-        <Button type="link" href="/next-consent-form">
+        <Button type="link" href="/patientconsent">
           Fill Next Consent Form
         </Button>{" "}
         {/* Adjust the href to the actual link */}
