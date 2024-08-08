@@ -62,19 +62,19 @@ const PatientConsentForm = () => {
           <p style="font-size: 22px;">If a patient remains inactive for 2 months, the access to our online tools and phone app will be deactivated. An email reminder will be sent to notify you. Upon the return to the practice, the tools will be reactivated.</p>
           <p style="font-size: 22px;">If a patient has not been seen in any of our locations for 2 years, they will be considered a New Patient the next time they come in. The visit will be a New Patient visit, and the patient will be charged as a New Patient.</p>
           <p style="font-size: 22px;">Please sign below to acknowledge you have read this policy:</p>
-          <p style="font-size: 22px;">Patient Name (signature): <span style="border-bottom: 1px solid #000; display: inline-block; width: 50%;">${
+          <p style="font-size: 22px;">Patient Name (signature): <span style="border-bottom: 1px solid #000; display: inline-block; padding: 7px; width: 50%;">${
             values.patientSignature
           }</span></p>
-          <p style="font-size: 22px;">Patient Name (print): <span style="border-bottom: 1px solid #000; display: inline-block; width: 60%;">${
+          <p style="font-size: 22px;">Patient Name (print): <span style="border-bottom: 1px solid #000; padding: 7px; display: inline-block; width: 60%;">${
             values.patientName
           }</span></p>
-          <p style="font-size: 22px;">Date: <span style="border-bottom: 1px solid #000; display: inline-block; width: 40%;">${values.date.format(
+          <p style="font-size: 22px;">Date: <span style="border-bottom: 1px solid #000; display: inline-block; padding: 7px; width: 40%;">${values.date.format(
             "YYYY-MM-DD",
           )}</span></p>
         </div>
       `;
 
-      await axios.post("https://gemluxebackend.onrender.com/api/email/send", {
+      await axios.post("http://localhost:5009/api/email/send", {
         htmlContent,
         patientName: values.patientName,
       });

@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import QuestionnaireSubmit from "../Component/QuestionnaireSubmit";
 
 const WhyUs = () => {
   useEffect(() => {

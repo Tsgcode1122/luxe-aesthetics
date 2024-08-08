@@ -113,13 +113,10 @@ const Questionnaire = () => {
 
       const htmlString = ReactDOMServer.renderToString(htmlContent);
       console.log(htmlString);
-      await axios.post(
-        "https://gemluxebackend.onrender.com/api/email/questionaire",
-        {
-          htmlContent: htmlString,
-          patientName: values.name,
-        },
-      );
+      await axios.post("http://localhost:5009/api/email/questionaire", {
+        htmlContent: htmlString,
+        patientName: values.name,
+      });
 
       setLoading(false);
 

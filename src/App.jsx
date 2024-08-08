@@ -15,12 +15,13 @@ import { Result, Button } from "antd";
 import Services from "./Pages/Services";
 import Gallery from "./Pages/Gallery";
 import Policies from "./Pages/Policies";
-import ConsentForEmail from "./Component/ConsentForEmail";
-import RevokeConsent from "./Component/RevokeConsent";
-import Questionnaire from "./Component/Questionnaire";
-import HippaConsent from "./Component/HippaConsent";
+
+import RevokeConsent from "./Form/RevokeConsent";
+import Questionnaire from "./Form/Questionnaire";
+import HippaConsent from "./Form/HippaConsent";
 import PatientConsentForm from "./Form/PatientConsentForm";
-import PatientConsent from "./Component/PatientConsent";
+import PatientConsent from "./Form/PatientConsent";
+import ConsentForEmail from "./Form/ConsentForEmail";
 
 const GlobalStyle = createGlobalStyle`
 

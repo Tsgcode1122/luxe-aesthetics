@@ -228,13 +228,10 @@ const HippaConsent = () => {
   </div>
 `;
 
-      await axios.post(
-        "https://gemluxebackend.onrender.com/api/email/hippaConsent",
-        {
-          htmlContent,
-          patientName: values.patientName,
-        },
-      );
+      await axios.post("http://localhost:5009/api/email/hippaConsent", {
+        htmlContent,
+        patientName: values.patientName,
+      });
 
       setLoading(false);
 

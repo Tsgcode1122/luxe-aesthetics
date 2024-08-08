@@ -6,10 +6,12 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Squash as Hamburger } from "hamburger-react";
 import bg from "../Images/navb.jpg";
+import { Dropdown } from "antd";
 
 const Navbar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isDropdownOpenBig, setIsDropdownOpenBig] = useState(false);
   const [prevScrollPos, setPrevScrollPos] = useState(window.scrollY);
   const [visible, setVisible] = useState(true);
   const sidebarRef = useRef(null);
@@ -25,6 +27,9 @@ const Navbar = () => {
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
+  };
+  const toggleDropdownBig = () => {
+    setIsDropdownOpenBig(!isDropdownOpenBig);
   };
 
   const handleScroll = () => {
@@ -109,7 +114,11 @@ const Navbar = () => {
                       Revoke Consent Form
                     </DropdownLink>
                   </DropdownItem>
-
+                  <DropdownItem onClick={closeSidebar}>
+                    <DropdownLink to="/patientconsent">
+                      Patient Consent
+                    </DropdownLink>
+                  </DropdownItem>
                   <DropdownItem onClick={closeSidebar}>
                     <DropdownLink to="/hippaconsent">
                       HIPAA Consent Form
@@ -153,47 +162,41 @@ const Navbar = () => {
               <ListLink to="/contact">Contact Us</ListLink>
 
               <ListLink to="/appointment">Book Appointment</ListLink>
-              <ListLink onClick={toggleDropdown}>
-                <MenuLink>
-                  Consent Form/Questionaires
-                  <IoIosArrowDropdown />
-                </MenuLink>
-                {isDropdownOpen && (
-                  <DropdownMenu>
-                    <DropdownItem onClick={closeSidebar}>
-                      <DropdownLink to="/patientconsentform">
-                        Patient Consent Form
-                      </DropdownLink>
-                    </DropdownItem>
-                    <DropdownItem onClick={closeSidebar}>
-                      <DropdownLink to="/consentforemail">
-                        Email Consent Form
-                      </DropdownLink>
-                    </DropdownItem>
-                    <DropdownItem onClick={closeSidebar}>
-                      <DropdownLink to="/revokeconsent">
-                        Revoke Consent Form
-                      </DropdownLink>
-                    </DropdownItem>
-
-                    <DropdownItem onClick={closeSidebar}>
-                      <DropdownLink to="/hippaconsent">
-                        HIPAA Consent Form
-                      </DropdownLink>
-                    </DropdownItem>
-                    <DropdownItem onClick={closeSidebar}>
-                      <DropdownLink to="/questionaire">
-                        Questionnaire Form
-                      </DropdownLink>
-                    </DropdownItem>
-                    <DropdownItem onClick={closeSidebar}>
-                      <DropdownLink to="/faqs">
-                        Frequently Asked Ques.
-                      </DropdownLink>
-                    </DropdownItem>
-                  </DropdownMenu>
-                )}
+              <ListLink onClick={toggleDropdownBig}>
+                Consent Form/Questionaires
               </ListLink>
+
+              {isDropdownOpenBig && (
+                <Dropdowns>
+                  <DropItem onClick={closeSidebar}>
+                    <DropLink to="/patientconsentform">
+                      Patient Consent Form
+                    </DropLink>
+                  </DropItem>
+                  <DropItem onClick={closeSidebar}>
+                    <DropLink to="/consentforemail">
+                      Email Consent Form
+                    </DropLink>
+                  </DropItem>
+                  <DropItem onClick={closeSidebar}>
+                    <DropLink to="/revokeconsent">Revoke Consent Form</DropLink>
+                  </DropItem>
+
+                  <DropItem onClick={closeSidebar}>
+                    <DropLink to="/patientconsent">Patient Consent</DropLink>
+                  </DropItem>
+                  <DropItem onClick={closeSidebar}>
+                    <DropLink to="/hippaconsent">HIPAA Consent Form</DropLink>
+                  </DropItem>
+                  <DropItem onClick={closeSidebar}>
+                    <DropLink to="/questionaire">Questionnaire Form</DropLink>
+                  </DropItem>
+                  <DropItem onClick={closeSidebar}>
+                    <DropLink to="/faqs">Frequently Asked Ques.</DropLink>
+                  </DropItem>
+                </Dropdowns>
+              )}
+
               <ListLink to="/policies">Policies</ListLink>
             </ul>
           </MenuList>
@@ -323,6 +326,14 @@ const MenuLink = styled(Link)`
   }
 `;
 
+const Dropdowns = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0.5rem 1rem;
+`;
+
 const DropdownMenu = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -340,6 +351,7 @@ const DropdownMenu = styled.div`
   }
 `;
 
+const DropItem = styled.div``;
 const DropdownItem = styled.div`
   /* padding: 0.5rem 0; */
   @media screen and (max-width: 320px) {
@@ -365,6 +377,21 @@ const DropdownLink = styled(Link)`
   background: transparent;
   border: 1px solid #a08733;
   border-radius: 0.375rem;
+  text-decoration: none;
+  color: #070b0d;
+  transition: all 0.3s;
+  &:hover {
+    color: #070b0d;
+    background-color: #d0ad5b;
+    border-color: #f7d782;
+  }
+`;
+const DropLink = styled(Link)`
+  display: inline-block;
+  margin: 0;
+  padding: 0.2rem;
+  background: transparent;
+
   text-decoration: none;
   color: #070b0d;
   transition: all 0.3s;
