@@ -3,7 +3,6 @@ import styled from "styled-components";
 import exampleImage from "../Images/chopp.png";
 
 const ImageContainer = styled.div`
-  /* height: 400px; */
   overflow: hidden;
   position: relative;
 `;
