@@ -118,10 +118,13 @@ const RevokeConsent = () => {
         </div>
       `;
 
-      await axios.post("http://localhost:5009/api/email/revokeConsent", {
-        htmlContent,
-        patientName: values.patientName,
-      });
+      await axios.post(
+        "https://gemluxebackend.onrender.com/api/email/revokeConsent",
+        {
+          htmlContent,
+          patientName: values.patientName,
+        },
+      );
 
       setModalVisible(true);
     } catch (error) {

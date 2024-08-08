@@ -153,7 +153,47 @@ const Navbar = () => {
               <ListLink to="/contact">Contact Us</ListLink>
 
               <ListLink to="/appointment">Book Appointment</ListLink>
-              <ListLink to="/gallery">Gallery</ListLink>
+              <ListLink onClick={toggleDropdown}>
+                <MenuLink>
+                  Consent Form/Questionaires
+                  <IoIosArrowDropdown />
+                </MenuLink>
+                {isDropdownOpen && (
+                  <DropdownMenu>
+                    <DropdownItem onClick={closeSidebar}>
+                      <DropdownLink to="/patientconsentform">
+                        Patient Consent Form
+                      </DropdownLink>
+                    </DropdownItem>
+                    <DropdownItem onClick={closeSidebar}>
+                      <DropdownLink to="/consentforemail">
+                        Email Consent Form
+                      </DropdownLink>
+                    </DropdownItem>
+                    <DropdownItem onClick={closeSidebar}>
+                      <DropdownLink to="/revokeconsent">
+                        Revoke Consent Form
+                      </DropdownLink>
+                    </DropdownItem>
+
+                    <DropdownItem onClick={closeSidebar}>
+                      <DropdownLink to="/hippaconsent">
+                        HIPAA Consent Form
+                      </DropdownLink>
+                    </DropdownItem>
+                    <DropdownItem onClick={closeSidebar}>
+                      <DropdownLink to="/questionaire">
+                        Questionnaire Form
+                      </DropdownLink>
+                    </DropdownItem>
+                    <DropdownItem onClick={closeSidebar}>
+                      <DropdownLink to="/faqs">
+                        Frequently Asked Ques.
+                      </DropdownLink>
+                    </DropdownItem>
+                  </DropdownMenu>
+                )}
+              </ListLink>
               <ListLink to="/policies">Policies</ListLink>
             </ul>
           </MenuList>
