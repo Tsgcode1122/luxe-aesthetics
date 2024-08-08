@@ -3,6 +3,7 @@ import { Form, Input, Button, DatePicker, Typography, Modal } from "antd";
 import styled from "styled-components";
 import axios from "axios";
 import moment from "moment";
+import TextArea from "antd/es/input/TextArea";
 
 const StyledForm = styled(Form)`
   max-width: 800px;
@@ -35,11 +36,26 @@ const Heading = styled.div`
   font-weight: 800;
   padding-bottom: 20px;
 `;
+const SubHead = styled.div`
+  text-align: left;
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 800;
+`;
 
 const Title = styled.div`
   text-align: center;
   font-size: 14px;
   font-weight: 500;
+  padding-bottom: 10px;
+`;
+
+const Unlist = styled.ul`
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   padding-bottom: 0px;
 `;
 
@@ -239,7 +255,7 @@ const HippaConsent = () => {
         Patient Consent for Use and Disclosure of Protected Health Information
       </Title>
       <strong>Patient Information</strong>
-      <ul style={{ padding: " 0 20px 20px 20px" }}>
+      <Unlist>
         <li>
           <div>
             <span style={{ fontWeight: "500" }}>Name: </span>
@@ -259,18 +275,17 @@ const HippaConsent = () => {
           <div>
             <span style={{ fontWeight: "500" }}>Address: </span>
             <Form.Item name="address" noStyle>
-              <Input
+              <TextArea
                 style={{
-                  border: "none",
                   borderBottom: "1px solid #000",
-                  width: "70%",
+                  // width: "70%",
                 }}
                 placeholder="Enter your  address"
               />
             </Form.Item>
           </div>
         </li>
-        <li style={{ display: "flex", alignItems: "center" }}>
+        <li>
           <div>
             <span style={{ fontWeight: "500" }}>City: </span>
             <Form.Item name="city" noStyle>
@@ -278,12 +293,14 @@ const HippaConsent = () => {
                 style={{
                   border: "none",
                   borderBottom: "1px solid #000",
-                  width: "60%",
+                  width: "70%",
                 }}
                 placeholder="your city"
               />
             </Form.Item>
           </div>
+        </li>
+        <li style={{ display: "flex", alignItems: "center" }}>
           <div>
             <span style={{ fontWeight: "500" }}>State: </span>
             <Form.Item name="state" noStyle>
@@ -304,7 +321,7 @@ const HippaConsent = () => {
                 style={{
                   border: "none",
                   borderBottom: "1px solid #000",
-                  width: "30%",
+                  width: "50%",
                 }}
                 placeholder="Enter zipcode"
               />
@@ -331,7 +348,7 @@ const HippaConsent = () => {
               style={{
                 border: "none",
                 borderBottom: "1px solid #000",
-                width: "60%",
+                width: "80%",
               }}
               placeholder="Enter Email"
             />
@@ -350,8 +367,8 @@ const HippaConsent = () => {
             />
           </Form.Item>
         </li>
-      </ul>
-      <strong>Consent</strong>
+      </Unlist>
+      <SubHead>Consent</SubHead>
       <Paragraph style={{ paddingTop: "10px" }}>
         <strong>Purpose:</strong> This consent form allows GEM LUXE AESTHETICS
         to use and disclose your protected health information (PHI) for the
@@ -415,7 +432,7 @@ const HippaConsent = () => {
         of this form, and I am aware of my rights under HIPAA.
       </Paragraph>
       <strong>Signature</strong>
-      <div style={{ display: "flex", alignItems: "center" }}>
+      <div>
         <div>
           <span style={{ fontWeight: "500" }}>Patient Signature: </span>
           <Form.Item name="patientSignature" noStyle>
@@ -424,7 +441,7 @@ const HippaConsent = () => {
               style={{
                 border: "none",
                 borderBottom: "1px solid #000",
-                width: "40%",
+                // width: "60%",
               }}
             />
           </Form.Item>
@@ -437,7 +454,7 @@ const HippaConsent = () => {
               style={{
                 border: "none",
                 borderBottom: "1px solid #000",
-                width: "40%",
+                // width: "40%",
               }}
               format="YYYY-MM-DD"
             />
@@ -453,7 +470,7 @@ const HippaConsent = () => {
             style={{
               border: "none",
               borderBottom: "1px solid #000",
-              width: "80%",
+              // width: "100%",
             }}
             placeholder="Enter  guardian your signature"
           />
@@ -484,7 +501,7 @@ const HippaConsent = () => {
               style={{
                 border: "none",
                 borderBottom: "1px solid #000",
-                width: "60%",
+                // width: "60%",
               }}
             />
           </Form.Item>
@@ -500,7 +517,7 @@ const HippaConsent = () => {
               style={{
                 border: "none",
                 borderBottom: "1px solid #000",
-                width: "60%",
+                // width: "60%",
               }}
             />
           </Form.Item>
