@@ -9,6 +9,7 @@ import ConsentForEmail from "../Component/ConsentForEmail";
 import RevokeConsent from "../Component/RevokeConsent";
 import PatientConsent from "../Component/PatientConsent";
 import Questionnaire from "../Component/Questionnaire";
+import HippaConsent from "../Component/HippaConsent";
 
 const Gallery = () => {
   useEffect(() => {
@@ -24,6 +25,7 @@ const Gallery = () => {
       {/* <RevokeConsent /> */}
       {/* <PatientConsent /> */}
       <Questionnaire />
+      {/* <HippaConsent /> */}
     </>
   );
 };

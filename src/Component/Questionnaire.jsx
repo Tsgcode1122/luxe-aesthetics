@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Form,
   Input,
@@ -10,6 +10,7 @@ import {
   InputNumber,
   Typography,
 } from "antd";
+
 import axios from "axios";
 import styled from "styled-components";
 import QuestionnaireSubmit from "./QuestionnaireSubmit";
@@ -76,6 +77,9 @@ const checkBoxStyle = {
   margin: "1px",
 };
 const Questionnaire = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
   const [form] = Form.useForm();
   const [modalVisible, setModalVisible] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -862,10 +866,8 @@ const Questionnaire = () => {
               <Checkbox>Routine Blood Work</Checkbox>
             </Form.Item>
 
-            <Form.Item noStyle>
-              <Form.Item name="dateBlook" noStyle>
-                <DatePicker />
-              </Form.Item>
+            <Form.Item name="dateBlood" noStyle>
+              <DatePicker />
             </Form.Item>
           </Group>
           <Group>
@@ -873,7 +875,7 @@ const Questionnaire = () => {
               <Checkbox>CBC</Checkbox>
             </Form.Item>
 
-            <Form.Item label="Date" name="dateCbc" noStyle>
+            <Form.Item name="dateCbc" noStyle>
               <DatePicker />
             </Form.Item>
           </Group>
@@ -886,7 +888,7 @@ const Questionnaire = () => {
               <Checkbox>Basic or Comprehensive Metabolic Panel</Checkbox>
             </Form.Item>
 
-            <Form.Item label="Date" name="dateMetabolic" noStyle>
+            <Form.Item name="dateMetabolic" noStyle>
               <DatePicker />
             </Form.Item>
           </Group>
@@ -895,7 +897,7 @@ const Questionnaire = () => {
               <Checkbox>(optional)TSH</Checkbox>
             </Form.Item>
 
-            <Form.Item label="Date" name="dateTsh" noStyle>
+            <Form.Item name="dateTsh" noStyle>
               <DatePicker />
             </Form.Item>
           </Group>
@@ -908,7 +910,7 @@ const Questionnaire = () => {
               <Checkbox>Lipid Panel</Checkbox>
             </Form.Item>
 
-            <Form.Item label="Date" name="dateLipid" noStyle>
+            <Form.Item name="dateLipid" noStyle>
               <DatePicker />
             </Form.Item>
           </Group>

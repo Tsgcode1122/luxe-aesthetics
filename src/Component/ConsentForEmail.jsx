@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Form, Input, Button, DatePicker, Typography, Modal } from "antd";
 import styled from "styled-components";
 import axios from "axios";
@@ -67,6 +67,9 @@ const Footer = styled.div`
 `;
 
 const ConsentForEmail = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
   const [form] = Form.useForm();
   const [loading, setLoading] = useState(false);
   const [modalVisible, setModalVisible] = useState(false);

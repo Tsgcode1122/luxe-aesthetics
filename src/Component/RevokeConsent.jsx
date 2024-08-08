@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Form,
   Input,
@@ -68,6 +68,9 @@ const Footer = styled.div`
 `;
 
 const RevokeConsent = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
   const [form] = Form.useForm();
   const [loading, setLoading] = useState(false);
   const [modalVisible, setModalVisible] = useState(false);
