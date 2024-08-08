@@ -295,8 +295,6 @@ Notice of Privacy Practices.
           <Form.Item name="patientName" noStyle>
             <Input
               placeholder="Enter your Name"
-              value={formData.patientName}
-              onChange={(e) => handleInputChange("patientName", e.target.value)}
               style={{
                 border: "none",
                 borderBottom: "1px solid #000",
@@ -311,10 +309,6 @@ Notice of Privacy Practices.
           <span>Patient Signature: </span>
           <Form.Item name="patientSignature" noStyle>
             <Input
-              value={formData.patientSignature}
-              onChange={(e) =>
-                handleInputChange("patientSignature", e.target.value)
-              }
               style={{
                 border: "none",
                 borderBottom: "1px solid #000",
@@ -349,10 +343,6 @@ Notice of Privacy Practices.
             <Form.Item name="patientName" noStyle>
               <Input
                 placeholder="Enter your Name"
-                value={formData.patientName}
-                onChange={(e) =>
-                  handleInputChange("patientName", e.target.value)
-                }
                 style={{
                   border: "none",
                   borderBottom: "1px solid #000",
@@ -370,10 +360,6 @@ Notice of Privacy Practices.
           <span>Patient Signature: </span>
           <Form.Item name="patientSignature" noStyle>
             <Input
-              value={formData.patientSignature}
-              onChange={(e) =>
-                handleInputChange("patientSignature", e.target.value)
-              }
               style={{
                 border: "none",
                 borderBottom: "1px solid #000",

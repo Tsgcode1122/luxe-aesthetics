@@ -118,11 +118,15 @@ const HippaConsent = () => {
 
       </li>
       <li>
-        <p style="font-weight: 500;">Phone Number:   ${values.phoneNumber}</p>
+        <p style="font-weight: 500;">Phone Number:   ${
+          values.phoneNumber ? values.phoneNumber : ""
+        }</p>
       
       </li>
       <li>
-        <p style="font-weight: 500;">Email:    ${values.email}</p>
+        <p style="font-weight: 500;">Email:    ${
+          values.email ? values.email : ""
+        }</p>
       
       </li>
       <li>
@@ -209,7 +213,7 @@ const HippaConsent = () => {
     <div style="align-items: center;">
       <div>
         <p style="font-weight: 500;">Staff Member Name:   ${
-          values.staffName
+          values.staffName ? values.staffName : ""
         }</p>
       
       </div>
