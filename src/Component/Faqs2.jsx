@@ -81,7 +81,7 @@ const Faqs2 = () => {
             </FaqItem>
           ))}
           <Link to="/faqs">
-            <Button>Book Now</Button>
+            <Button>View More...</Button>
           </Link>
         </Content>
       </FaqsContainer>
@@ -120,6 +120,9 @@ const FaqsContainer = styled.div`
   }
 `;
 const Content = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 2rem;
   border-radius: 50px;
   background: rgb(245, 242, 234, 0.9);

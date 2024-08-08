@@ -286,13 +286,36 @@ const MenuLink = styled(Link)`
 const DropdownMenu = styled.div`
   display: flex;
   flex-wrap: wrap;
-  padding-left: 1rem;
+  padding: 0.5rem 1rem;
 
   gap: 0.5rem;
+  @media screen and (max-width: 320px) {
+    padding-left: 0.8rem;
+  }
+  @media (min-width: 321px) and (max-width: 399px) {
+    padding-left: 0.9rem;
+  }
+  @media (min-width: 400px) and (max-width: 499px) {
+    padding: 0.5rem 1rem;
+  }
 `;
 
 const DropdownItem = styled.div`
-  padding: 0.5rem 0;
+  /* padding: 0.5rem 0; */
+  @media screen and (max-width: 320px) {
+    font-size: 12px;
+
+    /* max-width: 100px; */
+  }
+  @media (min-width: 321px) and (max-width: 399px) {
+    font-size: 14px;
+    /* padding: 0.5rem 0.4rem; */
+    /* min-width: 160px; */
+  }
+  @media (min-width: 400px) and (max-width: 499px) {
+    font-size: 15px;
+    min-width: 160px;
+  }
 `;
 
 const DropdownLink = styled(Link)`
@@ -348,7 +371,7 @@ const StyledNavbar = styled.div`
 `;
 
 const NavHeight = styled.div`
-  height: 3.75rem;
+  height: 3.25rem;
 `;
 
 const HeadSpace = styled.div`

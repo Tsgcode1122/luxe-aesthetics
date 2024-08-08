@@ -67,6 +67,9 @@ const Footer = styled.div`
 `;
 
 const PatientConsent = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
   const [form] = Form.useForm();
   const [loading, setLoading] = useState(false);
   const [modalVisible, setModalVisible] = useState(false);
