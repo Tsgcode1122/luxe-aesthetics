@@ -76,6 +76,26 @@ const checkBoxStyle = {
 
   margin: "1px",
 };
+const StyledDatePicker = styled(DatePicker)`
+  width: 40%;
+  border: none;
+  border-bottom: 1px solid #000;
+  padding: 2px 5px;
+  font-size: 12px; /* Reduce font size */
+  line-height: 1.2; /* Adjust line height */
+
+  .ant-picker-input {
+    input {
+      font-size: 12px; /* Reduce font size of input text */
+      padding: 2px 0; /* Adjust padding inside input */
+    }
+  }
+
+  .ant-picker {
+    padding: 2px 5px;
+    height: 28px; /* Adjust height */
+  }
+`;
 const Questionnaire = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -122,6 +142,7 @@ const Questionnaire = () => {
             <Form.Item name="date" noStyle>
               <DatePicker
                 style={{
+                  transformOrigin: "top center",
                   border: "none",
                   borderBottom: "1px solid #000",
                   width: "70%",
