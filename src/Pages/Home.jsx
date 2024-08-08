@@ -4,7 +4,7 @@ import About from "../Component/About";
 import GlowingDivider from "../Component/GlowingDivider";
 import Services from "../Component/Services";
 import WhyUs from "../Component/WhyUs";
-import Faqs from "../Component/Faqs";
+import Faqs2 from "../Component/Faqs2";
 import Contact from "../Component/Contact";
 import Bottle from "../Component/Bottle";
 import styled from "styled-components";
@@ -31,7 +31,7 @@ const Home = () => {
             <GlowingDivider />
           </span>
         </div>
-        <Faqs />
+        <Faqs2 />
       </Divider>
       <Contact />
     </>

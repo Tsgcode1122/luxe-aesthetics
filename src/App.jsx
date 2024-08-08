@@ -15,6 +15,12 @@ import { Result, Button } from "antd";
 import Services from "./Pages/Services";
 import Gallery from "./Pages/Gallery";
 import Policies from "./Pages/Policies";
+import ConsentForEmail from "./Component/ConsentForEmail";
+import RevokeConsent from "./Component/RevokeConsent";
+import Questionnaire from "./Component/Questionnaire";
+import HippaConsent from "./Component/HippaConsent";
+import PatientConsentForm from "./Form/PatientConsentForm";
+import PatientConsent from "./Component/PatientConsent";
 
 const GlobalStyle = createGlobalStyle`
 
@@ -109,8 +115,15 @@ const routes = [
       { path: "/appointment", element: <Appointment /> },
       { path: "/whyus", element: <WhyUs /> },
       { path: "/services", element: <Services /> },
-      { path: "/gallery", element: <Gallery /> },
+
       { path: "/policies", element: <Policies /> },
+      { path: "/consentforemail", element: <ConsentForEmail /> },
+      { path: "/revokeconsent", element: <RevokeConsent /> },
+      { path: "/questionaire", element: <Questionnaire /> },
+      { path: "/hippaconsent", element: <HippaConsent /> },
+      { path: "/patientconsent", element: <PatientConsent /> },
+      { path: "/patientconsentform", element: <PatientConsentForm /> },
+      { path: "/faqs", element: <Gallery /> },
 
       { path: "*", element: <InvalidPath /> },
     ],

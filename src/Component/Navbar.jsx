@@ -1,13 +1,15 @@
 import React, { useState, useRef, useEffect } from "react";
 import styled from "styled-components";
 import logo from "../Images/logo.png";
-import { IoIosArrowDropright } from "react-icons/io";
+import { IoIosArrowDropright, IoIosArrowDropdown } from "react-icons/io";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Squash as Hamburger } from "hamburger-react";
 import bg from "../Images/navb.jpg";
+
 const Navbar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [prevScrollPos, setPrevScrollPos] = useState(window.scrollY);
   const [visible, setVisible] = useState(true);
   const sidebarRef = useRef(null);
@@ -18,6 +20,11 @@ const Navbar = () => {
 
   const closeSidebar = () => {
     setIsSidebarOpen(false);
+    setIsDropdownOpen(false);
+  };
+
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
   };
 
   const handleScroll = () => {
@@ -80,11 +87,46 @@ const Navbar = () => {
                 Book Appointment <IoIosArrowDropright />
               </MenuLink>
             </MenuItem>
-            <MenuItem onClick={closeSidebar}>
-              <MenuLink to="/gallery">
-                Gallery
-                <IoIosArrowDropright />
+            <MenuItem onClick={toggleDropdown}>
+              <MenuLink>
+                Consent Form/Questionaires
+                <IoIosArrowDropdown />
               </MenuLink>
+              {isDropdownOpen && (
+                <DropdownMenu>
+                  <DropdownItem onClick={closeSidebar}>
+                    <DropdownLink to="/patientconsentform">
+                      Patient Consent Form
+                    </DropdownLink>
+                  </DropdownItem>
+                  <DropdownItem onClick={closeSidebar}>
+                    <DropdownLink to="/consentforemail">
+                      Email Consent Form
+                    </DropdownLink>
+                  </DropdownItem>
+                  <DropdownItem onClick={closeSidebar}>
+                    <DropdownLink to="/revokeconsent">
+                      Revoke Consent Form
+                    </DropdownLink>
+                  </DropdownItem>
+
+                  <DropdownItem onClick={closeSidebar}>
+                    <DropdownLink to="/hippaconsent">
+                      HIPAA Consent Form
+                    </DropdownLink>
+                  </DropdownItem>
+                  <DropdownItem onClick={closeSidebar}>
+                    <DropdownLink to="/questionaire">
+                      Questionnaire Form
+                    </DropdownLink>
+                  </DropdownItem>
+                  <DropdownItem onClick={closeSidebar}>
+                    <DropdownLink to="/faqs">
+                      Frequently Asked Ques.
+                    </DropdownLink>
+                  </DropdownItem>
+                </DropdownMenu>
+              )}
             </MenuItem>
             <MenuItem onClick={closeSidebar}>
               <MenuLink to="/policies">
@@ -120,6 +162,7 @@ const Navbar = () => {
     </>
   );
 };
+
 const FixedNavbar = styled.div`
   display: none;
   position: fixed;
@@ -145,6 +188,7 @@ const FixedNavbar = styled.div`
     display: block;
   }
 `;
+
 const MenuList = styled.div`
   ul {
     display: flex;
@@ -158,6 +202,7 @@ const MenuList = styled.div`
     }
   }
 `;
+
 const ListLink = styled(Link)`
   display: flex;
   justify-content: space-between;
@@ -238,8 +283,43 @@ const MenuLink = styled(Link)`
   }
 `;
 
-const NavHeight = styled.div`
-  height: 3rem;
+const DropdownMenu = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 1rem;
+
+  gap: 0.5rem;
+`;
+
+const DropdownItem = styled.div`
+  padding: 0.5rem 0;
+`;
+
+const DropdownLink = styled(Link)`
+  display: inline-block;
+  margin: 0;
+  padding: 0.2rem;
+  background: transparent;
+  border: 1px solid #a08733;
+  border-radius: 0.375rem;
+  text-decoration: none;
+  color: #070b0d;
+  transition: all 0.3s;
+  &:hover {
+    color: #070b0d;
+    background-color: #d0ad5b;
+    border-color: #f7d782;
+  }
+`;
+
+const Overlay = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 998;
 `;
 
 const StyledNavbar = styled.div`
@@ -267,6 +347,10 @@ const StyledNavbar = styled.div`
   }
 `;
 
+const NavHeight = styled.div`
+  height: 3.75rem;
+`;
+
 const HeadSpace = styled.div`
   align-items: center;
   display: flex;
@@ -287,20 +371,10 @@ const HeadSpace = styled.div`
 `;
 
 const MenuToggle = styled.div`
-  margin: 0;
-  cursor: pointer;
-  img {
-    max-width: 100%;
-    height: 40px;
+  display: block;
+  @media screen and (min-width: 900px) {
+    display: none;
   }
-`;
-
-const Overlay = styled.div`
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
 `;
 
 export default Navbar;
