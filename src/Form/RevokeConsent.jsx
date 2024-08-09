@@ -30,7 +30,7 @@ const StyledForm = styled(Form)`
 const Paragraph = styled.div`
   padding-bottom: 20px;
   color: #000000;
-  font-size: 12px;
+  font-size: 14px;
 `;
 
 const StyledButton = styled(Button)`

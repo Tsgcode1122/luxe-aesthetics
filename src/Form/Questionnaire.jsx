@@ -38,6 +38,7 @@ const StyledButton = styled(Button)`
 const Paragraph = styled.div`
   padding-bottom: 20px;
   color: #000000;
+  font-size: 14px;
 `;
 const Heading = styled.div`
   text-align: center;
