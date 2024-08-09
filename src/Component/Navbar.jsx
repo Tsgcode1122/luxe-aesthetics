@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Squash as Hamburger } from "hamburger-react";
 import bg from "../Images/navb.jpg";
-import { Dropdown } from "antd";
 
 const Navbar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -96,10 +95,10 @@ const Navbar = () => {
               </MenuLink>
             </MenuItem>
             <MenuItem onClick={toggleDropdown}>
-              <MenuLink>
+              <div>
                 Consent Form/Questionaires
                 <IoIosArrowDropdown />
-              </MenuLink>
+              </div>
               {isDropdownOpen && (
                 <DropdownMenu>
                   <DropdownItem onClick={closeSidebar}>
@@ -165,9 +164,9 @@ const Navbar = () => {
               <ListLink to="/contact">Contact Us</ListLink>
 
               <ListLink to="/appointment">Book Appointment</ListLink>
-              <ListLink onClick={toggleDropdownBig}>
+              <ListLin onClick={toggleDropdownBig}>
                 Consent Form/Questionaires
-              </ListLink>
+              </ListLin>
 
               <ListLink to="/policies">Policies</ListLink>
             </ul>
@@ -260,6 +259,22 @@ const ListLink = styled(Link)`
     border-color: #f7d782;
   }
 `;
+const ListLin = styled.div`
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  background: transparent;
+
+  border-radius: 0.375rem;
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s;
+  &:hover {
+    color: #070b0d;
+    background-color: #d0ad5b;
+    border-color: #f7d782;
+  }
+`;
 
 const Logo = styled.img`
   max-width: 100%;
@@ -330,7 +345,9 @@ const Dropdowns = styled.div`
   display: grid;
   background: white;
   position: absolute;
-  right: 20px;
+  border-radius: 0 0 10px 10px;
+  border: 1px solid #f7d782;
+  right: 50px;
   grid-template-columns: 1fr 1fr;
   padding: 0.5rem 1rem;
 `;
@@ -391,6 +408,7 @@ const DropLink = styled(Link)`
   display: inline-block;
   margin: 0;
   padding: 0.2rem;
+  /* border: 1px solid #a08733; */
   background: transparent;
   border-radius: 5px;
   text-decoration: none;
