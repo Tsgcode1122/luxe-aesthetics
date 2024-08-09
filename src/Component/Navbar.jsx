@@ -95,10 +95,10 @@ const Navbar = () => {
               </MenuLink>
             </MenuItem>
             <MenuItem onClick={toggleDropdown}>
-              <div>
+              <MenuLin>
                 Consent Form/Questionaires
                 <IoIosArrowDropdown />
-              </div>
+              </MenuLin>
               {isDropdownOpen && (
                 <DropdownMenu>
                   <DropdownItem onClick={closeSidebar}>
@@ -322,6 +322,22 @@ const MenuItem = styled.li`
   padding-bottom: 0.5rem;
 `;
 
+const MenuLin = styled.div`
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  background: transparent;
+  border: 1px solid #a08733;
+  border-radius: 0.375rem;
+  text-decoration: none;
+  color: #070b0d;
+  transition: all 0.3s;
+  &:hover {
+    color: #070b0d;
+    background-color: #d0ad5b;
+    border-color: #f7d782;
+  }
+`;
 const MenuLink = styled(Link)`
   display: flex;
   justify-content: space-between;
