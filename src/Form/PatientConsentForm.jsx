@@ -175,6 +175,7 @@ const PatientConsentForm = () => {
         title="Form Submitted Successfully"
         visible={modalVisible}
         onOk={handleOk}
+        footer={null}
         onCancel={handleOk}
       >
         <p>

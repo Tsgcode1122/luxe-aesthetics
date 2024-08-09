@@ -5,6 +5,7 @@ import axios from "axios";
 import moment from "moment";
 import TextArea from "antd/es/input/TextArea";
 import LoaderModal from "./LoaderModal";
+import SignatureUpload from "./SignatureUpload";
 const Container = styled.div`
   display: flex;
   align-items: center;
@@ -105,6 +106,7 @@ const HippaConsent = () => {
     setLoader(true);
     setLoading(true);
     try {
+      const signatureImage = values.patientSignature;
       const htmlContent = `
   <div>
     <h1 style="text-align: center;">GEM LUXE AESTHETICS</h1>
@@ -185,11 +187,10 @@ const HippaConsent = () => {
     <strong>Signature</strong>
     <div style="display: flex; align-items: center; gap: 20px;">
     
-        <p style="font-weight: 500;">Patient Signature:
-        ${values.patientSignature ? values.patientSignature : "N/A"}
-        
-        </p>
-    
+     
+     <p style="font-size: 22px;">Patient Signature: <img src="${
+       signatureImage ? signatureImage : ""
+     }" style="width: 150px; height: auto;" alt="Patient Signature" /></p>
    
    
         <p style="font-weight: 500; padding-left:"20px">Date: 
@@ -262,7 +263,10 @@ const HippaConsent = () => {
     setModalVisible(false);
     form.resetFields();
   };
-
+  const handleImageUpload = (imageUrl) => {
+    console.log(imageUrl);
+    form.setFieldsValue({ patientSignature: imageUrl });
+  };
   return (
     <Container>
       {" "}
@@ -455,14 +459,7 @@ const HippaConsent = () => {
           <div>
             <span style={{ fontWeight: "500" }}>Patient Signature: </span>
             <Form.Item name="patientSignature" noStyle>
-              <Input
-                placeholder="Enter signature"
-                style={{
-                  border: "none",
-                  borderBottom: "1px solid #000",
-                  // width: "60%",
-                }}
-              />
+              <SignatureUpload onImageUpload={handleImageUpload} />
             </Form.Item>
           </div>
 
@@ -491,7 +488,7 @@ const HippaConsent = () => {
                 borderBottom: "1px solid #000",
                 // width: "100%",
               }}
-              placeholder="Enter  guardian your signature"
+              placeholder="Enter  guardian FULL NAME"
             />
           </Form.Item>
         </div>

@@ -13,7 +13,7 @@ import axios from "axios";
 import moment from "moment";
 import LoaderModal from "./LoaderModal";
 const { TextArea } = Input;
-
+import SignatureUpload from "./SignatureUpload";
 const Container = styled.div`
   display: flex;
   align-items: center;
@@ -85,6 +85,7 @@ const RevokeConsent = () => {
     setLoader(true);
     setLoading(true);
     try {
+      const signatureImage = values.patientSignature;
       const htmlContent = `
         <div style="padding: 20px 30px;">
           <p style="font-size: 22px;"><strong>REVOCATION OF CONSENT TO TELEPHONE CALL APPOINTMENT REMINDERS, EMAIL AND/OR TEXT USAGE</strong></p>
@@ -111,9 +112,9 @@ const RevokeConsent = () => {
           <p style="font-size: 22px;">Patient Name: <span style="border-bottom: 1px solid #000; display: inline-block; width: 50%; padding: 7px;">${
             values.patientName
           }</span></p>
-          <p style="font-size: 22px;">Patient Signature: <span style="border-bottom: 1px solid #000; display: inline-block; width: 60%; padding: 7px;">${
-            values.patientSignature
-          }</span></p>
+           <p style="font-size: 22px;">Patient Signature: <img src="${
+             signatureImage ? signatureImage : ""
+           }" style="width: 150px; height: auto;" alt="Patient Signature" /></p>
           <p style="font-size: 22px;">Date: <span style="border-bottom: 1px solid #000; display: inline-block; width: 70%; padding: 7px;">${values.date.format(
             "YYYY-MM-DD",
           )}</span></p>
@@ -146,7 +147,10 @@ const RevokeConsent = () => {
     setModalVisible(false);
     form.resetFields();
   };
-
+  const handleImageUpload = (imageUrl) => {
+    console.log(imageUrl);
+    form.setFieldsValue({ patientSignature: imageUrl });
+  };
   return (
     <Container>
       {" "}
@@ -286,14 +290,7 @@ const RevokeConsent = () => {
           >
             <span>Patient signature: </span>
             <Form.Item name="patientSignature" noStyle>
-              <Input
-                style={{
-                  border: "none",
-                  borderBottom: "1px solid #000",
-                  width: "70%",
-                }}
-                placeholder="Patient Signature"
-              />
+              <SignatureUpload onImageUpload={handleImageUpload} />
             </Form.Item>
           </div>
         </Form.Item>

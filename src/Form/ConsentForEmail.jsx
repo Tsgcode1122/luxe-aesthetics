@@ -4,7 +4,7 @@ import styled from "styled-components";
 import axios from "axios";
 import moment from "moment";
 import LoaderModal from "./LoaderModal";
-
+import SignatureUpload from "./SignatureUpload";
 const Container = styled.div`
   display: flex;
   align-items: center;
@@ -104,6 +104,7 @@ const ConsentForEmail = () => {
     setLoader(true);
     setLoading(true);
     try {
+      const signatureImage = values.patientSignature;
       const htmlContent = `
         <div style=" padding: 20px 30px; " >
           <div style="text-align: center; font-size: 32px; font-weight: 800;  padding-bottom: 10px; ">GEM LUXE AESTHETICS</div>
@@ -142,9 +143,7 @@ const ConsentForEmail = () => {
               values.patientName
             }</span></p>
           
-          <p style="font-size: 18px;">Patient Signature: <span style="border-bottom: 1px solid #000; display: inline-block; width: 60%; padding: 7px;">${
-            values.patientSignature
-          }</span></p>
+         <p style="font-size: 22px;">Patient Name (signature): <img src="${signatureImage}" style="width: 150px; height: auto;" alt="Patient Signature" /></p>
         <p style="font-size: 18px;">Date: <span style="border-bottom: 1px solid #000; display: inline-block; width: 70%; padding: 7px;">${values.date.format(
           "YYYY-MM-DD",
         )}</span></p>
@@ -183,6 +182,10 @@ const ConsentForEmail = () => {
   const handleOk = () => {
     setModalVisible(false);
     form.resetFields("");
+  };
+  const handleImageUpload = (imageUrl) => {
+    console.log(imageUrl);
+    form.setFieldsValue({ patientSignature: imageUrl });
   };
   return (
     <Container>
@@ -388,14 +391,7 @@ const ConsentForEmail = () => {
           <div>
             <span>Patient Signature: </span>
             <Form.Item name="patientSignature" noStyle>
-              <Input
-                style={{
-                  border: "none",
-                  borderBottom: "1px solid #000",
-                  width: "40%",
-                }}
-                placeholder="Enter your signature"
-              />
+              <SignatureUpload onImageUpload={handleImageUpload} />
             </Form.Item>
           </div>
         </Form.Item>

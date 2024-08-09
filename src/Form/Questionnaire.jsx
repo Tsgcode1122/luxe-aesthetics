@@ -15,7 +15,7 @@ import axios from "axios";
 import styled from "styled-components";
 import QuestionnaireSubmit from "./QuestionnaireSubmit";
 import ReactDOMServer from "react-dom/server";
-
+import SignatureUpload from "./SignatureUpload";
 const { TextArea } = Input;
 
 const Container = styled.div`
