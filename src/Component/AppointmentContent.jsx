@@ -13,7 +13,7 @@ const AppointmentContent = () => {
       </Content>
       <Container>
         <Iframe
-          src="https://gemluxaesthetics.setmore.com/gemluxaesthetics"
+          src="https://gemluxeaesthetics.setmore.com/gemluxeaesthetics"
           title="Appointment Scheduling"
           frameBorder="0"
         />
