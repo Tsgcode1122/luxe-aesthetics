@@ -5,6 +5,12 @@ import axios from "axios";
 import moment from "moment";
 import TextArea from "antd/es/input/TextArea";
 import LoaderModal from "./LoaderModal";
+const Container = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+`;
 const StyledForm = styled(Form)`
   max-width: 800px;
   padding: 20px;
@@ -258,7 +264,7 @@ const HippaConsent = () => {
   };
 
   return (
-    <>
+    <Container>
       {" "}
       {loader && <LoaderModal />}
       <StyledForm form={form} onFinish={onFinish} initialValues={formData}>
@@ -570,7 +576,7 @@ const HippaConsent = () => {
           </Typography.Text>
         </Modal>
       </StyledForm>
-    </>
+    </Container>
   );
 };
 

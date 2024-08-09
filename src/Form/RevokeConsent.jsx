@@ -14,6 +14,12 @@ import moment from "moment";
 import LoaderModal from "./LoaderModal";
 const { TextArea } = Input;
 
+const Container = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+`;
 const StyledForm = styled(Form)`
   max-width: 800px;
   padding: 20px;
@@ -142,7 +148,7 @@ const RevokeConsent = () => {
   };
 
   return (
-    <>
+    <Container>
       {" "}
       {loader && <LoaderModal />}
       <StyledForm form={form} onFinish={onFinish}>
@@ -331,7 +337,7 @@ const RevokeConsent = () => {
           <p>Gemluxemedspa@gmail.com</p>
         </Footer>
       </StyledForm>
-    </>
+    </Container>
   );
 };
 

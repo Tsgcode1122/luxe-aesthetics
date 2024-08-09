@@ -24,6 +24,9 @@ const Navbar = () => {
     setIsSidebarOpen(false);
     setIsDropdownOpen(false);
   };
+  const closebar = () => {
+    setIsDropdownOpenBig(false);
+  };
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
@@ -166,41 +169,36 @@ const Navbar = () => {
                 Consent Form/Questionaires
               </ListLink>
 
-              {isDropdownOpenBig && (
-                <Dropdowns>
-                  <DropItem onClick={closeSidebar}>
-                    <DropLink to="/patientconsentform">
-                      Patient Consent Form
-                    </DropLink>
-                  </DropItem>
-                  <DropItem onClick={closeSidebar}>
-                    <DropLink to="/consentforemail">
-                      Email Consent Form
-                    </DropLink>
-                  </DropItem>
-                  <DropItem onClick={closeSidebar}>
-                    <DropLink to="/revokeconsent">Revoke Consent Form</DropLink>
-                  </DropItem>
-
-                  <DropItem onClick={closeSidebar}>
-                    <DropLink to="/patientconsent">Patient Consent</DropLink>
-                  </DropItem>
-                  <DropItem onClick={closeSidebar}>
-                    <DropLink to="/hippaconsent">HIPAA Consent Form</DropLink>
-                  </DropItem>
-                  <DropItem onClick={closeSidebar}>
-                    <DropLink to="/questionaire">Questionnaire Form</DropLink>
-                  </DropItem>
-                  <DropItem onClick={closeSidebar}>
-                    <DropLink to="/faqs">Frequently Asked Ques.</DropLink>
-                  </DropItem>
-                </Dropdowns>
-              )}
-
               <ListLink to="/policies">Policies</ListLink>
             </ul>
           </MenuList>
         </HeadSpace>
+        {isDropdownOpenBig && (
+          <Dropdowns>
+            <DropItem onClick={closebar}>
+              <DropLink to="/patientconsentform">Patient Consent Form</DropLink>
+            </DropItem>
+            <DropItem onClick={closebar}>
+              <DropLink to="/consentforemail">Email Consent Form</DropLink>
+            </DropItem>
+            <DropItem onClick={closebar}>
+              <DropLink to="/revokeconsent">Revoke Consent Form</DropLink>
+            </DropItem>
+
+            <DropItem onClick={closebar}>
+              <DropLink to="/patientconsent">Patient Consent</DropLink>
+            </DropItem>
+            <DropItem onClick={closebar}>
+              <DropLink to="/hippaconsent">HIPAA Consent Form</DropLink>
+            </DropItem>
+            <DropItem onClick={closebar}>
+              <DropLink to="/questionaire">Questionnaire Form</DropLink>
+            </DropItem>
+            <DropItem onClick={closebar}>
+              <DropLink to="/faqs">Frequently Asked Ques.</DropLink>
+            </DropItem>
+          </Dropdowns>
+        )}
       </FixedNavbar>
     </>
   );
@@ -330,6 +328,9 @@ const Dropdowns = styled.div`
   display: flex;
   flex-wrap: wrap;
   display: grid;
+  background: white;
+  position: absolute;
+  right: 20px;
   grid-template-columns: 1fr 1fr;
   padding: 0.5rem 1rem;
 `;
@@ -391,7 +392,7 @@ const DropLink = styled(Link)`
   margin: 0;
   padding: 0.2rem;
   background: transparent;
-
+  border-radius: 5px;
   text-decoration: none;
   color: #070b0d;
   transition: all 0.3s;

@@ -17,6 +17,13 @@ import QuestionnaireSubmit from "./QuestionnaireSubmit";
 import ReactDOMServer from "react-dom/server";
 
 const { TextArea } = Input;
+
+const Container = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+`;
 const StyledButton = styled(Button)`
   width: 100%;
   margin-top: 20px;
@@ -140,7 +147,7 @@ const Questionnaire = () => {
   };
 
   return (
-    <>
+    <Container>
       {loader && <LoaderModal />}
       <StyledForm form={form} onFinish={onFinish}>
         <Heading>GEM LUXE AESTHETICS</Heading>
@@ -974,7 +981,7 @@ const Questionnaire = () => {
           The consent form has been submitted successfully.
         </Typography.Text>
       </Modal>
-    </>
+    </Container>
   );
 };
 

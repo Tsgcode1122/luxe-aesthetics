@@ -4,6 +4,13 @@ import styled from "styled-components";
 import axios from "axios";
 import moment from "moment";
 import LoaderModal from "./LoaderModal";
+
+const Container = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+`;
 const StyledForm = styled(Form)`
   max-width: 800px;
   padding: 20px;
@@ -219,7 +226,7 @@ Notice of Privacy Practices.
   };
 
   return (
-    <>
+    <Container>
       {loader && <LoaderModal />}
       <StyledForm form={form} onFinish={onFinish} initialValues={formData}>
         <Heading>GEM LUXE AESTHETICS</Heading>
@@ -410,7 +417,7 @@ Notice of Privacy Practices.
           </Typography.Text>
         </Modal>
       </StyledForm>
-    </>
+    </Container>
   );
 };
 

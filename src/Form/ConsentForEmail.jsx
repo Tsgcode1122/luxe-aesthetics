@@ -4,6 +4,13 @@ import styled from "styled-components";
 import axios from "axios";
 import moment from "moment";
 import LoaderModal from "./LoaderModal";
+
+const Container = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+`;
 const StyledForm = styled(Form)`
   max-width: 800px;
   padding: 20px;
@@ -178,7 +185,7 @@ const ConsentForEmail = () => {
     form.resetFields("");
   };
   return (
-    <>
+    <Container>
       {" "}
       {loader && <LoaderModal />}
       <StyledForm form={form} onFinish={onFinish} initialValues={formData}>
@@ -428,7 +435,7 @@ const ConsentForEmail = () => {
           </Typography.Text>
         </Modal>
       </StyledForm>
-    </>
+    </Container>
   );
 };
 
