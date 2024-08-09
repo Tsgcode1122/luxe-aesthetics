@@ -143,14 +143,14 @@ const PatientConsentForm = () => {
 
             <Form.Item
               name="patientName"
-              label="Patient Name (print)"
+              label="Patient Name (print):"
               rules={[{ required: true, message: "Please enter your name" }]}
             >
               <Input />
             </Form.Item>
             <Form.Item
               name="patientSignature"
-              label="Patient Name (signature)"
+              label="Patient  (signature):"
               rules={[
                 { required: true, message: "Please upload your signature" },
               ]}
@@ -159,7 +159,7 @@ const PatientConsentForm = () => {
             </Form.Item>
             <Form.Item
               name="date"
-              label="Date"
+              label="Date:"
               rules={[{ required: true, message: "Please select a date" }]}
             >
               <DatePicker style={{ width: "100%" }} />
