@@ -68,7 +68,7 @@ const PatientConsentForm = () => {
           <p style="font-size: 22px;">If a patient remains inactive for 2 months, the access to our online tools and phone app will be deactivated. An email reminder will be sent to notify you. Upon the return to the practice, the tools will be reactivated.</p>
           <p style="font-size: 22px;">If a patient has not been seen in any of our locations for 2 years, they will be considered a New Patient the next time they come in. The visit will be a New Patient visit, and the patient will be charged as a New Patient.</p>
           <p style="font-size: 22px;">Please sign below to acknowledge you have read this policy:</p>
-            <p style="font-size: 22px;">Patient Name (signature): <img src="${signatureImage}" style="width: 150px; height: auto;" alt="Patient Signature" /></p>
+            <p style="font-size: 22px;">Patient Name (signature): <img src="${signatureImage}" style="width: 150px; height: 75px;" alt="Patient Signature" /></p>
          
           <p style="font-size: 22px;">Patient Name (print): <span style="border-bottom: 1px solid #000; padding: 7px; display: inline-block; width: 60%;">${
             values.patientName
