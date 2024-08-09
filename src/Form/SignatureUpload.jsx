@@ -30,7 +30,9 @@ const SignatureUpload = ({ onImageUpload }) => {
         onImageUpload(uploadedImageUrl);
       }
     } catch (error) {
-      message.error("Upload failed. Please try again.");
+      message.error(
+        "Upload failed. Please try again. // or upload from gallery",
+      );
     } finally {
       setLoading(false);
     }
