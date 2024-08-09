@@ -11,8 +11,9 @@
   },
   "dependencies": {
     "animate.css": "^4.1.1",
-    "antd": "^5.19.3",
+    "antd": "^5.20.0",
     "axios": "^1.7.3",
+    "cloudinary-react": "^1.8.1",
     "dom-to-pdf": "^0.3.2",
     "framer-motion": "^11.3.12",
     "hamburger-react": "^2.5.1",
@@ -28,6 +29,7 @@
     "react-intersection-observer": "^9.13.0",
     "react-leaflet": "^4.2.1",
     "react-router-dom": "^6.24.1",
+    "react-webcam": "^7.2.0",
     "styled-components": "^6.1.12"
   },
   "devDependencies": {

@@ -4,8 +4,10 @@ import styled from "styled-components";
 import axios from "axios";
 import LoaderModal from "./LoaderModal";
 import { notification } from "antd";
+import SignatureUpload from "./SignatureUpload";
+
 const { Paragraph } = Typography;
-const { TextArea } = Input;
+
 const Container = styled.div`
   display: flex;
   align-items: center;
@@ -44,13 +46,6 @@ const Title = styled.div`
   padding-bottom: 10px;
 `;
 
-const Underline = styled.span`
-  border-bottom: 1px solid #000;
-  display: inline-block;
-  width: 100%;
-  height: 20px;
-`;
-
 const PatientConsentForm = () => {
   const [form] = Form.useForm();
   const [loading, setLoading] = useState(false);
@@ -62,6 +57,8 @@ const PatientConsentForm = () => {
     setLoading(true);
 
     try {
+      const signatureImage = values.patientSignature;
+
       const htmlContent = `
         <div style="padding: 20px 30px;">
           <div style="text-align: center; font-size: 32px; font-weight: 800; padding-bottom: 10px;">GEM LUXE AESTHETICS</div>
@@ -71,9 +68,8 @@ const PatientConsentForm = () => {
           <p style="font-size: 22px;">If a patient remains inactive for 2 months, the access to our online tools and phone app will be deactivated. An email reminder will be sent to notify you. Upon the return to the practice, the tools will be reactivated.</p>
           <p style="font-size: 22px;">If a patient has not been seen in any of our locations for 2 years, they will be considered a New Patient the next time they come in. The visit will be a New Patient visit, and the patient will be charged as a New Patient.</p>
           <p style="font-size: 22px;">Please sign below to acknowledge you have read this policy:</p>
-          <p style="font-size: 22px;">Patient Name (signature): <span style="border-bottom: 1px solid #000; display: inline-block; padding: 7px; width: 50%;">${
-            values.patientSignature
-          }</span></p>
+            <p style="font-size: 22px;">Patient Name (signature): <img src="${signatureImage}" style="width: 150px; height: auto;" alt="Patient Signature" /></p>
+         
           <p style="font-size: 22px;">Patient Name (print): <span style="border-bottom: 1px solid #000; padding: 7px; display: inline-block; width: 60%;">${
             values.patientName
           }</span></p>
@@ -103,6 +99,11 @@ const PatientConsentForm = () => {
 
   const handleOk = () => {
     setModalVisible(false);
+  };
+
+  const handleImageUpload = (imageUrl) => {
+    console.log(imageUrl);
+    form.setFieldsValue({ patientSignature: imageUrl });
   };
 
   return (
@@ -139,21 +140,22 @@ const PatientConsentForm = () => {
             <Paragraph>
               Please sign below to acknowledge you have read this policy:
             </Paragraph>
-            <Form.Item
-              name="patientSignature"
-              label="Patient Name (signature)"
-              rules={[
-                { required: true, message: "Please enter your signature" },
-              ]}
-            >
-              <TextArea rows={2} />
-            </Form.Item>
+
             <Form.Item
               name="patientName"
               label="Patient Name (print)"
               rules={[{ required: true, message: "Please enter your name" }]}
             >
               <Input />
+            </Form.Item>
+            <Form.Item
+              name="patientSignature"
+              label="Patient Name (signature)"
+              rules={[
+                { required: true, message: "Please upload your signature" },
+              ]}
+            >
+              <SignatureUpload onImageUpload={handleImageUpload} />
             </Form.Item>
             <Form.Item
               name="date"
@@ -168,24 +170,17 @@ const PatientConsentForm = () => {
           Submit
         </StyledButton>
       </StyledForm>
+
       <Modal
-        title="Success"
+        title="Form Submitted Successfully"
         visible={modalVisible}
         onOk={handleOk}
         onCancel={handleOk}
-        footer={null}
-        okText="OK"
-        centered // Center the modal
       >
         <p>
-          Your consent form has been submitted successfully. Kindly click the
-          button below to fill consent for email call appointment reminders
-          communications.
+          Your consent form has been submitted successfully and is being
+          reviewed by Gem Luxe Aesthetics.
         </p>
-        <Button type="link" href="/patientconsent">
-          Fill Next Consent Form
-        </Button>{" "}
-        {/* Adjust the href to the actual link */}
       </Modal>
     </Container>
   );
