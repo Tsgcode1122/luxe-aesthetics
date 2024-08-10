@@ -4,11 +4,11 @@ import styled from "styled-components";
 const AppointmentContent = () => {
   return (
     <>
-      <Content>
+      {/* <Content>
         Book your personalized weight loss appointment with our expert team.
         We're here to provide the best care and tailored treatments to help you
         achieve your wellness goals. Let's get started!
-      </Content>
+      </Content> */}
       <Container>
         <Iframe
           src="https://gemluxeaesthetics.setmore.com/gemluxeaesthetics"
