@@ -40,6 +40,15 @@ const Heading = styled.h1`
   z-index: 3;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a text shadow for better readability */
   text-align: center;
+  @media screen and (max-width: 320px) {
+    font-size: 2rem;
+  }
+  @media (min-width: 321px) and (max-width: 399px) {
+    font-size: 2rem;
+  }
+  @media (min-width: 400px) and (max-width: 499px) {
+    font-size: 2.1rem;
+  }
 `;
 
 export default PageHeading;
