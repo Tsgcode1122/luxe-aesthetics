@@ -96,7 +96,7 @@ const Navbar = () => {
             </MenuItem>
             <MenuItem onClick={toggleDropdown}>
               <MenuLin>
-                Consent Form/Questionaires
+                Consent Form/Questionnaires
                 <IoIosArrowDropdown />
               </MenuLin>
               {isDropdownOpen && (
@@ -165,7 +165,7 @@ const Navbar = () => {
 
               <ListLink to="/appointment">Book Appointment</ListLink>
               <ListLin onClick={toggleDropdownBig}>
-                Consent Form/Questionaires
+                Consent Form/Questionnaires
               </ListLin>
 
               <ListLink to="/policies">Policies</ListLink>
