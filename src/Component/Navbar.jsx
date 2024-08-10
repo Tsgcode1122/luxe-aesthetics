@@ -303,9 +303,12 @@ const Sidebar = styled(motion.div)`
   );
   border-radius: 0 0 30px 30px;
   border: 1px solid #1f1809;
-  // position: fixed;
+  position: fixed;
   z-index: 999 !important;
   color: white;
+
+  max-height: calc(100vh - 3rem);
+  overflow-y: auto;
   width: 100%;
   font-family: "YourFontName", sans-serif;
   font-weight: 500;
