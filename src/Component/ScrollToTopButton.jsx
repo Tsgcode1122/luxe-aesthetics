@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { FaWhatsapp } from "react-icons/fa";
 import bgg from "../Images/down.png";
 import styled from "styled-components";
@@ -56,6 +57,7 @@ const ScrollToTop = styled.div`
 `;
 const ScrollToTopButton = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const location = useLocation(); // Get the current route
 
   const handleScroll = () => {
     const scrollHeight = document.documentElement.scrollHeight;
@@ -80,10 +82,15 @@ const ScrollToTopButton = () => {
     };
   }, []);
 
+  // Don't render the button if on the appointment page
+  if (location.pathname === "/appointment") {
+    return null;
+  }
+
   return (
     isVisible && (
       <ScrollToTop onClick={scrollToTop}>
-        <img src={bgg} />{" "}
+        <img src={bgg} />
       </ScrollToTop>
     )
   );
