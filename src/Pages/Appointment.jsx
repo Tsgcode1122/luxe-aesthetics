@@ -8,7 +8,7 @@ const Appointment = () => {
   });
   return (
     <>
-      <PageHeading backgroundImage={backgroundImage} text="Book Appointment" />
+      {/* <PageHeading backgroundImage={backgroundImage} text="Book Appointment" /> */}
       <AppointmentContent />
     </>
   );

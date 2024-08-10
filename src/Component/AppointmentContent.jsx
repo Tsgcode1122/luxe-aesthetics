@@ -5,11 +5,9 @@ const AppointmentContent = () => {
   return (
     <>
       <Content>
-        We're excited to support you on your weight loss journey. Use the form
-        below to book your personalized appointment. Our expert team is
-        dedicated to providing you with the best care and effective treatments
-        tailored just for you. Let's get started on achieving your wellness
-        goals!
+        Book your personalized weight loss appointment with our expert team.
+        We're here to provide the best care and tailored treatments to help you
+        achieve your wellness goals. Let's get started!
       </Content>
       <Container>
         <Iframe
@@ -53,7 +51,7 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0.1rem;
+  /* padding: 0.1rem; */
 `;
 
 const Iframe = styled.iframe`
