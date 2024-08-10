@@ -303,7 +303,7 @@ const Sidebar = styled(motion.div)`
   );
   border-radius: 0 0 30px 30px;
   border: 1px solid #1f1809;
-  position: fixed;
+  // position: fixed;
   z-index: 999 !important;
   color: white;
   width: 100%;
@@ -348,6 +348,11 @@ const MenuLink = styled(Link)`
   text-decoration: none;
   color: #070b0d;
   transition: all 0.3s;
+  @media screen and (max-width: 320px) {
+    // font-size: 13px;
+
+    /* max-width: 100px; */
+  }
   &:hover {
     color: #070b0d;
     background-color: #d0ad5b;
