@@ -9,15 +9,15 @@ const Layout = () => {
   const location = useLocation();
 
   // Check if the current path is the appointment page
-  const isAppointmentPage = location.pathname === "/appointment";
+  // const isAppointmentPage = location.pathname === "/appointment";
 
   return (
     <>
       <Navbar />
       <Outlet />
       <ScrollToTopButton />
-      {/* Conditionally render Footer only if not on the appointment page */}
-      {!isAppointmentPage && <Footer />}
+
+      <Footer />
     </>
   );
 };

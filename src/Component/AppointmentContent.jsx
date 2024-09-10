@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { Skeleton } from "antd";
+import Contact from "../Form/Contact";
 
 const AppointmentContent = () => {
   const [loading, setLoading] = useState(true);
@@ -17,20 +18,21 @@ const AppointmentContent = () => {
         tailored just for you. Let's get started on achieving your wellness
         goals!
       </Content> */}
-      <Container>
+      <Contact />
+      {/* <Container>
         {loading && (
           <SkeletonContainer>
-            <Skeleton active paragraph={{ rows: 10 }} /> {/* Skeleton effect */}
+            <Skeleton active paragraph={{ rows: 10 }} /> 
           </SkeletonContainer>
         )}
         <Iframe
           src="https://gemluxeaesthetics.setmore.com/gemluxeaesthetics"
           title="Appointment Scheduling"
           frameBorder="0"
-          onLoad={handleLoad} // Call handleLoad when iframe has loaded
-          style={{ display: loading ? "none" : "block" }} // Hide iframe while loading
+          onLoad={handleLoad} 
+          style={{ display: loading ? "none" : "block" }} 
         />
-      </Container>
+      </Container> */}
     </>
   );
 };
