@@ -7,7 +7,9 @@ import Sereni from "../Images/sereni.png";
 import Check from "../Images/checkk.png";
 import Endurance from "../Images/Endurance.png";
 import Heading from "./Heading";
+
 import { Colors, Gradients } from "./ColorComponent";
+import { Link } from "react-router-dom";
 const services = [
   {
     id: 1,
@@ -122,7 +124,7 @@ const IvSection = () => {
                 ))}
               </BenefitsList>
               <LastDescription>{service.lastDescription}</LastDescription>
-              <Button>{service.buttonLabel}</Button>
+              <Button to="/appointment">{service.buttonLabel}</Button>
             </Content>
           </Card>
         ))}
@@ -246,7 +248,7 @@ const LastDescription = styled.p`
   font-style: italic;
 `;
 
-const Button = styled.button`
+const Button = styled(Link)`
   display: inline-block;
   padding: 0.7rem 1.5rem;
   font-size: 0.9rem;

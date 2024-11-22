@@ -19,6 +19,11 @@ const services = [
   "Select Service",
   "GLP-1 SEMAGLUTIDE",
   "GIP/GLP-1 TIRZEPATIDE",
+  "Glow drip IV Hydration",
+  "Sereni Drip IV Hydration",
+  "Endurance Elite IV Hydration",
+  "Revive Luxe Drip IV Hydration",
+  "Opulent Glow  IV Hydration",
 ];
 // import from "../Component/Button";
 import PageHeading from "../Component/PageHeading";
