@@ -222,17 +222,17 @@ const Description = styled.p`
   line-height: 1.4;
   margin-bottom: 1rem;
   @media screen and (max-width: 320px) {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
 
     line-height: 1.2;
   }
   @media (min-width: 321px) and (max-width: 399px) {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
 
     line-height: 1.2;
   }
   @media (min-width: 400px) and (max-width: 499px) {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
 
     line-height: 1.2;
   }
@@ -271,17 +271,17 @@ const LastDescription = styled.p`
   margin-bottom: 1rem;
   font-style: italic;
   @media screen and (max-width: 320px) {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
 
     line-height: 1.2;
   }
   @media (min-width: 321px) and (max-width: 399px) {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
 
     line-height: 1.2;
   }
   @media (min-width: 400px) and (max-width: 499px) {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
 
     line-height: 1.2;
   }
