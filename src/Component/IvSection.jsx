@@ -174,6 +174,15 @@ const ImageWrapper = styled.div`
     max-width: 100%;
     height: 20rem;
     border-radius: 10px;
+    @media screen and (max-width: 320px) {
+      height: 15rem;
+    }
+    @media (min-width: 321px) and (max-width: 399px) {
+      height: 15rem;
+    }
+    @media (min-width: 400px) and (max-width: 499px) {
+      height: 15rem;
+    }
   }
 `;
 
@@ -209,9 +218,24 @@ const Title = styled.h3`
 
 const Description = styled.p`
   font-size: 0.9rem;
-  color: #666;
+  color: #252525;
   line-height: 1.4;
   margin-bottom: 1rem;
+  @media screen and (max-width: 320px) {
+    font-size: 0.7rem;
+
+    line-height: 1;
+  }
+  @media (min-width: 321px) and (max-width: 399px) {
+    font-size: 0.7rem;
+
+    line-height: 1;
+  }
+  @media (min-width: 400px) and (max-width: 499px) {
+    font-size: 0.7rem;
+
+    line-height: 1;
+  }
 `;
 
 const Split = styled.div`
@@ -243,9 +267,24 @@ const BenefitItem = styled.li`
 
 const LastDescription = styled.p`
   font-size: 0.9rem;
-  color: #555;
+  color: #252525;
   margin-bottom: 1rem;
   font-style: italic;
+  @media screen and (max-width: 320px) {
+    font-size: 0.7rem;
+
+    line-height: 1;
+  }
+  @media (min-width: 321px) and (max-width: 399px) {
+    font-size: 0.7rem;
+
+    line-height: 1;
+  }
+  @media (min-width: 400px) and (max-width: 499px) {
+    font-size: 0.7rem;
+
+    line-height: 1;
+  }
 `;
 
 const Button = styled(Link)`
