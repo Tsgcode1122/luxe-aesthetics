@@ -9,6 +9,7 @@ import Contact from "../Component/Contact";
 import Bottle from "../Component/Bottle";
 import styled from "styled-components";
 import ImageWithClipPath from "../Component/ImageWithClipPath";
+import IvSection from "../Component/IvSection";
 
 const Home = () => {
   useEffect(() => {
@@ -20,6 +21,8 @@ const Home = () => {
       <GlowingDivider />
       <About />
 
+      <GlowingDivider />
+      <IvSection />
       <GlowingDivider />
       <Services />
 
