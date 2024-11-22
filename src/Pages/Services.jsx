@@ -5,6 +5,7 @@ import PageHeading from "../Component/PageHeading";
 import backgroundImage from "../Images/servicebg.jpg";
 import styled from "styled-components";
 import ServiceDetails from "../Component/ServiceDetails";
+import IvSection from "../Component/IvSection";
 const Services = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -14,6 +15,7 @@ const Services = () => {
       <PageHeading backgroundImage={backgroundImage} text="Services" />
       <Container>
         <ServiceDetails />
+        <IvSection />
       </Container>
     </>
   );
