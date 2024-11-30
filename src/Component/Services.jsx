@@ -62,7 +62,7 @@ const Container = styled.div`
   position: relative;
   padding: 2rem;
   margin: 2rem;
-  background: ${Colors.offWhite};
+  background: rgb(245, 242, 234, 0.9);
   box-shadow:
     rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
     rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
@@ -78,12 +78,12 @@ const Container = styled.div`
     margin: 1rem;
   }
   @media (min-width: 321px) and (max-width: 399px) {
-    padding: 1rem;
+    padding: 1rem 1rem 2rem 1rem;
 
     margin: 1.3rem;
   }
   @media (min-width: 400px) and (max-width: 499px) {
-    padding: 1rem;
+    padding: 1rem 1rem 2rem 1rem;
 
     margin: 1.5rem;
   }
@@ -109,7 +109,7 @@ const ServicesContainer = styled.div`
 `;
 
 const ServiceCard = styled.div`
-  background-color: #fff;
+  background: ${Colors.offWhite};
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
