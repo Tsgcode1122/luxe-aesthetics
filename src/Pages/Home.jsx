@@ -24,7 +24,7 @@ const Home = () => {
       <GlowingDivider />
       {/* <IvSection /> */}
       {/* <GlowingDivider /> */}
-      {/* <Services /> */}
+      <Services />
 
       <WhyUs />
       <Divider>
