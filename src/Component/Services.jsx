@@ -176,6 +176,12 @@ const SubHead = styled.h5`
   @media screen and (max-width: 320px) {
     font-size: 1rem;
   }
+  @media screen and (min-width: 1000px) {
+    font-size: 1.3rem;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 1.4rem;
+  }
 `;
 
 export default Services;
