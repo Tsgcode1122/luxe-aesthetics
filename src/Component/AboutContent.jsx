@@ -14,11 +14,14 @@ const AboutContent = () => {
         <SwipeComponent direction="left-to-right">
           <Heading>About Us</Heading>
           <Content>
-            Welcome to Gem Luxe Aesthetics, where your path to a healthier, more
-            vibrant self begins. We specialize in providing tailored weight loss
-            solutions designed to align perfectly with your wellness goals. Our
-            expert team crafts personalized plans that fit seamlessly into your
-            lifestyle.
+            Welcome to Gem Luxe Aesthetics Med Spa! We specialize in enhancing
+            your beauty and wellness from the inside out. Our services include
+            IV hydration, Neurotoxins, fillers, and weight loss management, all
+            designed to help you look and feel your best. At Gem Luxe, we’re
+            committed to delivering personalized care in a relaxing,
+            professional environment. Thank you for letting us be part of your
+            journey to confidence and vitality. Beauty starts within—let’s glow
+            together!
           </Content>
         </SwipeComponent>
         <SwipeComponent direction="right-to-left">

@@ -99,7 +99,10 @@ const services = [
 const IvSection = () => {
   return (
     <Section>
-      <Heading>Featured Treatments</Heading>
+      <p>
+        Dive into the details of our IV Hydrations offerings and discover how we
+        can support your weight loss journey.
+      </p>
       <CardsContainer>
         {services.map((service) => (
           <Card key={service.id}>
@@ -136,8 +139,11 @@ const IvSection = () => {
 export default IvSection;
 const Section = styled.section`
   padding: 2rem;
-  /* background-color: #f9f9f9; */
+  background: ${Colors.offWhite} !important;
   text-align: center;
+  p {
+    color: black !important;
+  }
 `;
 
 const CardsContainer = styled.div`

@@ -22,9 +22,9 @@ const Home = () => {
       <About />
 
       <GlowingDivider />
-      <IvSection />
-      <GlowingDivider />
-      <Services />
+      {/* <IvSection /> */}
+      {/* <GlowingDivider /> */}
+      {/* <Services /> */}
 
       <WhyUs />
       <Divider>

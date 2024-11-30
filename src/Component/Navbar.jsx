@@ -75,15 +75,41 @@ const Navbar = () => {
               </MenuLink>
             </MenuItem>
             <MenuItem onClick={closeSidebar}>
-              <MenuLink to="/about">
-                About <IoIosArrowDropright />
+              <MenuLink to="/services">
+                Weight Loss Management <IoIosArrowDropright />
               </MenuLink>
             </MenuItem>
             <MenuItem onClick={closeSidebar}>
-              <MenuLink to="/services">
-                Services <IoIosArrowDropright />
+              <MenuLink to="/IvServices">
+                Iv Hydration Services <IoIosArrowDropright />
               </MenuLink>
             </MenuItem>
+
+            {/* <MenuItem onClick={toggleDropdown}>
+              <MenuLin>
+                Services
+                <IoIosArrowDropdown />
+              </MenuLin>
+              {isDropdownOpen && (
+                <DropdownMenu>
+                  <DropdownItem onClick={closeSidebar}>
+                    <DropdownLink to="/IV-Hydration"></DropdownLink>
+                  </DropdownItem>
+                  <DropdownItem onClick={closeSidebar}>
+                    <DropdownLink to="/Services">
+                      Weight loss Management
+                    </DropdownLink>
+                  </DropdownItem>
+                  <DropdownItem onClick={closeSidebar}>
+                    <DropdownLink to="/Neurotoxins">Neurotoxins</DropdownLink>
+                  </DropdownItem>
+                  <DropdownItem onClick={closeSidebar}>
+                    <DropdownLink to="/patientconsent">Fillers</DropdownLink>
+                  </DropdownItem>
+                </DropdownMenu>
+              )}
+            </MenuItem> */}
+
             <MenuItem onClick={closeSidebar}>
               <MenuLink to="/contact">
                 Contact Us <IoIosArrowDropright />

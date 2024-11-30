@@ -2,11 +2,11 @@ import React, { useEffect } from "react";
 
 import Bottle from "../Component/Bottle";
 import PageHeading from "../Component/PageHeading";
-import backgroundImage from "../Images/servicebg.jpg";
+import backgroundImage from "../Images/ivH.jpg";
 import styled from "styled-components";
 import ServiceDetails from "../Component/ServiceDetails";
 import IvSection from "../Component/IvSection";
-const Services = () => {
+const IvServices = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   });
@@ -14,11 +14,10 @@ const Services = () => {
     <>
       <PageHeading
         backgroundImage={backgroundImage}
-        text="Weight Loss Management Services"
+        text="Iv Hydration Services"
       />
       <Container>
-        <ServiceDetails />
-        {/* <IvSection /> */}
+        <IvSection />
       </Container>
     </>
   );
@@ -27,4 +26,4 @@ const Container = styled.div``;
 const AContain = styled.div`
   padding: 2rem;
 `;
-export default Services;
+export default IvServices;

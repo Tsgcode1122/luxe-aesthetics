@@ -22,6 +22,7 @@ import HippaConsent from "./Form/HippaConsent";
 import PatientConsentForm from "./Form/PatientConsentForm";
 import PatientConsent from "./Form/PatientConsent";
 import ConsentForEmail from "./Form/ConsentForEmail";
+import IvServices from "./Pages/IvServices";
 
 const GlobalStyle = createGlobalStyle`
 
@@ -116,6 +117,7 @@ const routes = [
       { path: "/appointment", element: <Appointment /> },
       { path: "/whyus", element: <WhyUs /> },
       { path: "/services", element: <Services /> },
+      { path: "/IvServices", element: <IvServices /> },
 
       { path: "/policies", element: <Policies /> },
       { path: "/consentforemail", element: <ConsentForEmail /> },
