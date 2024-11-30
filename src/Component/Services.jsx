@@ -130,10 +130,22 @@ const ServiceCard = styled.div`
 const ServiceTitle = styled.h2`
   color: #9e7a2c;
   font-size: 24px;
+  @media screen and (min-width: 1000px) {
+    font-size: 26px;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 26px;
+  }
 `;
 
 const ServiceDescription = styled.p`
   color: #333333;
+  @media screen and (min-width: 1000px) {
+    font-size: 17px;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 18px;
+  }
 `;
 
 const pulse = keyframes`

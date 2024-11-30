@@ -183,9 +183,9 @@ const Navbar = () => {
             <ul>
               <ListLink to="/">Home</ListLink>
 
-              <ListLink to="/about">About</ListLink>
+              <ListLink to="/services">Weight Lost Management</ListLink>
 
-              <ListLink to="/services">Services</ListLink>
+              <ListLink to="/IVservices">IV Hydration</ListLink>
 
               <ListLink to="/contact">Contact Us</ListLink>
 
