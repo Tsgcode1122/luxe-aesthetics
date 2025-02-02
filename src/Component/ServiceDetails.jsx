@@ -26,10 +26,10 @@ const ServiceDetails = () => {
         <Divide>
           <div>
             <Prices>
-              <Price>
+              {/* <Price>
                 <span>$ 299.00</span>
                 <p> USD/monthly</p>
-              </Price>
+              </Price> */}
               <Price>
                 <span>$ 150.00 </span> <p>/ first month special</p>
               </Price>
@@ -87,12 +87,12 @@ const ServiceDetails = () => {
         <Divide>
           <div>
             <Prices>
-              <Price>
+              {/* <Price>
                 <span>$ 349.00</span>
                 <p> USD/monthly</p>
-              </Price>
+              </Price> */}
               <Price>
-                <span>$ 199.00 </span> <p>/ first month special</p>
+                <span>$ 200.00 </span> <p>/ first month special</p>
               </Price>
             </Prices>
             <Description>

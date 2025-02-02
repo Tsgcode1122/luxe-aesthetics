@@ -26,7 +26,7 @@ const Home = () => {
       {/* <GlowingDivider /> */}
       <Services />
 
-      <WhyUs />
+      {/* <WhyUs /> */}
       <Divider>
         <div>
           <Bottle />
