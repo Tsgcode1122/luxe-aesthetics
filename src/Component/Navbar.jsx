@@ -194,7 +194,7 @@ const Navbar = () => {
                 Consent Form/Questionnaires
               </ListLin>
 
-              <ListLink to="/policies">Policies</ListLink>
+              {/* <ListLink to="/policies">Policies</ListLink> */}
             </ul>
           </MenuList>
         </HeadSpace>
@@ -250,7 +250,7 @@ const FixedNavbar = styled.div`
     max-width: 100%;
     height: 20px;
   }
-  @media screen and (min-width: 900px) {
+  @media screen and (min-width: 1100px) {
     display: block;
   }
 `;
@@ -501,7 +501,7 @@ const StyledNavbar = styled.div`
     max-width: 100%;
     height: 20px;
   }
-  @media screen and (min-width: 900px) {
+  @media screen and (min-width: 1100px) {
     display: none;
   }
 `;
@@ -516,22 +516,22 @@ const HeadSpace = styled.div`
   margin: 2px 10px;
   justify-content: space-between;
   @media screen and (min-width: 700px) {
-    margin: 5px 2rem;
+    margin: 5px 0.5rem;
   }
   @media screen and (min-width: 900px) {
-    margin: 5px 3rem;
+    margin: 5px 1rem;
   }
   @media screen and (min-width: 1100px) {
     margin: 5px 4rem;
   }
   @media screen and (min-width: 1200px) {
-    margin: 5px 8rem;
+    margin: 5px 4rem;
   }
 `;
 
 const MenuToggle = styled.div`
   display: block;
-  @media screen and (min-width: 900px) {
+  @media screen and (min-width: 1100px) {
     display: none;
   }
 `;

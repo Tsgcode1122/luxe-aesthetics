@@ -2,15 +2,11 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { Colors } from "./ColorComponent";
-
 import Heading from "./Heading";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import StarsBackground from "./StarsBackground";
 import bg from "../Images/filler.png";
-import { Link } from "react-router-dom";
-import Button from "./Button";
-
-const Faqs2 = () => {
+const IvFaqs = () => {
   const [selectedFaq, setSelectedFaq] = useState(null);
 
   const toggleFaq = (index) => {
@@ -32,63 +28,73 @@ const Faqs2 = () => {
       answer:
         "IV therapy can help with:\n\n- Dehydration recovery\n- Hangover relief\n- Immune system support\n- Increased energy and mental clarity\n- Skin health and anti-aging benefits\n- Athletic recovery and performance enhancement\n- Migraine and headache relief",
     },
-    // {
-    //   question: "What is Semaglutide?",
-    //   answer:
-    //     "Semaglutide is a medication that mimics a hormone called GLP-1 (glucagon-like peptide-1) which helps to regulate blood sugar levels and appetite. It is commonly used to treat type 2 diabetes and is also effective for weight management.",
-    // },
-    // {
-    //   question: "How does Semaglutide work?",
-    //   answer:
-    //     "Semaglutide works by stimulating insulin production, reducing glucose production in the liver, and  slowing down gastric emptying. This leads to reduced appetite, lower blood sugar levels, and  weight loss.",
-    // },
     {
-      question: "What are neurotoxins?",
+      question: "How long does an IV hydration session take?",
       answer:
-        "Neurotoxins, such as Botox, Dysport, and Xeomin, are injectable treatments that temporarily relax targeted muscles to reduce the appearance of fine lines and wrinkles. They work by blocking nerve signals to the muscles, preventing them from contracting.",
+        "A typical session lasts between 30-60 minutes, depending on the type of IV infusion.",
     },
     {
-      question: "What areas can be treated with neurotoxins?",
+      question: "When will I feel the effects?",
       answer:
-        "Commonly treated areas include:\n\n- Forehead lines\n- Frown lines (between the eyebrows)\n- Crow’s feet (around the eyes)\n- Bunny lines (nose wrinkles)\n- Lip flip (upper lip enhancement)\n- Chin dimpling\n- Jawline slimming\n- Neck bands",
-    },
-    // {
-    //   question: "Who can use Semaglutide?",
-    //   answer:
-    //     "Semaglutide is prescribed for adults with type 2 diabetes or those who are overweight or obese and  need help with weight management. A healthcare provider will determine if Semaglutide is  appropriate based on individual health conditions and history.",
-    // },
-    // {
-    //   question: "How is Semaglutide administered?",
-    //   answer:
-    //     "Semaglutide is typically administered once a week via subcutaneous injection (under the skin). It is  important to follow the dosage instructions provided by your healthcare provider.",
-    // },
-    {
-      question: "What are dermal fillers?",
-      answer:
-        "Dermal fillers are injectable treatments used to restore lost volume, smooth wrinkles, and enhance facial contours. Most fillers are made of hyaluronic acid (HA), a substance naturally found in the body that helps maintain hydration and elasticity.",
+        "Many clients feel immediate benefits, such as increased energy and hydration, while others may notice gradual improvements over the next 24 hours.",
     },
     {
-      question: "What areas can be treated with fillers?",
+      question: "How long do the effects last?",
       answer:
-        "Common treatment areas include:\n\n- Lips (augmentation and hydration)\n- Cheeks (volume restoration and contouring)\n- Nasolabial folds (smile lines)\n- Marionette lines (lines from the mouth to the chin)\n- Jawline and chin (definition and contouring)\n- Under-eye hollows (tear troughs)\n- Hands (volume loss correction)",
+        "Effects can last anywhere from a few days to a week, depending on the individual and the type of infusion received.",
     },
-    // {
-    //   question: "What are the benefits of Semaglutide?",
-    //   answer:
-    //     "• Improved blood sugar control • Significant weight loss • Reduced appetite • Lower risk of cardiovascular events in people with type 2 diabetes",
-    // },
-    // {
-    //   question: "What are the potential side effects?",
-    //   answer:
-    //     "Common side effects of Semaglutide include: • Nausea • Vomiting • Diarrhea • Constipation • Abdominal pain In rare cases, serious side effects may occur. It is important to contact your healthcare provider if  you experience severe side effects or allergic reactions.",
-    // },
+    {
+      question: "Is IV hydration safe?",
+      answer:
+        "Yes! IV hydration is administered by trained professionals, and all ingredients are medical-grade and carefully dosed for safety and effectiveness.",
+    },
+    {
+      question: "Does IV hydration therapy hurt?",
+      answer:
+        "Most clients experience minimal discomfort, similar to a small pinch when the IV is inserted. The process is generally well-tolerated.",
+    },
+    {
+      question: "Are there any side effects?",
+      answer:
+        "Mild side effects may include temporary bruising, swelling, or soreness at the injection site. Rarely, some individuals may experience lightheadedness or nausea.",
+    },
+    {
+      question: "Who is a good candidate for IV hydration?",
+      answer:
+        "Most adults looking to boost hydration, energy, or overall wellness can benefit. However, individuals with certain medical conditions should consult a healthcare provider before treatment.",
+    },
+    {
+      question: "How often can I get IV hydration therapy?",
+      answer:
+        "The frequency depends on your hydration and wellness needs. Some clients receive IV therapy weekly, while others opt for treatments as needed for recovery or energy boosts.",
+    },
+    {
+      question: "Can IV hydration help with hangovers?",
+      answer:
+        "Yes! IV therapy can quickly replenish lost fluids, electrolytes, and vitamins to relieve hangover symptoms such as headaches, nausea, and fatigue.",
+    },
+    {
+      question: "What should I do before my IV therapy session?",
+      answer:
+        "Drink plenty of water, eat a light meal, and avoid alcohol before your session to ensure the best experience.",
+    },
+    {
+      question: "Can I combine IV hydration with other treatments?",
+      answer:
+        "Yes! IV hydration can be combined with vitamin injections, aesthetic treatments, and wellness therapies for enhanced benefits.",
+    },
+    {
+      question: "How much does IV hydration therapy cost?",
+      answer:
+        " Pricing varies based on the type of infusion and any added boosters. A consultation can help determine the best treatment for your needs.",
+    },
   ];
 
   return (
     <>
       <FaqsContainer>
         <Content>
-          <Heading>Faqs</Heading>
+          <Heading> Iv Hydrations Faqs</Heading>
           <SubHead>Frequently Asked Questions</SubHead>
           {faqs.map((faq, index) => (
             <FaqItem key={index}>
@@ -110,27 +116,25 @@ const Faqs2 = () => {
               </Answer>
             </FaqItem>
           ))}
-          <Link to="/faqs">
-            <Button>View More...</Button>
-          </Link>
         </Content>
       </FaqsContainer>
     </>
   );
 };
 
-export default Faqs2;
+export default IvFaqs;
 
 const FaqsContainer = styled.div`
   position: relative;
   box-shadow:
     rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
     rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-  margin: 2rem;
+  margin: 1rem;
   background: url(${bg}) no-repeat center/cover;
   background-position: 10% top;
   background-size: 100%;
-
+  overflow: hidden;
+  /* padding: 0 20px 0 0; */
   border-radius: 50px;
   display: flex;
   flex-direction: column;
@@ -150,10 +154,31 @@ const FaqsContainer = styled.div`
   }
 `;
 const Content = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   padding: 2rem;
+  height: 70vh;
+  &::-webkit-scrollbar {
+    margin-left: 10px !important;
+    width: 8px;
+
+    position: absolute !important;
+    border: 1px solid #f0f0f0;
+    padding: 1.1px;
+    border-radius: 5px;
+    background-color: white;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #d5d5d5;
+
+    margin-left: 10px !important;
+    border-radius: 5px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+    margin-left: 10px !important;
+  }
+  overflow-y: auto;
   border-radius: 50px;
   background: rgb(245, 242, 234, 0.9);
   @media screen and (max-width: 320px) {
