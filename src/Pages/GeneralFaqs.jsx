@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import IvFaqs from "../Component/IvFaqs";
 import NeurotoxinFaqs from "../Component/NeurotoxinFaqs";
 import DermalFillerFaqs from "../Component/DermalFillerFaqs";
 import styled from "styled-components";
 
 const GeneralFaqs = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
   return (
     <>
       <Container>
