@@ -168,7 +168,7 @@ const Content = styled.div`
   }
 
   &::-webkit-scrollbar-thumb {
-    background: #d5d5d5;
+    background: #535252 !important;
 
     margin-left: 10px !important;
     border-radius: 5px;
