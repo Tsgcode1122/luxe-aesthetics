@@ -22,13 +22,13 @@ const GeneralFaqs = () => {
 export default GeneralFaqs;
 
 const Container = styled.div`
-  padding: 1rem 2rem;
+  padding: 1rem 0.5rem;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* Centers items horizontally */
+  justify-content: center;
   gap: 10px;
 
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 500px) {
     padding: 3rem 2rem 2rem 2rem;
   }
 
