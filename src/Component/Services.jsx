@@ -15,6 +15,7 @@ import Revive from "../Images/Revive.png";
 import Sereni from "../Images/sereni.png";
 import Check from "../Images/checkk.png";
 import Endurance from "../Images/Endurance.png";
+import SwipeComponent from "./SwipeComponent";
 
 // Services Array
 const services = [
@@ -66,18 +67,22 @@ const Services = () => {
               </ImageWrapper>
 
               <ServiceTitle>{service.name}</ServiceTitle>
-              <ServiceDescription>{service.description}</ServiceDescription>
-              <StyledLink
-                to={service.linkToView}
-                style={{ textDecoration: "none", color: "inherit" }}
-              >
-                <Button>
-                  LEARN MORE
-                  {/* <ArrowContainer>
+              <SwipeComponent direction="left-to-right">
+                <ServiceDescription>{service.description}</ServiceDescription>
+              </SwipeComponent>
+              <SwipeComponent direction="right-to-left">
+                <StyledLink
+                  to={service.linkToView}
+                  style={{ textDecoration: "none", color: "inherit" }}
+                >
+                  <Button>
+                    LEARN MORE
+                    {/* <ArrowContainer>
                   <ArrowIcon />
                 </ArrowContainer> */}
-                </Button>
-              </StyledLink>
+                  </Button>
+                </StyledLink>
+              </SwipeComponent>
             </ServiceCard>
           ))}
         </ServicesContainer>
