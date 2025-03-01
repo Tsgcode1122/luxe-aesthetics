@@ -1,0 +1,157 @@
+{
+  "hash": "3c34518d",
+  "configHash": "24837eac",
+  "lockfileHash": "3f294224",
+  "browserHash": "c7ef40a9",
+  "optimized": {
+    "react": {
+      "src": "../../../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "fa14db97",
+      "needsInterop": true
+    },
+    "react/jsx-dev-runtime": {
+      "src": "../../../../node_modules/react/jsx-dev-runtime.js",
+      "file": "react_jsx-dev-runtime.js",
+      "fileHash": "268b786f",
+      "needsInterop": true
+    },
+    "react/jsx-runtime": {
+      "src": "../../../../node_modules/react/jsx-runtime.js",
+      "file": "react_jsx-runtime.js",
+      "fileHash": "c5ebbb82",
+      "needsInterop": true
+    },
+    "@ant-design/icons": {
+      "src": "../../../../node_modules/@ant-design/icons/es/index.js",
+      "file": "@ant-design_icons.js",
+      "fileHash": "5c5b3328",
+      "needsInterop": false
+    },
+    "antd": {
+      "src": "../../../../node_modules/antd/es/index.js",
+      "file": "antd.js",
+      "fileHash": "86f3f83e",
+      "needsInterop": false
+    },
+    "antd/es/input/TextArea": {
+      "src": "../../../../node_modules/antd/es/input/TextArea.js",
+      "file": "antd_es_input_TextArea.js",
+      "fileHash": "06ddda16",
+      "needsInterop": false
+    },
+    "axios": {
+      "src": "../../../../node_modules/axios/index.js",
+      "file": "axios.js",
+      "fileHash": "e539b83d",
+      "needsInterop": false
+    },
+    "framer-motion": {
+      "src": "../../../../node_modules/framer-motion/dist/es/index.mjs",
+      "file": "framer-motion.js",
+      "fileHash": "961643ef",
+      "needsInterop": false
+    },
+    "hamburger-react": {
+      "src": "../../../../node_modules/hamburger-react/dist-esm/index.js",
+      "file": "hamburger-react.js",
+      "fileHash": "b2599bab",
+      "needsInterop": false
+    },
+    "leaflet": {
+      "src": "../../../../node_modules/leaflet/dist/leaflet-src.js",
+      "file": "leaflet.js",
+      "fileHash": "3d1cbf1d",
+      "needsInterop": true
+    },
+    "moment": {
+      "src": "../../../../node_modules/moment/dist/moment.js",
+      "file": "moment.js",
+      "fileHash": "52082842",
+      "needsInterop": false
+    },
+    "react-dom/client": {
+      "src": "../../../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "a81989b4",
+      "needsInterop": true
+    },
+    "react-dom/server": {
+      "src": "../../../../node_modules/react-dom/server.browser.js",
+      "file": "react-dom_server.js",
+      "fileHash": "877b9e97",
+      "needsInterop": true
+    },
+    "react-icons/fa": {
+      "src": "../../../../node_modules/react-icons/fa/index.mjs",
+      "file": "react-icons_fa.js",
+      "fileHash": "73c7979f",
+      "needsInterop": false
+    },
+    "react-icons/io": {
+      "src": "../../../../node_modules/react-icons/io/index.mjs",
+      "file": "react-icons_io.js",
+      "fileHash": "f447e198",
+      "needsInterop": false
+    },
+    "react-intersection-observer": {
+      "src": "../../../../node_modules/react-intersection-observer/dist/index.mjs",
+      "file": "react-intersection-observer.js",
+      "fileHash": "b4148187",
+      "needsInterop": false
+    },
+    "react-leaflet": {
+      "src": "../../../../node_modules/react-leaflet/lib/index.js",
+      "file": "react-leaflet.js",
+      "fileHash": "753a6b72",
+      "needsInterop": false
+    },
+    "react-router-dom": {
+      "src": "../../../../node_modules/react-router-dom/dist/index.js",
+      "file": "react-router-dom.js",
+      "fileHash": "18c134d0",
+      "needsInterop": false
+    },
+    "styled-components": {
+      "src": "../../../../node_modules/styled-components/dist/styled-components.browser.esm.js",
+      "file": "styled-components.js",
+      "fileHash": "16480624",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-SDHJQH6X": {
+      "file": "chunk-SDHJQH6X.js"
+    },
+    "chunk-WUCLI7JR": {
+      "file": "chunk-WUCLI7JR.js"
+    },
+    "chunk-HJINVM7D": {
+      "file": "chunk-HJINVM7D.js"
+    },
+    "chunk-FMNIZRSS": {
+      "file": "chunk-FMNIZRSS.js"
+    },
+    "chunk-DWY6KALS": {
+      "file": "chunk-DWY6KALS.js"
+    },
+    "chunk-TINBCO54": {
+      "file": "chunk-TINBCO54.js"
+    },
+    "chunk-B7DG5IFP": {
+      "file": "chunk-B7DG5IFP.js"
+    },
+    "chunk-JTR4A4LI": {
+      "file": "chunk-JTR4A4LI.js"
+    },
+    "chunk-HWVP5QPK": {
+      "file": "chunk-HWVP5QPK.js"
+    },
+    "chunk-CXIOQOXP": {
+      "file": "chunk-CXIOQOXP.js"
+    },
+    "chunk-PLDDJCW6": {
+      "file": "chunk-PLDDJCW6.js"
+    }
+  }
+}
