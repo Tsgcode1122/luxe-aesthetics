@@ -455,7 +455,7 @@ const DropdownsOne = styled.div`
   position: absolute;
   border-radius: 0 0 10px 10px;
   border: 1px solid #f7d782;
-  right: 170px;
+  right: 190px;
   /* gap: 40px; */
   grid-template-columns: 1fr 1fr;
   padding: 0.5rem 0.5rem;
@@ -497,7 +497,9 @@ const DropdownMenu = styled.div`
   }
 `;
 
-const DropItem = styled.div``;
+const DropItem = styled.div`
+  padding-right: 10px;
+`;
 const DropdownItem = styled.div`
   margin-top: 0.5rem;
   @media screen and (max-width: 320px) {
