@@ -92,8 +92,12 @@ const Services = () => {
 };
 
 const Start = styled.div`
-  margin: 2rem 1rem 0 1rem;
+  margin: 2rem 1rem 0rem 1rem;
   padding: 1rem 0 0 0;
+  /* background: ${Colors.back}; */
+  @media screen and (max-width: 600px) {
+    background: ${Colors.back};
+  }
   @media screen and (max-width: 320px) {
     margin: 2rem 0.5rem 0 0.5rem;
     margin-bottom: -1rem;

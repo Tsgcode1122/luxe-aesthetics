@@ -20,14 +20,14 @@ const Container = styled.div`
     /* margin: 0.75rem 0.75rem; */
     padding: 1.75rem 0.75rem;
   }
-  @media screen and (min-width: 1000px) {
-    margin: 2rem 4rem 0rem 4rem;
+  @media screen and (min-width: 800px) {
+    margin: 4rem 4rem 0rem 4rem;
     border-radius: 40px;
   }
 
   @media screen and (min-width: 1200px) {
     /* padding: 2rem 8rem 4rem 8rem; */
-    margin: 2rem 7rem 3rem 7rem;
+    margin: 5rem 7rem 3rem 7rem;
     border-radius: 40px;
   }
 `;

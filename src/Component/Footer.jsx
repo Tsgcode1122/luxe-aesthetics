@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import logo from "../Images/logo.png";
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
   return (
     <Container>
       <Content>
@@ -10,7 +11,7 @@ const Footer = () => {
           <strong>Business Hours:</strong> By Appointment Only.
         </p>
         {/* <p> 9:00 a.m. - 5:00 p.m. </p> */}
-        <p>© 2024 Gem Luxe Aesthetics. All rights reserved.</p>
+        <p>© 2024 - {currentYear} Gem Luxe Aesthetics. All rights reserved.</p>
       </Content>
     </Container>
   );

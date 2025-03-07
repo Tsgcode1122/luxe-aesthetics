@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import bgg from "../Images/drug.png";
 import belly from "../Images/belly.png";
-import HeroBg from "../Image2025/ivhero.jpg";
+import HeroBg from "../Image2025/newhero.jpg";
 // import HeroBg from "../Image2025/gemim.png";
 import SwipeComponent from "./SwipeComponent";
 import Button from "./Button";
@@ -23,11 +23,11 @@ const Hero = () => {
             <SwipeComponent direction="left-to-right">
               <Heading>Luxury aesthetics, uniquely yours.</Heading>
             </SwipeComponent>
-            <SwipeComponent direction="right-to-left">
-              {/* <Subheading>
+            {/* <SwipeComponent direction="right-to-left">
+              <Subheading>
                 Tailored Weight Loss Solutions for a Vibrant You!
-              </Subheading> */}
-            </SwipeComponent>
+              </Subheading>
+            </SwipeComponent> */}
             <ZoomInComponent>
               <Link to="appointment">
                 <Button href="#packages">Book Appointment</Button>
@@ -45,12 +45,12 @@ const Hero = () => {
 };
 
 const HeroSection = styled.section`
-  display: flex;
+  /* display: flex; */
   background: url(${HeroBg});
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-
+  align-items: center;
   text-align: center;
   position: relative;
   /* height: 70vh; */
@@ -64,11 +64,11 @@ const HeroSection = styled.section`
 `;
 
 const HeroContent = styled.div`
-  position: relative;
+  /* position: relative; */
   background: rgba(0, 0, 0, 0.5);
-  flex-direction: column;
+  /* flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
   padding: 40px 20px;
   @media screen and (max-width: 320px) {
     padding: 40px 5px;
@@ -80,13 +80,13 @@ const HeroContent = styled.div`
     padding: 40px 5px;
   }
   @media screen and (min-width: 600px) {
-    padding: 6rem 2rem 1rem 2rem;
+    padding: 6rem 2rem 2rem 2rem;
   }
   @media screen and (min-width: 1000px) {
-    padding: 7rem 3rem 1rem 3rem;
+    padding: 7rem 3rem 3rem 3rem;
   }
   @media screen and (min-width: 1200px) {
-    padding: 7rem 8rem 1rem 8rem;
+    padding: 7rem 8rem 4rem 8rem;
   }
   overflow: hidden;
   @media screen and (min-width: 1000px) {
