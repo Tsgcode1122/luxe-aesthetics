@@ -21,14 +21,12 @@ const Hero = () => {
         <HeroContent>
           <Bottom>
             <SwipeComponent direction="left-to-right">
-              <Heading>
-                Achieve Your Dream Body with Gem Luxe Aesthetics
-              </Heading>
+              <Heading>Luxury aesthetics, uniquely yours.</Heading>
             </SwipeComponent>
             <SwipeComponent direction="right-to-left">
-              <Subheading>
+              {/* <Subheading>
                 Tailored Weight Loss Solutions for a Vibrant You!
-              </Subheading>
+              </Subheading> */}
             </SwipeComponent>
             <ZoomInComponent>
               <Link to="appointment">

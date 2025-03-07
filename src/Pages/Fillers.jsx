@@ -5,7 +5,7 @@ import styled from "styled-components";
 import ServiceDetails from "../Component/ServiceDetails";
 import PageHeading from "../Component/PageHeading";
 
-import aboutimg from "../Image2025/fillerh.jpg";
+import aboutimg from "../Image2025/fillernew.jpg";
 import { Colors, Gradients } from "../Component/ColorComponent";
 import { Link } from "react-router-dom";
 import SwipeComponent from "../Component/SwipeComponent";
@@ -53,7 +53,7 @@ const Fillers = () => {
 export default Fillers;
 const BContainer = styled.div`
   background: ${Colors.back};
-  margin: 2rem 1rem 0rem 1rem;
+  /* margin: 2rem 1rem 0rem 1rem; */
   padding: 2rem 1rem 0rem 1rem;
   @media screen and (max-width: 320px) {
     margin: 0;

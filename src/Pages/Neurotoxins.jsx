@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import NeurotoxinFaqs from "../Component/NeurotoxinFaqs";
 import PageHeading from "../Component/PageHeading";
 import backgroundImage from "../Image2025/neuro.jpg";
-import aboutimg from "../Image2025/neuroh.jpg";
+import aboutimg from "../Image2025/neuronew.jpg";
 
 import styled from "styled-components";
 
@@ -51,7 +51,7 @@ const Neurotoxins = () => {
 export default Neurotoxins;
 const BContainer = styled.div`
   background: ${Colors.back};
-  margin: 2rem 1rem -1rem 1rem;
+  /* margin: 2rem 1rem -1rem 1rem; */
   padding: 2rem 1rem 2rem 1rem;
   @media screen and (max-width: 320px) {
     margin: 0;

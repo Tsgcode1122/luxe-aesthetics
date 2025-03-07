@@ -20,7 +20,7 @@ const Home = () => {
   return (
     <>
       <Hero />
-      <HeroMoving />
+      {/* <HeroMoving /> */}
       <About />
       {/* <IvHome /> */}
       {/* <IvSection /> */}
