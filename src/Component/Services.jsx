@@ -5,7 +5,7 @@ import { Colors, Gradients } from "./ColorComponent";
 import styled, { keyframes } from "styled-components";
 import { ArrowRightOutlined } from "@ant-design/icons";
 import { Link } from "react-router-dom";
-import weightloss from "../Image2025/weightloss.jpg";
+import weightloss from "../Image2025/weightloss.png";
 import ivhydration from "../Image2025/ivnew.jpg";
 import fill from "../Image2025/fillernew.jpg";
 // import Glow from "../Image/Glow.png";

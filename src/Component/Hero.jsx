@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import bgg from "../Images/drug.png";
 import belly from "../Images/belly.png";
-import HeroBg from "../Image2025/newhero.jpg";
+import HeroBg from "../Image2025/heronew2.jpg";
 // import HeroBg from "../Image2025/gemim.png";
 import SwipeComponent from "./SwipeComponent";
 import Button from "./Button";
