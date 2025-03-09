@@ -185,6 +185,7 @@ const Contact = () => {
 
 export default Contact;
 const Container = styled.div`
+  padding-top: 4rem;
   position: relative;
   overflow: hidden;
   padding: 20px 20px 100px 20px;

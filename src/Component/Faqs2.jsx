@@ -127,7 +127,7 @@ const FaqsContainer = styled.div`
     rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
     rgba(60, 64, 67, 0.15) 0px 1px 3px 1px; */
   margin: 2rem 1rem;
-  background: url(${bg}) no-repeat center/cover;
+  /* background: url(${bg}) no-repeat center/cover; */
   background-position: 10% top;
   background-size: 100%;
 

@@ -34,16 +34,22 @@ const Home = () => {
 
       {/* <WhyUs /> */}
       <Divider>
-        <div>
+        <HiddenBottle>
           <Bottle />
           <span>{/* <GlowingDivider /> */}</span>
-        </div>
+        </HiddenBottle>
         <Faqs2 />
       </Divider>
       <Contact />
     </>
   );
 };
+const HiddenBottle = styled.div`
+  display: none;
+  @media screen and (min-width: 800px) {
+    display: block;
+  }
+`;
 const Divider = styled.div`
   @media screen and (min-width: 1000px) {
     padding: 2rem 3rem 1rem 3rem;

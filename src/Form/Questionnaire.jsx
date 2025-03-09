@@ -19,6 +19,7 @@ import SignatureUpload from "./SignatureUpload";
 const { TextArea } = Input;
 
 const Container = styled.div`
+  padding-top: 4rem;
   display: flex;
   align-items: center;
   justify-content: center;

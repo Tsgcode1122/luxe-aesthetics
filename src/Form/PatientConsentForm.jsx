@@ -9,6 +9,7 @@ import SignatureUpload from "./SignatureUpload";
 const { Paragraph } = Typography;
 
 const Container = styled.div`
+  padding-top: 4rem;
   display: flex;
   align-items: center;
   justify-content: center;

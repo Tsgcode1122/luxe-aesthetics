@@ -7,6 +7,7 @@ import TextArea from "antd/es/input/TextArea";
 import LoaderModal from "./LoaderModal";
 import SignatureUpload from "./SignatureUpload";
 const Container = styled.div`
+  padding-top: 4rem;
   display: flex;
   align-items: center;
   justify-content: center;

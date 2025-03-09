@@ -114,6 +114,7 @@ const Content = styled.p`
   }
 `;
 const AboutImg = styled.div`
+  display: none;
   img {
     max-width: 100%;
 
@@ -124,6 +125,7 @@ const AboutImg = styled.div`
     padding: 0 3rem;
   }
   @media screen and (min-width: 1000px) {
+    display: block;
     padding: 0 0;
     border-radius: 30px;
   }
