@@ -114,12 +114,14 @@ const Content = styled.p`
   }
 `;
 const AboutImg = styled.div`
-  display: none;
   img {
     max-width: 100%;
-
+    display: none;
     border-radius: 50px;
     background: ${Gradients.lightGoldToGold};
+    @media screen and (min-width: 600px) {
+      display: block;
+    }
   }
   @media screen and (min-width: 600px) {
     padding: 0 3rem;
