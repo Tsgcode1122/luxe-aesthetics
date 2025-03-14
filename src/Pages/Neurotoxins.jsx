@@ -67,34 +67,7 @@ const BContainer = styled.div`
     padding: 2rem 0.75rem 0.75rem 0.75rem;
   }
 `;
-const Heading = styled.h1`
-  text-align: center;
-  padding: 1rem 0 0.5rem 0;
-  margin: 0 !important;
-  background: ${Gradients.goldGradient};
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  line-height: 0.9;
-  -webkit-text-stroke: 0.91px #8c6c28;
-  font-weight: 500;
-  font-size: 2rem;
-  display: none;
-  position: relative;
-  font-family: "Philosopher", sans-serif;
-  @media screen and (max-width: 320px) {
-    font-size: 1.8rem;
-  }
-  @media (min-width: 321px) and (max-width: 399px) {
-    font-size: 2rem;
-  }
-  @media (min-width: 400px) and (max-width: 499px) {
-    font-size: 2rem;
-  }
-  @media screen and (min-width: 1000px) {
-    display: block;
-  }
-`;
+
 const Container = styled.div`
   align-items: center;
   display: flex;

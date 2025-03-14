@@ -128,7 +128,7 @@ export default DermalFillerFaqs;
 
 const FaqsContainer = styled.div`
   position: relative;
-
+  background: ${Colors.back};
   /* background: url(${bg}) no-repeat center/cover; */
   background-position: 10% top;
   background-size: 100%;
@@ -176,6 +176,11 @@ const Content = styled.div`
   }
   @media (min-width: 400px) and (max-width: 499px) {
     padding: 1.5rem;
+  }
+  @media screen and (min-width: 800px) {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
   }
 `;
 const SubHead = styled.h5`
