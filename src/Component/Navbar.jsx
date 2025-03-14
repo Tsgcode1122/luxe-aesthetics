@@ -234,7 +234,7 @@ const Navbar = () => {
             </DropItem>
 
             <DropItem onClick={closebarOne}>
-              <DropLink to="/neurotixins">Neurotoxin</DropLink>
+              <DropLink to="/neurotoxins">Neurotoxin</DropLink>
             </DropItem>
           </DropdownsOne>
         )}
