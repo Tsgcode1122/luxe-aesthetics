@@ -22,22 +22,23 @@ const Neurotoxins = () => {
       />
       <BContainer>
         <Container>
-          <SwipeComponent direction="left-to-right">
-            <Heading>About Us</Heading>
-            <Content>
-              Neurotoxin treatments, such as Botox and Dysport, are a
-              non-invasive way to reduce fine lines and wrinkles, giving your
-              skin a smoother, more youthful appearance. By temporarily relaxing
-              targeted facial muscles, neurotoxins help soften expression lines
-              on the forehead, around the eyes, and between the brows.
-            </Content>
-          </SwipeComponent>
-          <SwipeComponent direction="right-to-left">
-            <Link to="/appointment">
-              <Button>Book Now</Button>
-            </Link>
-          </SwipeComponent>
-
+          <div>
+            <SwipeComponent direction="left-to-right">
+              <Content>
+                Neurotoxin treatments, such as Botox and Dysport, are a
+                non-invasive way to reduce fine lines and wrinkles, giving your
+                skin a smoother, more youthful appearance. By temporarily
+                relaxing targeted facial muscles, neurotoxins help soften
+                expression lines on the forehead, around the eyes, and between
+                the brows.
+              </Content>
+            </SwipeComponent>
+            <SwipeComponent direction="right-to-left">
+              <Link to="/appointment">
+                <Button>Book Now</Button>
+              </Link>
+            </SwipeComponent>
+          </div>
           <AboutImg>
             <img src={aboutimg} />
           </AboutImg>

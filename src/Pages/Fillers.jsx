@@ -22,23 +22,23 @@ const Fillers = () => {
       />
       <BContainer>
         <Container>
-          <SwipeComponent direction="left-to-right">
-            <Heading>About Us</Heading>
-            <Content>
-              Dermal fillers are a popular, non-surgical cosmetic treatment
-              designed to restore volume, smooth out wrinkles, and rejuvenate
-              your appearance. Whether you're looking to soften deep lines,
-              enhance facial contours, or add fullness to areas like your lips
-              or cheeks, dermal fillers offer a safe and effective solution with
-              minimal downtime.
-            </Content>
-          </SwipeComponent>
-          <SwipeComponent direction="right-to-left">
-            <Link to="/appointment">
-              <Button>Book Now</Button>
-            </Link>
-          </SwipeComponent>
-
+          <div>
+            <SwipeComponent direction="left-to-right">
+              <Content>
+                Dermal fillers are a popular, non-surgical cosmetic treatment
+                designed to restore volume, smooth out wrinkles, and rejuvenate
+                your appearance. Whether you're looking to soften deep lines,
+                enhance facial contours, or add fullness to areas like your lips
+                or cheeks, dermal fillers offer a safe and effective solution
+                with minimal downtime.
+              </Content>
+            </SwipeComponent>
+            <SwipeComponent direction="right-to-left">
+              <Link to="/appointment">
+                <Button>Book Now</Button>
+              </Link>
+            </SwipeComponent>
+          </div>
           <AboutImg>
             <img src={aboutimg} />
           </AboutImg>

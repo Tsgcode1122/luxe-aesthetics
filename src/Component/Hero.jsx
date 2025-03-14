@@ -58,6 +58,7 @@ const HeroSection = styled.section`
   @media screen and (max-width: 320px) {
   }
   @media (min-width: 321px) and (max-width: 399px) {
+    background-size: 70%;
   }
   @media (min-width: 400px) and (max-width: 499px) {
   }
