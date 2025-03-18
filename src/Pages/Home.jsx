@@ -33,13 +33,13 @@ const Home = () => {
       <Services />
 
       {/* <WhyUs /> */}
-      <Divider>
+      {/* <Divider>
         <HiddenBottle>
           <Bottle />
-          <span>{/* <GlowingDivider /> */}</span>
+          <span></span>
         </HiddenBottle>
         <Faqs2 />
-      </Divider>
+      </Divider> */}
       <Contact />
     </>
   );
