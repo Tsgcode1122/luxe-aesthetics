@@ -3,7 +3,7 @@ import styled from "styled-components";
 import bgg from "../Images/drug.png";
 import belly from "../Images/belly.png";
 import HeroBg from "../Image2025/heronew2.jpg";
-import HeroBgSmall from "../Image2025/smallbgg.png";
+import HeroBgSmall from "../Image2025/smallbggg.png";
 // import HeroBg from "../Image2025/gemim.png";
 import SwipeComponent from "./SwipeComponent";
 import Button from "./Button";
@@ -64,7 +64,6 @@ const HeroSection = styled.section`
     height: 70vh;
   }
   @media (min-width: 321px) and (max-width: 399px) {
-    /* background-size: 70%; */
   }
   @media (min-width: 400px) and (max-width: 499px) {
   }
@@ -72,7 +71,7 @@ const HeroSection = styled.section`
 
 const HeroContent = styled.div`
   /* position: relative; */
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.4);
   /* flex-direction: column;
   align-items: center;
   justify-content: center; */
