@@ -3,7 +3,7 @@ import styled from "styled-components";
 import bgg from "../Images/drug.png";
 import belly from "../Images/belly.png";
 import HeroBg from "../Image2025/heronew2.jpg";
-import HeroBgSmall from "../Image2025/smallbggg.png";
+import HeroBgSmall from "../Image2025/smal.png";
 // import HeroBg from "../Image2025/gemim.png";
 import SwipeComponent from "./SwipeComponent";
 import Button from "./Button";
@@ -71,7 +71,7 @@ const HeroSection = styled.section`
 
 const HeroContent = styled.div`
   /* position: relative; */
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.2);
   /* flex-direction: column;
   align-items: center;
   justify-content: center; */
