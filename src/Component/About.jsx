@@ -18,7 +18,7 @@ const Container = styled.div`
   }
   @media (min-width: 400px) and (max-width: 499px) {
     /* margin: 0.75rem 0.75rem; */
-    padding: 1.75rem 0.75rem;
+    padding: 1rem 0.75rem;
   }
   @media screen and (min-width: 800px) {
     margin: 4rem 4rem 0rem 4rem;

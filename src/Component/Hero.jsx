@@ -3,6 +3,7 @@ import styled from "styled-components";
 import bgg from "../Images/drug.png";
 import belly from "../Images/belly.png";
 import HeroBg from "../Image2025/heronew2.jpg";
+import HeroBgSmall from "../Image2025/smallbgg.png";
 // import HeroBg from "../Image2025/gemim.png";
 import SwipeComponent from "./SwipeComponent";
 import Button from "./Button";
@@ -17,7 +18,7 @@ const Hero = () => {
   return (
     <>
       <HeroSection>
-        <StarsBackground />
+        {/* <StarsBackground /> */}
         <HeroContent>
           <Bottom>
             <SwipeComponent direction="left-to-right">
@@ -46,7 +47,7 @@ const Hero = () => {
 
 const HeroSection = styled.section`
   /* display: flex; */
-  background: url(${HeroBg});
+  background: url(${HeroBgSmall});
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -55,10 +56,15 @@ const HeroSection = styled.section`
   position: relative;
   /* height: 70vh; */
   color: #333;
-  @media screen and (max-width: 320px) {
+  @media screen and (min-width: 600px) {
+    background: url(${HeroBg});
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 70vh;
   }
   @media (min-width: 321px) and (max-width: 399px) {
-    background-size: 70%;
+    /* background-size: 70%; */
   }
   @media (min-width: 400px) and (max-width: 499px) {
   }
@@ -71,6 +77,9 @@ const HeroContent = styled.div`
   align-items: center;
   justify-content: center; */
   padding: 40px 20px;
+  @media screen and (min-width: 600px) {
+    height: 70vh;
+  }
   @media screen and (max-width: 320px) {
     padding: 40px 5px;
   }
