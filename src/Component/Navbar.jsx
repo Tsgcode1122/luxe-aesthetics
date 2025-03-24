@@ -275,9 +275,9 @@ const FixedNavbar = styled.div`
   width: 100%;
   top: 0;
   z-index: 999 !important;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.1) !important;
   color: white;
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px) !important;
   /* background: linear-gradient(
     190deg,
     #1f1809 10%,
@@ -287,7 +287,7 @@ const FixedNavbar = styled.div`
     #2f240d 90%,
     #181501 100%
   ); */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
   transition: top 0.3s;
   img {
     max-width: 100%;
@@ -573,8 +573,8 @@ const StyledNavbar = styled.div`
   z-index: 999 !important;
 
   color: #ffffff;
-  background: #ffffff4a;
-  backdrop-filter: blur(10px);
+  background: #ffffff4a !important;
+  backdrop-filter: blur(10px) !important;
   transition: top 0.3s;
   img {
     max-width: 100%;
