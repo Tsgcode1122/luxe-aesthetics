@@ -573,7 +573,7 @@ const StyledNavbar = styled.div`
   z-index: 999 !important;
 
   color: #ffffff;
-  background: #ffffff4a !important;
+  background: #ffffffe4 !important;
   backdrop-filter: blur(10px) !important;
   transition: top 0.3s;
   img {
