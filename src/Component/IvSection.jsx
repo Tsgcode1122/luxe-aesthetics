@@ -6,6 +6,8 @@ import Revive from "../Images/Revive.png";
 import Sereni from "../Images/sereni.png";
 import Check from "../Images/checkk.png";
 import Endurance from "../Images/Endurance.png";
+import NadImage from "../Image2025/nadplus.png";
+import MobileIV from "../Image2025/mobileiv.png";
 import Heading from "./Heading";
 
 import { Colors, Gradients } from "./ColorComponent";
@@ -13,6 +15,47 @@ import { Link } from "react-router-dom";
 const services = [
   {
     id: 1,
+    title: "NAD+ IV Therapy",
+
+    description:
+      "NAD+ IV Therapy is a restorative treatment that replenishes essential coenzymes, boosts energy, and supports healthy aging from within.",
+
+    Benefits: [
+      "<strong>Energy Boost:</strong> Increases natural energy levels and reduces chronic fatigue.",
+      "<strong>Mental Clarity:</strong> Improves focus, concentration, and cognitive function.",
+      "<strong>Cellular Repair:</strong> Promotes DNA repair and supports healthy aging.",
+      "<strong>Mood Support:</strong> Enhances neurotransmitter balance and detoxification for improved mood.",
+    ],
+
+    buttonLabel: "Book Now",
+    imageUrl: NadImage,
+
+    lastDescription:
+      "Recharge your body and mind with NAD+ IV Therapy at Gem Luxe Aesthetics—feel revitalized, energized, and balanced.",
+  },
+  {
+    id: 2,
+    title: "Mobile IV Hydration",
+
+    description:
+      "Mobile IV Hydration brings revitalizing IV therapy directly to your location, offering convenient, on-the-go wellness and hydration support.",
+
+    Benefits: [
+      "<strong>Convenience:</strong> Receive premium IV therapy in the comfort of your home, office, or event space.",
+      "<strong>Rapid Rehydration:</strong> Quickly restores fluid balance and essential nutrients.",
+      "<strong>Personalized Service:</strong> Customized IV blends tailored to your wellness needs.",
+      "<strong>On-Demand Care:</strong> Flexible scheduling for fast, responsive hydration therapy.",
+    ],
+
+    buttonLabel: "Book Now",
+    imageUrl: MobileIV, // Replace with your actual image import or URL
+
+    lastDescription:
+      "Experience the luxury of wellness on the go—our Mobile IV Hydration keeps you refreshed, energized, and at your best, wherever you are.",
+  },
+
+  {
+    id: 3,
     title: "Glow Drip IV Hydration",
 
     description:
@@ -30,7 +73,7 @@ const services = [
       "Glow Drip is perfect for restoring vitality, enhancing your skin’s glow, and feeling refreshed from the inside out.",
   },
   {
-    id: 2,
+    id: 4,
     title: "SereniDrip IV Hydration",
 
     description:
@@ -47,7 +90,7 @@ const services = [
       "Each SereniDrip IV Kit provides up to 7 infusions, delivering continuous relief from PMS discomfort.",
   },
   {
-    id: 3,
+    id: 5,
     title: "Endurance Elite Drip IV Hydration",
 
     description:
@@ -63,7 +106,7 @@ const services = [
       "Each session of Endurance Elite Drip delivers a powerful infusion of hydration and nutrients, helping you stay at the top of your game. ",
   },
   {
-    id: 4,
+    id: 6,
     title: "Revive Luxe Drip IV Hydration",
 
     description:
@@ -79,7 +122,7 @@ const services = [
       "Each Revive Luxe Drip provides up to 10 infusions, delivering a luxurious and effective solution to rehydrate, revitalize, and refresh.",
   },
   {
-    id: 5,
+    id: 7,
     title: "Opulent Glow IV Hydration",
 
     description:

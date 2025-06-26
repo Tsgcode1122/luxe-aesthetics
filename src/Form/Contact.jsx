@@ -21,6 +21,8 @@ const services = [
   "Dermal Fillers",
   "GLP-1 SEMAGLUTIDE",
   "GIP/GLP-1 TIRZEPATIDE",
+  "NAD+ IV Therapy",
+  "Mobile IV Hydration",
   "Glow drip IV Hydration",
   "Sereni Drip IV Hydration",
   "Opulent Glow  IV Hydration",
