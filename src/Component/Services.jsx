@@ -15,6 +15,7 @@ import Revive from "../Images/Revive.png";
 import Sereni from "../Images/sereni.png";
 import Check from "../Images/checkk.png";
 import Endurance from "../Images/Endurance.png";
+import IMInjection from "../Image2025/infusions.png";
 import SwipeComponent from "./SwipeComponent";
 
 // Services Array
@@ -32,6 +33,13 @@ const services = [
       "Customized IV hydration treatments designed to replenish essential nutrients, boost energy, and promote overall wellness, helping you feel revitalized and balanced.",
     linkToView: "/IVservices",
     imageUrl: ivhydration,
+  },
+  {
+    name: "Intramuscular Injection Services",
+    description:
+      "IM Injectables are quick intramuscular shots that can support your immune system, enhance fat burning, boost biotin levels for healthy hair and skin, and increase your overall energy.",
+    linkToView: "/ivInjections",
+    imageUrl: IMInjection,
   },
   {
     name: "Neurotoxins",

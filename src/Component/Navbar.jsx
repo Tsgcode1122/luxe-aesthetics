@@ -108,11 +108,18 @@ const Navbar = () => {
                 </DropdownLink>
               </DropdownItem>
               <DropdownItem onClick={closeSidebar}>
+                <DropdownLink to="/ivInjections">
+                  <IoIosArrowDropright />
+                  Intramuscular Injections
+                </DropdownLink>
+              </DropdownItem>
+              <DropdownItem onClick={closeSidebar}>
                 <DropdownLink to="/IvServices">
                   <IoIosArrowDropright />
                   Iv Hydration Services
                 </DropdownLink>
               </DropdownItem>
+
               <DropdownItem onClick={closeSidebar}>
                 <DropdownLink to="/neurotoxins">
                   <IoIosArrowDropright />
@@ -228,6 +235,9 @@ const Navbar = () => {
             </DropItem>
             <DropItem onClick={closebarOne}>
               <DropLink to="/IvServices">Iv Hydration</DropLink>
+            </DropItem>
+            <DropItem onClick={closebarOne}>
+              <DropLink to="/ivInjections">Intramuscular Injections</DropLink>
             </DropItem>
             <DropItem onClick={closebarOne}>
               <DropLink to="/filler">Dermal Filler</DropLink>

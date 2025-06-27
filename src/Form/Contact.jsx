@@ -28,6 +28,11 @@ const services = [
   "Opulent Glow  IV Hydration",
   "Endurance Elite IV Hydration",
   "Revive Luxe Drip IV Hydration",
+  "Tri-Immune Boost Injections",
+  "Weight Loss Injections",
+  "Vitamin B12 Injections",
+  "Vitamin D3 Injections",
+  "Biotin Injections",
 ];
 // import from "../Component/Button";
 import PageHeading from "../Component/PageHeading";

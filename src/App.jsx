@@ -26,6 +26,7 @@ import IvServices from "./Pages/IvServices";
 import GeneralFaqs from "./Pages/GeneralFaqs";
 import Neurotoxins from "./Pages/Neurotoxins";
 import Fillers from "./Pages/Fillers";
+import IvInjections from "./Pages/IvInjections";
 
 const GlobalStyle = createGlobalStyle`
 
@@ -123,6 +124,7 @@ const routes = [
       { path: "/IvServices", element: <IvServices /> },
       { path: "/neurotoxins", element: <Neurotoxins /> },
       { path: "/filler", element: <Fillers /> },
+      { path: "/ivInjections", element: <IvInjections /> },
 
       { path: "/policies", element: <Policies /> },
       { path: "/consentforemail", element: <ConsentForEmail /> },
