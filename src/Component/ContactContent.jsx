@@ -20,7 +20,7 @@ const ContactContent = () => {
         <ContactItem>
           <EnvironmentOutlined />
           <a href={googleMapsLink} target="_blank" rel="noopener noreferrer">
-            1418 Manoa Rd Wynnewood Pa 19096
+            1605 East Passyunk Ave Phila Pa 19148
           </a>
         </ContactItem>
       </ZoomInComponent>

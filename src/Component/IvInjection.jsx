@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import TriImmune from "../Image2025/triinjection.png";
-import WeightLoss from "../Image2025/weightinjection.png";
+import WeightLoss from "../Image2025/lipotropicinjection.png";
 import Biotin from "../Image2025/Biotininjection.png";
 import B12 from "../Image2025/vitamininjection.png";
 import D3 from "../Image2025/vitamindinjection.png";
@@ -47,7 +47,7 @@ const injections = [
     imageUrl: D3,
   },
   {
-    name: "Weight Loss Injections",
+    name: "Lipotropic Injections",
     description:
       "Specially crafted to support metabolism, break down fat, and boost your energy while helping to control appetite and maintain healthy weight goals.",
     ingredients: [

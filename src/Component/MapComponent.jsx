@@ -8,7 +8,7 @@ import styled from "styled-components";
 const MapComponent = () => {
   const position = [40.006, -75.272];
   const googleMapsLink =
-    "https://www.google.com/maps/search/?api=1&query=1418+Manoa+Rd,+Wynnewood,+PA+19096";
+    "https://www.google.com/maps/search/?api=1&query=1605+East+Passyunk+Ave,+Philadelphia,+PA+19148";
 
   const customIcon = new L.Icon({
     iconUrl: locationIcon,
