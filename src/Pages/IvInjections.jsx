@@ -15,7 +15,7 @@ const IvInjections = () => {
     <>
       <PageHeading
         backgroundImage={backgroundImage}
-        text="Gemluxe IV Injections"
+        text="Gemluxe IM Injections"
       />
       <Container>
         <IvInjection />
