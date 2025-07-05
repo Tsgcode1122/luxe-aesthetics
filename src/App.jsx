@@ -27,6 +27,9 @@ import GeneralFaqs from "./Pages/GeneralFaqs";
 import Neurotoxins from "./Pages/Neurotoxins";
 import Fillers from "./Pages/Fillers";
 import IvInjections from "./Pages/IvInjections";
+import SpecialsPage from "./Specials/SpecialsPage";
+import SemaglutideSpecialOffer from "./Specials/SemaglutideSpecialOffer";
+import TirzepatideSpecial from "./Specials/TirzepatideSpecial";
 
 const GlobalStyle = createGlobalStyle`
 
@@ -133,6 +136,9 @@ const routes = [
       { path: "/hippaconsent", element: <HippaConsent /> },
       { path: "/patientconsent", element: <PatientConsent /> },
       { path: "/patientconsentform", element: <PatientConsentForm /> },
+      { path: "/bestdeal", element: <SpecialsPage /> },
+      { path: "/semaglutidedeal", element: <SemaglutideSpecialOffer /> },
+      { path: "/tirzepatidedeal", element: <TirzepatideSpecial /> },
       { path: "/faqs", element: <GeneralFaqs /> },
 
       { path: "*", element: <InvalidPath /> },

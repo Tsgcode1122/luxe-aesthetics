@@ -12,6 +12,7 @@ const Navbar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isServiceDropdownOpen, setIsServiceDropdownOpen] = useState(false);
+  const [isSpecialDropdownOpen, setIsSpecialDropdownOpen] = useState(false);
   const [isDropdownOpenBig, setIsDropdownOpenBig] = useState(false);
   const [isDropdownOpenBigOne, setIsDropdownOpenBigOne] = useState(false);
   const [prevScrollPos, setPrevScrollPos] = useState(window.scrollY);
@@ -40,6 +41,9 @@ const Navbar = () => {
   };
   const toggleServiceDropdown = () => {
     setIsServiceDropdownOpen(!isServiceDropdownOpen);
+  };
+  const toggleSpecialDropdown = () => {
+    setIsSpecialDropdownOpen(!isSpecialDropdownOpen);
   };
   const toggleDropdownBig = () => {
     setIsDropdownOpenBig(!isDropdownOpenBig);
@@ -130,6 +134,34 @@ const Navbar = () => {
                 <DropdownLink to="/filler">
                   <IoIosArrowDropright />
                   Fillers
+                </DropdownLink>
+              </DropdownItem>
+            </DropdownMenu>
+          </MenuItem>
+          <MenuItem onClick={toggleSpecialDropdown}>
+            <MenuLin>
+              Special Offers
+              <IoIosArrowDropdown />
+            </MenuLin>
+
+            <DropdownMenu isOpen={isSpecialDropdownOpen} ref={dropRef}>
+              <DropdownItem onClick={closeSidebar}>
+                <DropdownLink to="/semaglutidedeal">
+                  <IoIosArrowDropright />
+                  Semaglutide Specials
+                </DropdownLink>
+              </DropdownItem>
+              <DropdownItem onClick={closeSidebar}>
+                <DropdownLink to="/bestdeal">
+                  <IoIosArrowDropright />
+                  Limited Deals
+                </DropdownLink>
+              </DropdownItem>
+
+              <DropdownItem onClick={closeSidebar}>
+                <DropdownLink to="/tirzepatidedeal">
+                  <IoIosArrowDropright />
+                  Tirzepatide Specials
                 </DropdownLink>
               </DropdownItem>
             </DropdownMenu>
