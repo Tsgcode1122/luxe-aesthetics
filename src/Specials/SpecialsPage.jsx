@@ -248,7 +248,7 @@ const SpecialImage = styled.img`
   transition: transform 0.3s;
 `;
 const SpecialTitle = styled.div`
-  font-size: 2rem;
+  font-size: 1.5rem;
   /* text-align: center; */
   padding: 1rem 0 1rem 0;
   margin: 0 !important;
@@ -262,13 +262,13 @@ const SpecialTitle = styled.div`
   position: relative;
   font-family: "Philosopher", sans-serif;
   @media screen and (max-width: 320px) {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
   @media (min-width: 321px) and (max-width: 399px) {
     font-size: 1.5rem;
   }
   @media (min-width: 400px) and (max-width: 499px) {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
   }
 `;
 

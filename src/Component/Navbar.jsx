@@ -15,6 +15,7 @@ const Navbar = () => {
   const [isSpecialDropdownOpen, setIsSpecialDropdownOpen] = useState(false);
   const [isDropdownOpenBig, setIsDropdownOpenBig] = useState(false);
   const [isDropdownOpenBigOne, setIsDropdownOpenBigOne] = useState(false);
+  const [isDropdownOpenBigTwo, setIsDropdownOpenBigTwo] = useState(false);
   const [prevScrollPos, setPrevScrollPos] = useState(window.scrollY);
   const [visible, setVisible] = useState(true);
   const sidebarRef = useRef(null);
@@ -31,6 +32,9 @@ const Navbar = () => {
   };
   const closebarOne = () => {
     setIsDropdownOpenBigOne(false);
+  };
+  const closebarTwo = () => {
+    setIsDropdownOpenBigTwo(false);
   };
   const closebar = () => {
     setIsDropdownOpenBig(false);
@@ -50,6 +54,9 @@ const Navbar = () => {
   };
   const toggleDropdownBigOne = () => {
     setIsDropdownOpenBigOne(!isDropdownOpenBigOne);
+  };
+  const toggleDropdownBigTwo = () => {
+    setIsDropdownOpenBigTwo(!isDropdownOpenBigTwo);
   };
 
   const handleScroll = () => {
@@ -148,7 +155,7 @@ const Navbar = () => {
               <DropdownItem onClick={closeSidebar}>
                 <DropdownLink to="/semaglutidedeal">
                   <IoIosArrowDropright />
-                  Semaglutide Specials
+                  Semaglutide Special
                 </DropdownLink>
               </DropdownItem>
               <DropdownItem onClick={closeSidebar}>
@@ -161,7 +168,7 @@ const Navbar = () => {
               <DropdownItem onClick={closeSidebar}>
                 <DropdownLink to="/tirzepatidedeal">
                   <IoIosArrowDropright />
-                  Tirzepatide Specials
+                  Tirzepatide Special
                 </DropdownLink>
               </DropdownItem>
             </DropdownMenu>
@@ -253,6 +260,7 @@ const Navbar = () => {
               <ListLink to="/">Home</ListLink>
 
               <ListLin onClick={toggleDropdownBigOne}>Services</ListLin>
+              <ListLin onClick={toggleDropdownBigTwo}>Special Offers</ListLin>
 
               <ListLink to="https://merakiluxespa.co"> Meraki</ListLink>
               <ListLink to="/contact">Contact Us</ListLink>
@@ -285,6 +293,19 @@ const Navbar = () => {
               <DropLink to="/neurotoxins">Neurotoxin</DropLink>
             </DropItem>
           </DropdownsOne>
+        )}
+        {isDropdownOpenBigTwo && (
+          <DropdownsTwo>
+            <DropItem onClick={closebarTwo}>
+              <DropLink to="/semaglutidedeal"> Semaglutide Special</DropLink>
+            </DropItem>
+            <DropItem onClick={closebarTwo}>
+              <DropLink to="/bestdeal">Limited Deals</DropLink>
+            </DropItem>
+            <DropItem onClick={closebarTwo}>
+              <DropLink to="/Tirzepatidedeal">Tirzepatide Special</DropLink>
+            </DropItem>
+          </DropdownsTwo>
         )}
         {isDropdownOpenBig && (
           <Dropdowns>
@@ -503,7 +524,20 @@ const DropdownsOne = styled.div`
   position: absolute;
   border-radius: 0 0 10px 10px;
   border: 1px solid #f7d782;
-  right: 190px;
+  right: 35%;
+  /* gap: 40px; */
+  grid-template-columns: 1fr 1fr;
+  padding: 0.5rem 0.5rem;
+`;
+const DropdownsTwo = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  display: grid;
+  background: white;
+  position: absolute;
+  border-radius: 0 0 10px 10px;
+  border: 1px solid #f7d782;
+  right: 35%;
   /* gap: 40px; */
   grid-template-columns: 1fr 1fr;
   padding: 0.5rem 0.5rem;
