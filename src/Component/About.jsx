@@ -65,7 +65,7 @@ const About = () => {
     <Container>
       <Heading>About Us</Heading>
       <AboutContent />
-      {/* <PendulumSwing /> */}
+
     </Container>
   );
 };
