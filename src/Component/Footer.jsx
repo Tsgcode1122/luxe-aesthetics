@@ -13,7 +13,9 @@ const Footer = () => {
       
         <p>© 2024 - {currentYear} Gem Luxe Aesthetics. All rights reserved.</p>
       </Content>
+      
     </Container>
+   
   );
 };
 
@@ -38,7 +40,7 @@ const Container = styled.div`
 
 const Content = styled.div`
   text-align: center;
-  color: white;
+  color: green;
 
   font-family: "Arial", sans-serif;
   display: flex;
