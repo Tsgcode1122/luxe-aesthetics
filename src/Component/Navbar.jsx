@@ -386,7 +386,7 @@ const ListLink = styled(Link)`
   justify-content: space-between;
   padding: 0.5rem;
   background: transparent;
-
+  white-space: nowrap;
   border-radius: 0.375rem;
   text-decoration: none;
   color: black;
@@ -402,7 +402,7 @@ const ListLin = styled.div`
   justify-content: space-between;
   padding: 0.5rem;
   background: transparent;
-
+  white-space: nowrap;
   border-radius: 0.375rem;
   text-decoration: none;
   color: black;
@@ -563,9 +563,7 @@ const DropdownMenu = styled.div`
   overflow: hidden;
   max-height: ${(props) => (props.isOpen ? "600px" : "0")};
   visibility: ${(props) => (props.isOpen ? "visible" : "hidden")};
-  transition:
-    max-height 0.4s ease-in-out,
-    opacity 0.3s ease-in-out,
+  transition: max-height 0.4s ease-in-out, opacity 0.3s ease-in-out,
     visibility 0.3s ease-in-out;
 
   @media screen and (max-width: 320px) {
