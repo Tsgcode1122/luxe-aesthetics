@@ -31,7 +31,7 @@ const ServiceDetails = () => {
                 <p> USD/monthly</p>
               </Price> */}
               <Price>
-                <span>$ 150.00 </span> <p>/ first month special</p>
+                {/* <span>$ 150.00 </span> <p>/ first month special</p> */}
               </Price>
             </Prices>
             <Description>
@@ -92,7 +92,7 @@ const ServiceDetails = () => {
                 <p> USD/monthly</p>
               </Price> */}
               <Price>
-                <span>$ 200.00 </span> <p>/ first month special</p>
+                {/* <span>$ 200.00 </span> <p>/ first month special</p> */}
               </Price>
             </Prices>
             <Description>
