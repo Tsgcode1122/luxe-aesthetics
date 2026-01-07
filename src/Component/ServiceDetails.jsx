@@ -25,15 +25,12 @@ const ServiceDetails = () => {
         <SubHead>GLP-1 SEMAGLUTIDE</SubHead>
         <Divide>
           <div>
-            <Prices>
-              {/* <Price>
-                <span>$ 299.00</span>
-                <p> USD/monthly</p>
-              </Price> */}
+            {/* <Prices>
+             
               <Price>
-                {/* <span>$ 150.00 </span> <p>/ first month special</p> */}
+                <span>$ 150.00 </span> <p>/ first month special</p>
               </Price>
-            </Prices>
+            </Prices> */}
             <Description>
               Unlock the power of Semaglutide, a revolutionary GLP-1 agonist
               that not only aids in enhanced insulin secretion but also
@@ -86,15 +83,12 @@ const ServiceDetails = () => {
         <SubHead>GIP/GLP-1 TIRZEPATIDE</SubHead>
         <Divide>
           <div>
-            <Prices>
-              {/* <Price>
-                <span>$ 349.00</span>
-                <p> USD/monthly</p>
-              </Price> */}
+            {/* <Prices>
+             
               <Price>
-                {/* <span>$ 200.00 </span> <p>/ first month special</p> */}
+                <span>$ 200.00 </span> <p>/ first month special</p>
               </Price>
-            </Prices>
+            </Prices> */}
             <Description>
               Explore the benefits of Tirzepatide, a combined GIP/GLP-1 receptor
               agonist that offers a comprehensive approach to weight management.
@@ -194,16 +188,16 @@ const Price = styled.p`
   align-items: center;
   color: black;
   gap: 5px;
-  margin-bottom: 0.5rem;
-  margin-top: -0.2rem;
+  /* margin-bottom: 0.5rem; */
+  /* margin-top: -0.2rem; */
   @media screen and (max-width: 320px) {
-    margin-bottom: 0.5rem;
+    /* margin-bottom: 0.5rem; */
   }
   @media (min-width: 321px) and (max-width: 399px) {
-    margin-bottom: 0.5rem;
+    /* margin-bottom: 0.5rem; */
   }
   @media (min-width: 400px) and (max-width: 499px) {
-    margin-bottom: 0.5rem;
+    /* margin-bottom: 0.5rem; */
   }
   span {
     font-size: 1.5rem;
