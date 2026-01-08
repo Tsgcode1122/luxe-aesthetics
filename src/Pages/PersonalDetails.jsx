@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import imageSrc from "../Images2026/owner.jpg";
+
 const PersonalDetails = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
   return (
     <Wrapper>
       <Container>
