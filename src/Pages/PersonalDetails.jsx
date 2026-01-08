@@ -30,9 +30,7 @@ const PersonalDetails = () => {
               <Para>
                 In August 2024, I founded Gem Luxe Aesthetics, where I proudly
                 offer a range of services including weight loss management,
-                Botox, dermal fillers, and IV hydration therapy. In 2026, I will
-                expand services to include Facial Balancing, continuing my
-                commitment to advanced, patient-centered aesthetic care.
+                Botox, dermal fillers, and IV hydration therapy.
               </Para>
 
               <Para>
