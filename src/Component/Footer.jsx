@@ -10,12 +10,10 @@ const Footer = () => {
         <p>
           <strong>Business Hours:</strong> By Appointment Only.
         </p>
-      
+
         <p>© 2024 - {currentYear} Gem Luxe Aesthetics. All rights reserved.</p>
       </Content>
-      
     </Container>
-   
   );
 };
 

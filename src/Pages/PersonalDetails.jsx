@@ -127,7 +127,7 @@ const Title = styled.h1`
 
 const Para = styled.p`
   margin: 0;
-  line-height: 1.75;
+  line-height: 1.5;
   color: rgba(51, 51, 51, 0.88);
   font-size: 16px;
 `;
