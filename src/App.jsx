@@ -30,6 +30,7 @@ import IvInjections from "./Pages/IvInjections";
 import SpecialsPage from "./Specials/SpecialsPage";
 import SemaglutideSpecialOffer from "./Specials/SemaglutideSpecialOffer";
 import TirzepatideSpecial from "./Specials/TirzepatideSpecial";
+import PersonalDetails from "./Pages/PersonalDetails";
 
 const GlobalStyle = createGlobalStyle`
 
@@ -140,6 +141,7 @@ const routes = [
       { path: "/semaglutidedeal", element: <SemaglutideSpecialOffer /> },
       { path: "/tirzepatidedeal", element: <TirzepatideSpecial /> },
       { path: "/faqs", element: <GeneralFaqs /> },
+      { path: "/personal", element: <PersonalDetails /> },
 
       { path: "*", element: <InvalidPath /> },
     ],
