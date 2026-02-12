@@ -71,6 +71,7 @@ const HeroSection = styled.section`
 
 const HeroContent = styled.div`
   /* position: relative; */
+  /* margin-top: 3rem; */
   background: rgba(0, 0, 0, 0.2);
   /* flex-direction: column;
   align-items: center;

@@ -78,16 +78,16 @@ const SpecialsPage = () => {
           <SpecialTitle>Weight Loss Management</SpecialTitle>
           <SpecialList>
             <li>
-              Initial dosage Semaglutide: <strong>$150</strong>
+              Initial dosage Semaglutide: <strong>$300</strong>
             </li>
             <li>
-              Initial dosage Tirzepatide: <strong>$200</strong>
+              Initial dosage Tirzepatide: <strong>$400</strong>
             </li>
             <li>
-              Monthly Semaglutide: <strong>$300</strong>
+              Monthly Semaglutide: <strong>$300-$423</strong>
             </li>
             <li>
-              Monthly Tirzepatide: <strong>$400</strong>
+              Monthly Tirzepatide: <strong>$400 -$525</strong>
             </li>
           </SpecialList>
           <ButCont>
@@ -116,7 +116,7 @@ const SpecialsPage = () => {
         </SpecialCard>
       </SpecialsGrid>
 
-      <EndingNote>Offer ends 8/31/2025</EndingNote>
+      {/* <EndingNote>Offer ends 8/31/2025</EndingNote> */}
     </Container>
   );
 };

@@ -272,11 +272,11 @@ const TirzepatideSpecial = () => {
           {/* <OldPrice>Regular Price: $699</OldPrice> */}
           <span>Initial Dosage</span>
           <NewPrice>
-            Special Price:<span> $200 </span>
+            <span> $200 </span>
           </NewPrice>
 
-          <SpecialTag>Ends </SpecialTag>
-          <Countdown date={countdownDate} renderer={CountdownRenderer} />
+          {/* <SpecialTag>Ends </SpecialTag> */}
+          {/* <Countdown date={countdownDate} renderer={CountdownRenderer} /> */}
           <ButCont>
             <Button to="/appointment">Book Now</Button>
           </ButCont>

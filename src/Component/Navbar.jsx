@@ -274,6 +274,7 @@ const Navbar = () => {
             </ul>
           </MenuList>
         </HeadSpace>
+
         {isDropdownOpenBigOne && (
           <DropdownsOne>
             <DropItem onClick={closebarOne}>
@@ -344,7 +345,7 @@ const FixedNavbar = styled.div`
   width: 100%;
   top: 0;
   z-index: 999 !important;
-  background: rgba(255, 255, 255, 0.1) !important;
+  background: rgba(255, 255, 255, 0.973) !important;
   color: white;
   backdrop-filter: blur(8px) !important;
   /* background: linear-gradient(
@@ -563,7 +564,9 @@ const DropdownMenu = styled.div`
   overflow: hidden;
   max-height: ${(props) => (props.isOpen ? "600px" : "0")};
   visibility: ${(props) => (props.isOpen ? "visible" : "hidden")};
-  transition: max-height 0.4s ease-in-out, opacity 0.3s ease-in-out,
+  transition:
+    max-height 0.4s ease-in-out,
+    opacity 0.3s ease-in-out,
     visibility 0.3s ease-in-out;
 
   @media screen and (max-width: 320px) {

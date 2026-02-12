@@ -274,11 +274,11 @@ const SemaglutideSpecialOffer = () => {
           {/* <OldPrice>Regular Price: $699</OldPrice> */}
           <span>Initial Dosage</span>
           <NewPrice>
-            Special Price:<span> $150 </span>
+            <span> $150 </span>
           </NewPrice>
 
-          <SpecialTag>Ends </SpecialTag>
-          <Countdown date={countdownDate} renderer={CountdownRenderer} />
+          {/* <SpecialTag>Ends </SpecialTag> */}
+          {/* <Countdown date={countdownDate} renderer={CountdownRenderer} /> */}
           <ButCont>
             <Button to="/appointment">Book Now</Button>
           </ButCont>
