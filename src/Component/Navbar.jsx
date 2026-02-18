@@ -145,7 +145,7 @@ const Navbar = () => {
               </DropdownItem>
             </DropdownMenu>
           </MenuItem>
-          <MenuItem onClick={toggleSpecialDropdown}>
+          {/* <MenuItem onClick={toggleSpecialDropdown}>
             <MenuLin>
               Special Offers
               <IoIosArrowDropdown />
@@ -172,7 +172,7 @@ const Navbar = () => {
                 </DropdownLink>
               </DropdownItem>
             </DropdownMenu>
-          </MenuItem>
+          </MenuItem> */}
 
           <MenuItem onClick={closeSidebar}>
             <MenuLink to="https://merakiluxespa.co">
@@ -260,7 +260,7 @@ const Navbar = () => {
               <ListLink to="/">Home</ListLink>
 
               <ListLin onClick={toggleDropdownBigOne}>Services</ListLin>
-              <ListLin onClick={toggleDropdownBigTwo}>Special Offers</ListLin>
+              {/* <ListLin onClick={toggleDropdownBigTwo}>Special Offers</ListLin> */}
 
               <ListLink to="https://merakiluxespa.co"> Meraki</ListLink>
               <ListLink to="/contact">Contact Us</ListLink>
