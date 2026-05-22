@@ -31,6 +31,7 @@ import SpecialsPage from "./Specials/SpecialsPage";
 import SemaglutideSpecialOffer from "./Specials/SemaglutideSpecialOffer";
 import TirzepatideSpecial from "./Specials/TirzepatideSpecial";
 import PersonalDetails from "./Pages/PersonalDetails";
+import MembershipPage from "./Pages/MembershipPage";
 
 const GlobalStyle = createGlobalStyle`
 
@@ -121,6 +122,7 @@ const routes = [
       { index: true, path: "/", element: <Home /> },
       { path: "/about", element: <About /> },
       { path: "/contact", element: <Contact /> },
+      { path: "/membership", element: <MembershipPage /> },
 
       { path: "/appointment", element: <Appointment /> },
       { path: "/whyus", element: <WhyUs /> },

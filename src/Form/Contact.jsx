@@ -11,42 +11,103 @@ import {
   InstagramOutlined,
   FacebookOutlined,
 } from "@ant-design/icons";
-
+import ReactSelect from "react-select";
 import faq from "../Images/33.png";
-const { Option } = Select;
-
-const services = [
-  "Select Service",
-  "Neurotoxin",
-  "Dermal Fillers",
-  "GLP-1 SEMAGLUTIDE",
-  "GIP/GLP-1 TIRZEPATIDE",
-  "NAD+ IV Therapy",
-  "Mobile IV Hydration",
-  "Glow drip IV Hydration",
-  "Sereni Drip IV Hydration",
-  "Opulent Glow  IV Hydration",
-  "Endurance Elite IV Hydration",
-  "Revive Luxe Drip IV Hydration",
-  "Tri-Immune Boost Injections",
-  "Weight Loss Injections",
-  "Vitamin B12 Injections",
-  "Vitamin D3 Injections",
-  "Biotin Injections",
-];
-// import from "../Component/Button";
+import { useLocation } from "react-router-dom";
 import PageHeading from "../Component/PageHeading";
 import backgroundImage from "../Images/about.jpg";
 
 import Heading from "../Component/Heading";
 import ColorComponent, { Colors, Gradients } from "../Component/ColorComponent";
+const services = [
+  "Neurotoxin",
+  "Dermal Fillers",
+
+  "GLP-1 SEMAGLUTIDE",
+  "GIP/GLP-1 TIRZEPATIDE",
+
+  "NAD+ IV Therapy",
+
+  "Mobile IV Hydration",
+
+  "Clarity Luxe IV",
+  "Balance Luxe IV",
+  "Luxe Lean IV",
+  "Healing Luxe IV",
+  "Mineral Luxe IV",
+  "Gem Wellness Luxe IV",
+  "Immune Luxe IV",
+  "NAD+ Luxe IV",
+
+  "Glow Drip IV Hydration",
+  "SereniDrip IV Hydration",
+  "Opulent Glow IV Hydration",
+  "Endurance Elite Drip IV Hydration",
+  "Revive Luxe Drip IV Hydration",
+
+  "Tri-Immune Boost Injections",
+  "Weight Loss Injections",
+  "Vitamin B12 Injections",
+  "Vitamin D3 Injections",
+  "Biotin Injections",
+  "Luxe Membership",
+  "Platinum Luxe",
+  "Elite Wellness",
+];
+const ReactSelectWrapper = ({ value, onChange, options }) => {
+  return (
+    <ReactSelect
+      options={options}
+      placeholder="Search or select a service"
+      isSearchable
+      value={options.find((option) => option.value === value) || null}
+      onChange={(selected) => {
+        onChange(selected ? selected.value : undefined);
+      }}
+      styles={{
+        control: (provided) => ({
+          ...provided,
+
+          borderRadius: "5px",
+          // borderColor: "#d0ad5b",
+          boxShadow: "none",
+        }),
+
+        option: (provided, state) => ({
+          ...provided,
+          backgroundColor: state.isFocused ? "#F7D782" : "#fff",
+          color: "#333",
+          cursor: "pointer",
+        }),
+
+        menu: (provided) => ({
+          ...provided,
+          zIndex: 9999,
+        }),
+      }}
+    />
+  );
+};
 const Contact = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   });
+  const serviceOptions = services.map((service) => ({
+    value: service,
+    label: service,
+  }));
+  const location = useLocation();
+  const selectedService = location.state?.selectedService;
+
   const [form] = Form.useForm();
   const [loading, setLoading] = useState(false);
-
+  useEffect(() => {
+    if (selectedService) {
+      form.setFieldsValue({
+        service: selectedService,
+      });
+    }
+  }, [selectedService, form]);
   const onFinish = async (values) => {
     console.log("hy");
     setLoading(true);
@@ -103,13 +164,6 @@ const Contact = () => {
             name="contact_us"
             layout="vertical"
             onFinish={onFinish}
-            initialValues={{
-              service: services[0],
-            }}
-            // style={{
-            //   display: "flex",
-            //   flexDirection: "column",
-            // }}
           >
             <Form.Item
               name="name"
@@ -152,19 +206,17 @@ const Contact = () => {
             >
               <Input placeholder="Enter your Zip code" />
             </Form.Item> */}
-
             <Form.Item
               name="service"
               label="Select Service"
-              rules={[{ required: true, message: "Please select a service" }]}
+              rules={[
+                {
+                  required: true,
+                  message: "Please select a service",
+                },
+              ]}
             >
-              <Select placeholder="Select a service">
-                {services.map((service, index) => (
-                  <Option key={index} value={service}>
-                    {service}
-                  </Option>
-                ))}
-              </Select>
+              <ReactSelectWrapper options={serviceOptions} />
             </Form.Item>
 
             <Form.Item

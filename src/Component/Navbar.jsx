@@ -145,35 +145,11 @@ const Navbar = () => {
               </DropdownItem>
             </DropdownMenu>
           </MenuItem>
-          {/* <MenuItem onClick={toggleSpecialDropdown}>
-            <MenuLin>
-              Special Offers
-              <IoIosArrowDropdown />
-            </MenuLin>
-
-            <DropdownMenu isOpen={isSpecialDropdownOpen} ref={dropRef}>
-              <DropdownItem onClick={closeSidebar}>
-                <DropdownLink to="/semaglutidedeal">
-                  <IoIosArrowDropright />
-                  Semaglutide Special
-                </DropdownLink>
-              </DropdownItem>
-              <DropdownItem onClick={closeSidebar}>
-                <DropdownLink to="/bestdeal">
-                  <IoIosArrowDropright />
-                  Limited Deals
-                </DropdownLink>
-              </DropdownItem>
-
-              <DropdownItem onClick={closeSidebar}>
-                <DropdownLink to="/tirzepatidedeal">
-                  <IoIosArrowDropright />
-                  Tirzepatide Special
-                </DropdownLink>
-              </DropdownItem>
-            </DropdownMenu>
-          </MenuItem> */}
-
+          <MenuItem onClick={closeSidebar}>
+            <MenuLink to="/membership">
+              Membership <IoIosArrowDropright />
+            </MenuLink>
+          </MenuItem>
           <MenuItem onClick={closeSidebar}>
             <MenuLink to="https://merakiluxespa.co">
               Meraki <IoIosArrowDropright />
@@ -191,7 +167,7 @@ const Navbar = () => {
           </MenuItem>
           <MenuItem onClick={toggleDropdown}>
             <MenuLin>
-              Consent Form/Questionnaires
+              Consent Form
               <IoIosArrowDropdown />
             </MenuLin>
 
@@ -260,15 +236,13 @@ const Navbar = () => {
               <ListLink to="/">Home</ListLink>
 
               <ListLin onClick={toggleDropdownBigOne}>Services</ListLin>
-              {/* <ListLin onClick={toggleDropdownBigTwo}>Special Offers</ListLin> */}
+              <ListLink to="/membership">Membership</ListLink>
 
               <ListLink to="https://merakiluxespa.co"> Meraki</ListLink>
               <ListLink to="/contact">Contact Us</ListLink>
 
               <ListLink to="/appointment">Book Appointment</ListLink>
-              <ListLin onClick={toggleDropdownBig}>
-                Consent Form/Questionnaires
-              </ListLin>
+              <ListLin onClick={toggleDropdownBig}>Consent Form</ListLin>
 
               {/* <ListLink to="/policies">Policies</ListLink> */}
             </ul>

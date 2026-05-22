@@ -30,6 +30,7 @@
     "react-intersection-observer": "^9.13.0",
     "react-leaflet": "^4.2.1",
     "react-router-dom": "^6.24.1",
+    "react-select": "^5.10.2",
     "react-webcam": "^7.2.0",
     "styled-components": "^6.1.12"
   },

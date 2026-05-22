@@ -1,141 +1,399 @@
+import { Colors, Gradients } from "./ColorComponent";
+import Mobileiv from "../Images2026/MobileIV.png";
 import React from "react";
 import styled from "styled-components";
-import Glow from "../Images/Glow.png";
-import Opulent from "../Images/opulent.png";
-import Revive from "../Images/Revive.png";
-import Sereni from "../Images/sereni.png";
+import Glow from "../Images2026/Glow.png";
+import Sereni from "../Images2026/Sereni.png";
+import Endurance from "../Images2026/Endurance.png";
+import Revive from "../Images2026/Revive.png";
+import Opulent from "../Images2026/Opulent.png";
 import Check from "../Images/checkk.png";
-import Endurance from "../Images/Endurance.png";
-import NadImage from "../Image2025/nadplus.png";
-import MobileIV from "../Image2025/mobileiv.png";
+import ClarityLuxe from "../Images2026/ClarityLuxe.png";
+import BalanceLuxe from "../Images2026/BalanceLuxe.png";
+import LuxeLean from "../Images2026/LuxeLean.png";
+import HealingLuxe from "../Images2026/HealingLuxe.png";
+import MineralLuxe from "../Images2026/MineralLuxe.png";
+import GemWellnessLuxe from "../Images2026/GemWellnessLuxe.png";
+import ImmuneLuxe from "../Images2026/ImmuneLuxe.png";
+import NADLuxe from "../Images2026/NADLuxe.png";
 import Heading from "./Heading";
 
-import { Colors, Gradients } from "./ColorComponent";
 import { Link } from "react-router-dom";
 const services = [
   {
     id: 1,
-    title: "NAD+ IV Therapy",
+    title: "Clarity Luxe IV",
+    tagline: "Mental Clarity • Focus ",
 
     description:
-      "NAD+ IV Therapy is a restorative treatment that replenishes essential coenzymes, boosts energy, and supports healthy aging from within.",
+      "The Clarity Luxe IV supports mental clarity, focus, hydration, and cellular wellness with essential nutrients and antioxidant support.",
 
     Benefits: [
-      "<strong>Energy Boost:</strong> Increases natural energy levels and reduces chronic fatigue.",
-      "<strong>Mental Clarity:</strong> Improves focus, concentration, and cognitive function.",
-      "<strong>Cellular Repair:</strong> Promotes DNA repair and supports healthy aging.",
-      "<strong>Mood Support:</strong> Enhances neurotransmitter balance and detoxification for improved mood.",
+      "Mental clarity & focus",
+      "Cognitive wellness support",
+      "Hydration support",
+      "Cellular rejuvenation",
+      "Antioxidant support",
+      "Reduced fatigue",
+      "Beauty & wellness support",
     ],
 
-    buttonLabel: "Book Now",
-    imageUrl: NadImage,
+    Ingredients: ["Pyridoxine (Vitamin B6)", "Taurine", "Alpha Lipoic Acid"],
 
-    lastDescription:
-      "Recharge your body and mind with NAD+ IV Therapy at Gem Luxe Aesthetics—feel revitalized, energized, and balanced.",
+    buttonLabel: "Book Now",
+    imageUrl: ClarityLuxe,
   },
+
   {
     id: 2,
-    title: "Mobile IV Hydration",
+    title: "Balance Luxe IV",
+    tagline: "Relief • Balance ",
 
     description:
-      "Mobile IV Hydration brings revitalizing IV therapy directly to your location, offering convenient, on-the-go wellness and hydration support.",
-
+      "The Balance Luxe IV supports hydration, relaxation, comfort, and overall wellness during times of physical stress and discomfort.",
     Benefits: [
-      "<strong>Convenience:</strong> Receive premium IV therapy in the comfort of your home, office, or event space.",
-      "<strong>Rapid Rehydration:</strong> Quickly restores fluid balance and essential nutrients.",
-      "<strong>Personalized Service:</strong> Customized IV blends tailored to your wellness needs.",
-      "<strong>On-Demand Care:</strong> Flexible scheduling for fast, responsive hydration therapy.",
+      "Comfort & relaxation support",
+      "Hydration support",
+      "Reduced fatigue",
+      "Mood & wellness support",
+      "Muscle relaxation support",
+      "Headache & tension support",
+      "Energy support",
+      "Cellular wellness",
+    ],
+
+    Ingredients: [
+      "Calcium Chloride",
+      "Olympia Vita-Complex",
+      "Hydroxocobalamin B12",
+      "Magnesium Chloride",
     ],
 
     buttonLabel: "Book Now",
-    imageUrl: MobileIV, // Replace with your actual image import or URL
-
-    lastDescription:
-      "Experience the luxury of wellness on the go—our Mobile IV Hydration keeps you refreshed, energized, and at your best, wherever you are.",
+    imageUrl: BalanceLuxe,
   },
-
   {
     id: 3,
-    title: "Glow Drip IV Hydration",
+    title: "Luxe Lean IV",
+    tagline: "Energy • Metabolism ",
 
     description:
-      "Glow Drip IV Hydration Therapy is a rejuvenating treatment that restores hydration and delivers essential vitamins, minerals, and electrolytes to boost skin health and overall wellness.",
+      "The Luxe Lean IV supports energy, hydration, metabolism, and vitality to help fuel an active lifestyle.",
+
     Benefits: [
-      "<strong>Ascorbic Acid:</strong> Increases skin moisture, repairs damaged cells,and promotes new cell growth.",
-      "<strong>Gem Luxe Aesthetics' Vita-Complex:</strong> Reduces fatigue and helps manage stress.",
-
-      "<strong>Gem Luxe Aesthetics' Mineral Blend:</strong> Restores electrolytes and maintains fluid balance for optimal hydration.",
+      "Energy support",
+      "Metabolism support",
+      "Hydration",
+      "Mental focus",
+      "Reduced fatigue",
+      "Exercise recovery support",
+      "Wellness optimization",
     ],
-    buttonLabel: "Book Now",
-    imageUrl: Glow,
 
-    lastDescription:
-      "Glow Drip is perfect for restoring vitality, enhancing your skin’s glow, and feeling refreshed from the inside out.",
+    Ingredients: ["Methylcobalamin", "Vita Complex", "L-Taurine"],
+
+    buttonLabel: "Book Now",
+    imageUrl: LuxeLean,
   },
+
   {
     id: 4,
-    title: "SereniDrip IV Hydration",
+    title: "Healing Luxe IV",
+    tagline: "Post-Op Recovery • Hydration ",
 
     description:
-      "Experience relief with SereniDrip IV Hydration, designed to ease PMS symptoms like bloating, cramps, and fatigue, leaving you balanced, refreshed, and revitalized throughout your cycle.",
+      "The Healing Luxe IV supports hydration, recovery, tissue wellness, and rejuvenation after cosmetic or surgical procedures.",
+
     Benefits: [
-      "<strong>Calcium Chloride:</strong> Restores calcium levels to ease muscle cramps and reduce irritability.",
-      "<strong>Gem Luxe Vita-Complex:</strong> Enhances mood and boosts energy, helping you feel your best during your cycle.",
-      "<strong>Hydroxocobalamin B12:</strong> Supports energy, improves mood, and promotes mental clarity.",
-      "<strong>Magnesium Chloride:</strong> Relieves muscle tension, relaxes uterine spasms, and eases discomfort.",
+      "Post-op recovery support",
+      "Hydration support",
+      "Collagen & tissue wellness support",
+      "Antioxidant support",
+      "Cellular rejuvenation",
+      "Reduced fatigue",
+      "Beauty & glow support",
+      "Recovery & wellness optimization",
     ],
+
+    Ingredients: [
+      "Ascorbic Acid (Vitamin C)",
+      "Olympia Mineral Blend",
+      "Olympia Vita-Complex",
+      "Taurine",
+    ],
+
     buttonLabel: "Book Now",
-    imageUrl: Sereni,
-    lastDescription:
-      "Each SereniDrip IV Kit provides up to 7 infusions, delivering continuous relief from PMS discomfort.",
+    imageUrl: HealingLuxe,
   },
   {
     id: 5,
-    title: "Endurance Elite Drip IV Hydration",
+    title: "Mineral Luxe IV",
+    tagline: "Hydration • Recovery ",
 
     description:
-      "Unlock your best with Endurance Elite Drip at Gem Luxe Aesthetics! Perfect for athletes, it boosts recovery, enhances performance, and replenishes essential nutrients to keep you at the top of your game",
+      "The Mineral Luxe IV supports hydration, mineral replenishment, immunity, and overall wellness from within.",
+
     Benefits: [
-      "<strong>Ascorbic Acid:</strong> Promotes muscle tissue repair, boosts immunity, and aids in the recovery of damaged cells.",
-      "<strong>Gem Luxe Vita-Complex:</strong> Reduces fatigue, relieves stress, and combats inflammation.",
-      "<strong>Gem Luxe Mineral Blend:</strong> Replenishes vital electrolytes, regulates fluid balance.",
+      "Hydration support",
+      "Mineral replenishment",
+      "Immune wellness support",
+      "Energy support",
+      "Reduced fatigue",
+      "Recovery & relaxation support",
+      "Cellular wellness",
     ],
+
+    Ingredients: [
+      "Magnesium Chloride",
+      "Zinc Sulfate",
+      "Manganese",
+      "Copper Gluconate",
+    ],
+
     buttonLabel: "Book Now",
-    imageUrl: Endurance,
-    lastDescription:
-      "Each session of Endurance Elite Drip delivers a powerful infusion of hydration and nutrients, helping you stay at the top of your game. ",
+    imageUrl: MineralLuxe,
   },
   {
     id: 6,
-    title: "Revive Luxe Drip IV Hydration",
+    title: "Gem Wellness Luxe IV",
+    tagline: "Hydration • Immunity ",
 
     description:
-      "Bounce back fast with Revive Luxe Drip at Gem Luxe Med Spa! Hydrate, ease hangover symptoms, and restore your energy effortlessly to feel your best again.",
+      "The Gem Wellness Luxe IV supports hydration, immunity, energy, and overall wellness with essential nutrients and antioxidants.",
+
     Benefits: [
-      "<strong>Ondansetron:</strong> Reduces nausea and prevents vomiting, easing those tough hangover symptoms.",
-      "<strong>Gem Luxe Vita-Complex:</strong> Combats dehydration-induced fatigue.",
-      "<strong>Gem Luxe Mineral Blend:</strong> Restores essential electrolytes, balances fluid levels.",
+      "Hydration support",
+      "Immune wellness support",
+      "Energy support",
+      "Reduced fatigue",
+      "Antioxidant support",
+      "Cellular wellness",
+      "Recovery & relaxation support",
+      "Total-body wellness optimization",
     ],
+
+    Ingredients: [
+      "Magnesium Chloride",
+      "B-Complex Vitamins",
+      "Hydroxo B12",
+      "Calcium Gluconate",
+      "Ascorbic Acid (Vitamin C)",
+    ],
+
     buttonLabel: "Book Now",
-    imageUrl: Revive, // Replace with the correct image path
-    lastDescription:
-      "Each Revive Luxe Drip provides up to 10 infusions, delivering a luxurious and effective solution to rehydrate, revitalize, and refresh.",
+    imageUrl: GemWellnessLuxe,
   },
   {
     id: 7,
-    title: "Opulent Glow IV Hydration",
+    title: "Immune Luxe IV",
+    tagline: "Immunity • Wellness ",
 
     description:
-      "Reveal your radiance with Opulent Glow IV Therapy at Gem Luxe Med Spa! Hydrate, nourish, and rejuvenate your skin, hair, and nails for a youthful, luminous glow.",
+      "The Immune Luxe IV supports immunity, hydration, and cellular wellness with antioxidant and immune-supporting nutrients.",
+
     Benefits: [
-      "<strong>Ascorbic Acid:</strong> Vital for collagen production, ascorbic acid increases skin moisture, repairs damaged cells. ",
-      "<strong>Gem Luxe Vita-Complex:</strong> Reduces inflammation, boosts cellular regeneration.",
-      "<strong>Biotin:</strong> Supports collagen and keratin formation, improves skin elasticity, and stimulates hair follicles.",
+      "Immune wellness support",
+      "Antioxidant protection",
+      "Hydration support",
+      "Cellular wellness",
+      "Energy support",
+      "Recovery support",
+      "Reduced fatigue",
+      "Wellness optimization",
     ],
+
+    Ingredients: ["Glutathione", "Ascorbic Acid (Vitamin C)", "Zinc Sulfate"],
+
+    buttonLabel: "Book Now",
+    imageUrl: ImmuneLuxe,
+  },
+  {
+    id: 8,
+    title: "NAD+ Luxe IV",
+    tagline: "Energy • Mental Clarity",
+
+    description:
+      "The NAD+ Luxe IV supports energy, mental clarity, cellular repair, and healthy aging for overall vitality and wellness.",
+
+    Benefits: [
+      "Increased energy support",
+      "Mental clarity & focus",
+      "Cellular repair support",
+      "Healthy aging support",
+      "Mood & wellness support",
+      "Reduced fatigue",
+      "Detoxification support",
+      "Overall vitality & wellness optimization",
+    ],
+
+    buttonLabel: "Book Now",
+    imageUrl: NADLuxe,
+  },
+  {
+    id: 9,
+    title: "Glow Drip IV Hydration",
+    tagline: "Hydration • Skin Health ",
+
+    description:
+      "The Glow Drip IV Hydration supports hydration, skin health, and overall wellness with essential vitamins and nutrients.",
+
+    Benefits: [
+      "Skin moisture support",
+      "Damaged cell repair support",
+      "New cell growth support",
+      "Reduced fatigue",
+      "Stress support",
+      "Electrolyte restoration",
+      "Optimal hydration",
+    ],
+
+    Ingredients: [
+      "Ascorbic Acid",
+      "Gem Luxe Aesthetics' Vita-Complex",
+      "Gem Luxe Aesthetics' Mineral Blend",
+    ],
+
+    buttonLabel: "Book Now",
+    imageUrl: Glow,
+  },
+
+  {
+    id: 10,
+    title: "SereniDrip IV Hydration",
+    tagline: "PMS Relief • Balance ",
+
+    description:
+      "The SereniDrip IV Hydration supports comfort, balance, and wellness to help ease PMS-related symptoms.",
+
+    Benefits: [
+      "Muscle cramp relief",
+      "Reduced irritability",
+      "Mood support",
+      "Energy support",
+      "Mental clarity",
+      "Muscle tension relief",
+      "Cycle comfort support",
+    ],
+
+    Ingredients: [
+      "Calcium Chloride",
+      "Gem Luxe Vita-Complex",
+      "Hydroxocobalamin B12",
+      "Magnesium Chloride",
+    ],
+
+    buttonLabel: "Book Now",
+    imageUrl: Sereni,
+  },
+
+  {
+    id: 11,
+    title: "Endurance Elite Drip IV Hydration",
+    tagline: "Performance • Recovery ",
+
+    description:
+      "The SereniDrip IV Hydration supports comfort, balance, and wellness to help ease PMS-related symptoms.",
+
+    Benefits: [
+      "Muscle tissue repair support",
+      "Immunity support",
+      "Recovery support",
+      "Reduced fatigue",
+      "Stress relief",
+      "Inflammation support",
+      "Electrolyte replenishment",
+    ],
+
+    Ingredients: [
+      "Ascorbic Acid",
+      "Gem Luxe Vita-Complex",
+      "Gem Luxe Mineral Blend",
+    ],
+
+    buttonLabel: "Book Now",
+    imageUrl: Endurance,
+  },
+
+  {
+    id: 12,
+    title: "Revive Luxe Drip IV Hydration",
+    tagline: "Recovery • Hydration ",
+
+    description:
+      "The Revive Luxe Drip IV Hydration supports hydration, recovery, and wellness to help restore energy and vitality.",
+
+    Benefits: [
+      "Nausea relief",
+      "Vomiting prevention support",
+      "Hangover symptom support",
+      "Fatigue support",
+      "Electrolyte restoration",
+      "Fluid balance support",
+      "Energy restoration",
+    ],
+
+    Ingredients: [
+      "Ondansetron",
+      "Gem Luxe Vita-Complex",
+      "Gem Luxe Mineral Blend",
+    ],
+
+    buttonLabel: "Book Now",
+    imageUrl: Revive,
+  },
+
+  {
+    id: 13,
+    title: "Opulent Glow IV Hydration",
+    tagline: "Beauty •  Glow Support",
+
+    description:
+      "The Opulent Glow IV Hydration supports skin radiance, hydration, and beauty wellness from within.",
+
+    Benefits: [
+      "Collagen production support",
+      "Skin moisture support",
+      "Damaged cell repair support",
+      "Inflammation support",
+      "Cellular regeneration support",
+      "Skin elasticity support",
+      "Hair follicle support",
+    ],
+
+    Ingredients: ["Ascorbic Acid", "Gem Luxe Vita-Complex", "Biotin"],
+
     buttonLabel: "Book Now",
     imageUrl: Opulent,
-    lastDescription:
-      "Each Opulent Glow IV Kit provides up to 10 infusions, delivering deep hydration and beauty-boosting benefits from within.",
+  },
+  {
+    id: 14,
+    title: "Mobile IV Hydration",
+
+    tagline: "Convenience • Hydration  ",
+
+    description:
+      "Mobile IV Hydration delivers convenient hydration and wellness support directly to your location.",
+
+    Benefits: [
+      "Convenient in-home, office, or event wellness care",
+      "Rapid hydration support",
+      "Essential nutrient replenishment",
+      "Personalized wellness support",
+      "Customized IV blends",
+      "Flexible scheduling",
+      "On-demand hydration care",
+    ],
+
+    Ingredients: [
+      "Customized IV Blends",
+      "Hydration Support Nutrients",
+      "Electrolyte Support",
+      "Wellness Vitamins",
+    ],
+
+    buttonLabel: "Book Now",
+
+    imageUrl: Mobileiv,
   },
 ];
 
@@ -152,24 +410,53 @@ const IvSection = () => {
             <ImageWrapper>
               <img src={service.imageUrl} alt={service.title} />
             </ImageWrapper>
+
             <Content>
-              <Title>{service.title}</Title>
+              <div>
+                <Title>{service.title}</Title>
+
+                {service.tagline && (
+                  <Tagline>
+                    {service.tagline.split("•").map((tag, index) => (
+                      <TagItem key={index}>{tag.trim()}</TagItem>
+                    ))}
+                  </Tagline>
+                )}
+              </div>
               <Description>{service.description}</Description>
-              <KeyBenefits>
-                <h4>KEY BENEFITS:</h4>
-              </KeyBenefits>
+
               <BenefitsList>
-                {service.Benefits.map((benefit, index) => (
-                  <Split>
-                    <img src={Check} />
-                    <BenefitItem
-                      key={index}
-                      dangerouslySetInnerHTML={{ __html: benefit }}
-                    />
+                {" "}
+                <KeyBenefits>
+                  <h4>POTENTIAL BENEFITS:</h4>
+                </KeyBenefits>
+                {service.Benefits?.map((benefit, index) => (
+                  <Split key={index}>
+                    <img src={Check} alt="check" />
+                    <BenefitItem>{benefit}</BenefitItem>
                   </Split>
                 ))}
               </BenefitsList>
-              <LastDescription>{service.lastDescription}</LastDescription>
+
+              {service.Ingredients && (
+                <>
+                  <div>
+                    <KeyBenefits>
+                      <h4>KEY INGREDIENTS:</h4>
+                    </KeyBenefits>
+
+                    <BenefitsList>
+                      {service.Ingredients.map((ingredient, index) => (
+                        <Split key={index}>
+                          <img src={Check} alt="check" />
+                          <BenefitItem>{ingredient}</BenefitItem>
+                        </Split>
+                      ))}
+                    </BenefitsList>
+                  </div>
+                </>
+              )}
+
               <ButCont>
                 <Button to="/appointment">{service.buttonLabel}</Button>
               </ButCont>
@@ -241,6 +528,9 @@ const ImageWrapper = styled.div`
 
 const Content = styled.div`
   margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
 `;
 
 const Title = styled.h3`
@@ -273,7 +563,7 @@ const Description = styled.p`
   font-size: 0.9rem;
   color: #252525;
   line-height: 1.4;
-  margin-bottom: 1rem;
+
   @media screen and (max-width: 320px) {
     font-size: 0.8rem;
 
@@ -302,7 +592,7 @@ const Split = styled.div`
     margin-top: 5px !important;
     padding: 0 !important;
   }
-  margin-bottom: 1rem;
+  margin-bottom: 0.4rem;
 `;
 const BenefitsList = styled.ul`
   list-style: none;
@@ -318,26 +608,39 @@ const BenefitItem = styled.li`
   padding: 0 !important;
 `;
 
-const LastDescription = styled.p`
-  font-size: 0.9rem;
-  color: #252525;
-  margin-bottom: 1rem;
-  font-style: italic;
-  @media screen and (max-width: 320px) {
-    font-size: 0.8rem;
+const Tagline = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+`;
 
-    line-height: 1.4;
-  }
-  @media (min-width: 321px) and (max-width: 399px) {
-    font-size: 0.9rem;
+const TagItem = styled.span`
+  padding: 2px 6px;
 
-    line-height: 1.4;
-  }
-  @media (min-width: 400px) and (max-width: 499px) {
-    font-size: 0.9rem;
+  border: 1px solid #d0ad5b;
 
-    line-height: 1.4;
-  }
+  background: linear-gradient(
+    135deg,
+    rgba(208, 173, 91, 0.15),
+    rgba(247, 215, 130, 0.08)
+  );
+
+  border-radius: 30px;
+
+  color: #000000;
+
+  font-size: 0.82rem;
+
+  font-weight: 600;
+
+  letter-spacing: 0.4px;
+
+  box-shadow: 0 4px 12px rgba(208, 173, 91, 0.12);
+
+  backdrop-filter: blur(6px);
+
+  white-space: nowrap;
 `;
 
 const ButCont = styled.div`
@@ -375,10 +678,8 @@ const Button = styled(Link)`
 `;
 
 const KeyBenefits = styled.div`
-  margin-top: 1rem;
-
   h4 {
-    padding-bottom: 1.1rem;
+    padding: 0.7rem 0 1rem 0;
     font-size: 1.2rem;
     background: ${Gradients.goldGradient};
     -webkit-background-clip: text;
@@ -393,19 +694,14 @@ const KeyBenefits = styled.div`
       /* padding-bottom: 1.1rem; */
     }
     @media (min-width: 321px) and (max-width: 399px) {
-      padding-bottom: 1.1rem;
     }
     @media (min-width: 400px) and (max-width: 499px) {
-      padding-bottom: 1.1rem;
     }
   }
   @media screen and (max-width: 320px) {
-    margin-top: 1.5rem;
   }
   @media (min-width: 321px) and (max-width: 399px) {
-    margin-top: 2.5rem;
   }
   @media (min-width: 400px) and (max-width: 499px) {
-    margin-top: 2.5rem;
   }
 `;
