@@ -1,5 +1,5 @@
 import { Colors, Gradients } from "./ColorComponent";
-import Mobileiv from "../Images2026/MobileIV.png";
+
 import React from "react";
 import styled from "styled-components";
 import Glow from "../Images2026/Glow.png";
@@ -17,6 +17,7 @@ import GemWellnessLuxe from "../Images2026/GemWellnessLuxe.png";
 import ImmuneLuxe from "../Images2026/ImmuneLuxe.png";
 import NADLuxe from "../Images2026/NADLuxe.png";
 import Heading from "./Heading";
+import IV from "../Images2026/MobileIV.png";
 
 import { Link } from "react-router-dom";
 const services = [
@@ -393,7 +394,7 @@ const services = [
 
     buttonLabel: "Book Now",
 
-    imageUrl: Mobileiv,
+    imageUrl: IV,
   },
 ];
 

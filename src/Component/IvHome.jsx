@@ -15,7 +15,7 @@ import GemWellnessLuxe from "../Images2026/GemWellnessLuxe.png";
 import ImmuneLuxe from "../Images2026/ImmuneLuxe.png";
 import NADLuxe from "../Images2026/NADLuxe.png";
 import Heading from "./Heading";
-
+import IV from "../Images2026/MobileIV.png";
 import { Colors, Gradients } from "./ColorComponent";
 import { Link } from "react-router-dom";
 const services = [
@@ -393,7 +393,7 @@ const services = [
 
     buttonLabel: "Book Now",
 
-    imageUrl: MobileIV,
+    imageUrl: IV,
   },
 ];
 
