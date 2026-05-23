@@ -2,14 +2,56 @@ import React from "react";
 import styled from "styled-components";
 import { Colors, Gradients } from "./ColorComponent";
 // import Heading from "./Heading";
-import Button from "./Button";
+
 import i4 from "../Images/i4.png";
-import Sema from "../Images2026/semagl.png";
+import Sema from "../Images2026/semagl2.png";
 import Tirz from "../Images/tirze.png";
 import ZoomInComponent from "./ZoomInComponent";
 import WhiteStar from "./WhiteStar";
 import { Link } from "react-router-dom";
+const packages = [
+  {
+    id: 1,
+    sideTag: "Popular by Demand",
+    heading: "Semaglutide Package",
+    subHead: "GLP-1 SEMAGLUTIDE",
 
+    description:
+      "Unlock the power of Semaglutide, a revolutionary GLP-1 agonist that not only aids in enhanced insulin secretion but also significantly reduces your appetite. This mechanism creates a calorie deficit, paving the way for effective weight loss. What sets our Semaglutide apart is the addition of a potent enhancer that amplifies your weight loss efforts.",
+
+    image: Sema,
+
+    benefits: [
+      "Average weight loss of 5–10 lbs per month.",
+      "Initial focus on inch loss, setting the stage for visible weight reduction.",
+      "Helps maintain better glycemic control, reducing HbA1c levels and the need for additional diabetes medications.",
+    ],
+
+    selectedService: "GLP-1 SEMAGLUTIDE",
+  },
+
+  {
+    id: 2,
+    sideTag: "Highly Recommended",
+
+    heading: "Tirzepatide Package",
+
+    subHead: "GIP/GLP-1 TIRZEPATIDE",
+
+    description:
+      "Explore the benefits of Tirzepatide, a combined GIP/GLP-1 receptor agonist that offers a comprehensive approach to weight management. By targeting two key pathways, Tirzepatide supports insulin production to manage blood while simultaneously reducing appetite and caloric intake, fostering a conducive environment for weight loss.",
+
+    image: Tirz,
+
+    benefits: [
+      "Innovative average weight loss formula for a comprehensive weight management strategy designed for individuals seeking a potent solution to complement their weight loss journey.",
+      "Specifically targets and reduces visceral fat, leading to a healthier body composition.",
+      "Combines the benefits of GIP and GLP-1 agonists, offering a more comprehensive approach to appetite and blood sugar regulation.",
+    ],
+
+    selectedService: "GIP/GLP-1 TIRZEPATIDE",
+  },
+];
 const ServiceDetails = () => {
   return (
     <Container>
@@ -19,127 +61,56 @@ const ServiceDetails = () => {
           your weight loss journey.
         </p>
       </Intro>
-      <Package>
-        <SideCross>Popular by Demand</SideCross>
-        <Heading>Semaglutide Package</Heading>
-        <SubHead>GLP-1 SEMAGLUTIDE</SubHead>
-        <Divide>
-          <div>
-            {/* <Prices>
-             
-              <Price>
-                <span>$ 150.00 </span> <p>/ first month special</p>
-              </Price>
-            </Prices> */}
-            <Description>
-              Unlock the power of Semaglutide, a revolutionary GLP-1 agonist
-              that not only aids in enhanced insulin secretion but also
-              significantly reduces your appetite. This mechanism creates a
-              calorie deficit, paving the way for effective weight loss. What
-              sets our Semaglutide apart is the addition of a potent enhancer
-              that amplifies your weight loss efforts.
-            </Description>
-          </div>
-          <BottleWrapper>
-            <WhiteStar />
-            <Circle />
-            <BottleImage src={Sema} alt="Bottle" />
-          </BottleWrapper>
-        </Divide>
-        <KeyBenefits>
-          <h4>KEY BENEFITS:</h4>
-          <List>
-            <ZoomInComponent>
-              <ListItem>
-                <img src={i4} />{" "}
-                <p>Average weight loss of 5-10 lbs per month. </p>
-              </ListItem>
-            </ZoomInComponent>
-            <ListItem>
-              <img src={i4} />
-              <p>
-                Initial focus on inch loss, setting the stage for visible weight
-                reduction.
-              </p>
-            </ListItem>
-            <ZoomInComponent>
-              <ListItem>
-                <img src={i4} />
-                <p>
-                  Helps maintain better glycemic control, reducing HbA1c levels
-                  and the need for additional diabetes medications.
-                </p>
-              </ListItem>
-            </ZoomInComponent>
-          </List>
-        </KeyBenefits>
-        <Link to="/appointment">
-          <Button>Book Now!!!</Button>
-        </Link>
-      </Package>
-      <Package>
-        <SideCross>Highly Recommended</SideCross>
-        <Heading>Tirzepatide Package</Heading>
-        <SubHead>GIP/GLP-1 TIRZEPATIDE</SubHead>
-        <Divide>
-          <div>
-            {/* <Prices>
-             
-              <Price>
-                <span>$ 200.00 </span> <p>/ first month special</p>
-              </Price>
-            </Prices> */}
-            <Description>
-              Explore the benefits of Tirzepatide, a combined GIP/GLP-1 receptor
-              agonist that offers a comprehensive approach to weight management.
-              By targeting two key pathways, Tirzepatide supports insulin
-              production to manage blood while simultaneously reducing appetite
-              and caloric intake, fostering a conducive environment for weight
-              loss.
-            </Description>
-          </div>
-          <BottleWrapper>
-            <WhiteStar />
-            <Circle />
-            <BottleImage src={Tirz} alt="Bottle" />
-          </BottleWrapper>
-        </Divide>
-        <KeyBenefits>
-          <h4>KEY BENEFITS:</h4>
-          <List>
-            <ZoomInComponent>
-              <ListItem>
-                <img src={i4} />
-                <p>
-                  Innovative average weight loss formula for a comprehensive
-                  weight management strategy designed for individuals seeking a
-                  potent solution to complement their weight loss journey.
-                </p>
-              </ListItem>
-            </ZoomInComponent>
-            <ListItem>
-              <img src={i4} />
-              <p>
-                Specifically targets and reduces visceral fat, leading to a
-                healthier body composition.
-              </p>
-            </ListItem>
-            <ZoomInComponent>
-              <ListItem>
-                <img src={i4} />
-                <p>
-                  Combines the benefits of GIP and GLP-1 agonists, offering a
-                  more comprehensive approach to appetite and blood sugar
-                  regulation.
-                </p>
-              </ListItem>
-            </ZoomInComponent>
-          </List>
-        </KeyBenefits>
-        <Link to="/appointment">
-          <Button>Book Now!!!</Button>
-        </Link>
-      </Package>
+
+      {packages.map((item) => (
+        <Package key={item.id}>
+          <SideCross>{item.sideTag}</SideCross>
+
+          <Heading>{item.heading}</Heading>
+
+          <SubHead>{item.subHead}</SubHead>
+
+          <Divide>
+            <div>
+              <Description>{item.description}</Description>
+            </div>
+
+            <BottleWrapper>
+              <WhiteStar />
+
+              <Circle />
+
+              <BottleImage src={item.image} alt={item.heading} />
+            </BottleWrapper>
+          </Divide>
+
+          <KeyBenefits>
+            <h4>KEY BENEFITS:</h4>
+
+            <List>
+              {item.benefits.map((benefit, index) => (
+                <ZoomInComponent key={index}>
+                  <ListItem>
+                    <img src={i4} />
+
+                    <p>{benefit}</p>
+                  </ListItem>
+                </ZoomInComponent>
+              ))}
+            </List>
+          </KeyBenefits>
+          <ButCont>
+            <Button
+              to="/appointment"
+              state={{
+                selectedService: item.selectedService,
+              }}
+            >
+              Book Now!
+            </Button>
+          </ButCont>
+        </Package>
+      ))}
     </Container>
   );
 };
@@ -376,7 +347,39 @@ const Description = styled.p`
   color: ${Colors.coolBlack};
   margin: 1rem 0;
 `;
+const ButCont = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+const Button = styled(Link)`
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(
+    190deg,
+    #1f1809 10%,
+    #181501 30%,
+    #1f1809 50%,
+    #181501 70%,
+    #2f240d 90%,
+    #181501 100%
+  );
+  font-family: "Philosopher", sans-serif;
 
+  border-radius: 30px;
+  text-decoration: none;
+
+  &:hover {
+    background: #353535;
+  }
+  border: none;
+  border-radius: 20px 5px;
+  cursor: pointer;
+  /* transition: background-color 0.1s ease; */
+`;
 const KeyBenefits = styled.div`
   margin-top: 2.5rem;
   @media screen and (min-width: 800px) {
