@@ -4,11 +4,12 @@ import { Colors, Gradients } from "./ColorComponent";
 // import Heading from "./Heading";
 
 import i4 from "../Images/i4.png";
-import Sema from "../Images2026/semagl2.png";
+
 import Tirz from "../Images/tirze.png";
 import ZoomInComponent from "./ZoomInComponent";
 import WhiteStar from "./WhiteStar";
 import { Link } from "react-router-dom";
+import Semagem from "../Images2026/Semagl.png";
 const packages = [
   {
     id: 1,
@@ -19,7 +20,7 @@ const packages = [
     description:
       "Unlock the power of Semaglutide, a revolutionary GLP-1 agonist that not only aids in enhanced insulin secretion but also significantly reduces your appetite. This mechanism creates a calorie deficit, paving the way for effective weight loss. What sets our Semaglutide apart is the addition of a potent enhancer that amplifies your weight loss efforts.",
 
-    image: Sema,
+    image: Semagem,
 
     benefits: [
       "Average weight loss of 5–10 lbs per month.",
