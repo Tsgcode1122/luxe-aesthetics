@@ -4,7 +4,7 @@ import { Colors, Gradients } from "./ColorComponent";
 // import Heading from "./Heading";
 import Button from "./Button";
 import i4 from "../Images/i4.png";
-import Sema from "../Images/semagl.png";
+import Sema from "../Images2026/semagl.png";
 import Tirz from "../Images/tirze.png";
 import ZoomInComponent from "./ZoomInComponent";
 import WhiteStar from "./WhiteStar";

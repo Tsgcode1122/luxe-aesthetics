@@ -462,7 +462,7 @@ const IvSection = () => {
                 <Button
                   to="/appointment"
                   state={{
-                    selectedService: service.name,
+                    selectedService: service.title,
                   }}
                 >
                   {service.buttonLabel}
