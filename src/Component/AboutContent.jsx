@@ -14,7 +14,7 @@ const AboutContent = () => {
         <SwipeComponent direction="left-to-right">
           <Heading>About Us</Heading>
           <Content>
-            Welcome to Gem Luxe Aesthetics Med. We specialize in enhancing your
+            Welcome to Gem Luxe Aesthetics. We specialize in enhancing your
             beauty and wellness from the inside out. Our services include IV
             hydration, Neurotoxins, fillers, and weight loss management, all
             designed to help you look and feel your best. At Gem Luxe, we’re
