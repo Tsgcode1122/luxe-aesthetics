@@ -14,6 +14,7 @@ const Fillers = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   });
+  const name = "Dermal Fillers";
   return (
     <>
       <PageHeading
@@ -34,7 +35,12 @@ const Fillers = () => {
               </Content>
             </SwipeComponent>
             <SwipeComponent direction="right-to-left">
-              <Link to="/appointment">
+              <Link
+                to="/appointment"
+                state={{
+                  selectedService: name,
+                }}
+              >
                 <Button>Book Now</Button>
               </Link>
             </SwipeComponent>

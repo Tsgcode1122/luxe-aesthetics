@@ -14,6 +14,7 @@ const Neurotoxins = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   });
+  const name = "Neurotoxin";
   return (
     <div>
       <PageHeading
@@ -34,7 +35,12 @@ const Neurotoxins = () => {
               </Content>
             </SwipeComponent>
             <SwipeComponent direction="right-to-left">
-              <Link to="/appointment">
+              <Link
+                to="/appointment"
+                state={{
+                  selectedService: name,
+                }}
+              >
                 <Button>Book Now</Button>
               </Link>
             </SwipeComponent>

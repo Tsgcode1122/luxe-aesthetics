@@ -83,7 +83,14 @@ const IvInjection = () => {
               </ul>
             </IngredientSection>
             <ButCont>
-              <Button to="/appointment">Book Now</Button>
+              <Button
+                to="/appointment"
+                state={{
+                  selectedService: item.name,
+                }}
+              >
+                Book Now
+              </Button>
             </ButCont>
           </Card>
         ))}

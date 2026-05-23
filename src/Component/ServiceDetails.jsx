@@ -9,7 +9,7 @@ import Tirz from "../Images/tirze.png";
 import ZoomInComponent from "./ZoomInComponent";
 import WhiteStar from "./WhiteStar";
 import { Link } from "react-router-dom";
-import Semagem from "../Images/Semversion.png";
+import Semagem from "../Images/semaglutide.png";
 const packages = [
   {
     id: 1,
