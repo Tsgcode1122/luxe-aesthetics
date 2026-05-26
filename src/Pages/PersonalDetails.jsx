@@ -54,8 +54,8 @@ const PersonalDetails = () => {
           <Divider />
 
           <Note>
-            <Accent>*</Accent> I will also be offering one on one mentoring
-            opportunities as well .
+            <Accent>*</Accent> I also offer one on one mentoring opportunities
+            as well.
           </Note>
         </Card>
       </Container>
